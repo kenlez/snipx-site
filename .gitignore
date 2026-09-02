@@ -12,6 +12,9 @@ dist/
 build/
 .cache/
 
+# wrangler 缓存（包含项目 ID 等敏感元数据）
+.wrangler/
+
 # 临时文件
 *.log
 *.swp
