@@ -1,0 +1,18 @@
+# 编辑器
+.DS_Store
+.vscode/
+.idea/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# 构建产物（如果未来引入）
+dist/
+build/
+.cache/
+
+# 临时文件
+*.log
+*.swp
+*.tmp

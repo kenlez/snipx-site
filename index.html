@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta
+      name="description"
+      content="snipX：macOS 14+ 菜单栏截屏与 MP4 录屏原生应用。物理像素输出、可编辑快捷键、长截图拼接、本地 MP4 录制。零网络、零账号、零上传。"
+    />
+    <meta property="og:title" content="snipX - Mac 截屏与录屏，一触即达" />
+    <meta
+      property="og:description"
+      content="snipX：macOS 14+ 菜单栏截屏与 MP4 录屏原生应用。物理像素输出、可编辑快捷键、长截图拼接、本地 MP4 录制。零网络、零账号、零上传。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta
+      property="og:image"
+      content="assets/brand/icon-snipx.png"
+    />
+    <link id="favicon" rel="icon" href="assets/brand/icon-snipx.png" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>snipX - Mac 截屏与录屏，一触即达</title>
+  </head>
+  <body>
+    <canvas id="space-canvas" aria-hidden="true"></canvas>
+
+    <div class="site-shell">
+      <!-- 顶部导航 -->
+      <header class="topbar" id="topbar">
+        <div class="topbar-inner">
+          <a href="#home" class="topbar-brand" aria-label="snipX">
+            <span class="topbar-brand-mark" aria-hidden="true"></span>
+            <span class="topbar-brand-text">snipX</span>
+          </a>
+
+          <nav class="topbar-nav" aria-label="主导航">
+            <a href="#features">特性</a>
+            <a href="#install">下载</a>
+            <a href="#about">关于</a>
+          </nav>
+
+          <div class="topbar-actions">
+            <a href="#install" class="topbar-cta">下载 snipX</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="app">
+        <!-- Hero -->
+        <section id="home" class="hero">
+          <div class="hero-meteors" aria-hidden="true"></div>
+          <div class="hero-stardust" aria-hidden="true"></div>
+
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <p class="hero-eyebrow">macOS 14+ · 原生应用</p>
+              <h1 class="hero-title">snipX</h1>
+              <p class="hero-title-note">
+                Mac 截屏与录屏，一触即达。
+              </p>
+              <p class="hero-desc">
+                原生 AppKit + Swift + ScreenCaptureKit。物理像素输出、可编辑快捷键、长截图拼接、本地 MP4 录制。零网络、零账号、零上传。
+              </p>
+
+              <div class="hero-cta">
+                <a href="#install" class="btn btn-primary">下载 snipX</a>
+                <a href="#features" class="btn btn-ghost">查看功能</a>
+              </div>
+            </div>
+
+            <div class="hero-visual">
+              <div class="ph-image ph-image-hero" data-label="hero.webp" data-aspect="16/10">
+                <span class="ph-icon" aria-hidden="true">⌘</span>
+                <span class="ph-label">hero.webp · 1920×1200</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Features -->
+        <section id="features" class="section features-section">
+          <div class="section-head">
+            <p class="section-eyebrow">特性</p>
+            <h2 class="section-title">菜单栏常驻，所见即可截</h2>
+            <p class="section-desc">
+              截屏、标注、录屏、长截图，全部在菜单栏一触即达。
+            </p>
+          </div>
+
+          <div class="features">
+            <article class="feature-row" id="feature-menu">
+              <div class="feature-visual">
+                <div class="ph-image" data-label="feature-menu.webp" data-aspect="16/10">
+                  <span class="ph-icon" aria-hidden="true">▦</span>
+                  <span class="ph-label">feature-menu.webp</span>
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">常驻菜单栏</p>
+                <h3 class="feature-title">点击即开，不打扰</h3>
+                <p class="feature-desc">
+                  snipX 始终浮于屏幕角落的菜单栏。无需打开主窗口，点击即弹出截屏 / 录屏入口。
+                </p>
+                <ul class="feature-list">
+                  <li>截屏、录屏、标注、设置 全部直达</li>
+                  <li>不抢焦点、不打扰当前工作</li>
+                  <li>原生菜单栏图标，遵循 macOS 设计语言</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-row feature-row-reverse" id="feature-shortcut">
+              <div class="feature-visual">
+                <div class="ph-image" data-label="feature-shortcut.webp" data-aspect="16/10">
+                  <span class="ph-icon" aria-hidden="true">⌃</span>
+                  <span class="ph-label">feature-shortcut.webp</span>
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">可编辑快捷键</p>
+                <h3 class="feature-title">全局快捷键，自由绑定</h3>
+                <p class="feature-desc">
+                  截屏、录屏、标注、长截图 — 每个动作都可绑定独立快捷键，避免与其他应用冲突。
+                </p>
+                <ul class="feature-list">
+                  <li>支持单键 / 组合键 / 修饰键</li>
+                  <li>冲突检测，一键恢复默认</li>
+                  <li>录屏、截屏独立绑定，标注即时唤起</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-row" id="feature-modes">
+              <div class="feature-visual">
+                <div class="ph-image" data-label="feature-modes.webp" data-aspect="16/10">
+                  <span class="ph-icon" aria-hidden="true">▢</span>
+                  <span class="ph-label">feature-modes.webp</span>
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">四类截屏</p>
+                <h3 class="feature-title">区域 / 窗口 / 全屏 / 长截图</h3>
+                <p class="feature-desc">
+                  物理像素输出，自动按显示器倍率渲染。窗口截屏自动识别应用窗口边缘，长截图无缝拼接。
+                </p>
+                <ul class="feature-list">
+                  <li>区域截屏：拖拽选区，物理像素精度</li>
+                  <li>窗口截屏：自动选窗，背景透明</li>
+                  <li>全屏截屏：多显示器同时输出</li>
+                  <li>长截图：滚动拼接，自动对齐</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-row feature-row-reverse" id="feature-annotation">
+              <div class="feature-visual">
+                <div class="ph-image" data-label="feature-annotation.webp" data-aspect="16/10">
+                  <span class="ph-icon" aria-hidden="true">✎</span>
+                  <span class="ph-label">feature-annotation.webp</span>
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">标注工具</p>
+                <h3 class="feature-title">矩形 / 箭头 / 文字 / 马赛克</h3>
+                <p class="feature-desc">
+                  截屏后即时标注，所有元素可移动、可删除、可撤销重做。裁剪、马赛克、颜色选择器一应俱全。
+                </p>
+                <ul class="feature-list">
+                  <li>矩形、椭圆、箭头、画笔、文字</li>
+                  <li>马赛克模糊敏感信息</li>
+                  <li>撤销 / 重做 / 裁剪 / 颜色选择器</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-row" id="feature-recording">
+              <div class="feature-visual">
+                <div class="ph-image" data-label="feature-recording.webp" data-aspect="16/10">
+                  <span class="ph-icon" aria-hidden="true">●</span>
+                  <span class="ph-label">feature-recording.webp</span>
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">本地 MP4 录屏</p>
+                <h3 class="feature-title">倒计时 · 状态指示 · 自动停止</h3>
+                <p class="feature-desc">
+                  基于 ScreenCaptureKit 本地录制，倒计时、磁盘保护、Recovery 保留一应俱全。头尾裁剪导出，无需第三方编辑器。
+                </p>
+                <ul class="feature-list">
+                  <li>倒计时与状态指示，录屏不打断</li>
+                  <li>磁盘空间不足自动停止，文件不损坏</li>
+                  <li>异常退出后 Recovery 保留录制</li>
+                  <li>头尾裁剪导出为新 MP4</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-row feature-row-reverse" id="feature-privacy">
+              <div class="feature-visual">
+                <div class="ph-image" data-label="feature-privacy.webp" data-aspect="16/10">
+                  <span class="ph-icon" aria-hidden="true">⏻</span>
+                  <span class="ph-label">feature-privacy.webp</span>
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">零数据外传</p>
+                <h3 class="feature-title">完全离线运行</h3>
+                <p class="feature-desc">
+                  无网络请求、无账号体系、无遥测、无第三方依赖。所有截图、录屏数据始终留在你的 Mac。
+                </p>
+                <ul class="feature-list">
+                  <li>无网络请求（可通过 Little Snitch 验证）</li>
+                  <li>无账号、无登录、无云同步</li>
+                  <li>无第三方 SDK、无埋点</li>
+                  <li>开源友好的本地存储</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Install -->
+        <section id="install" class="section install-section">
+          <div class="section-head">
+            <p class="section-eyebrow">下载</p>
+            <h2 class="section-title">立即开始</h2>
+            <p class="section-desc">三步上手，五分钟进入状态。</p>
+          </div>
+
+          <ol class="install-steps">
+            <li class="install-step">
+              <span class="install-step-num">1</span>
+              <h3 class="install-step-title">下载 .dmg</h3>
+              <p class="install-step-desc">
+                点击下方按钮下载 snipX-<span class="ph-version">0.1.86</span>.dmg。
+              </p>
+            </li>
+            <li class="install-step">
+              <span class="install-step-num">2</span>
+              <h3 class="install-step-title">拖入 Applications</h3>
+              <p class="install-step-desc">
+                打开 .dmg，将 snipX 拖入 Applications 文件夹。
+              </p>
+            </li>
+            <li class="install-step">
+              <span class="install-step-num">3</span>
+              <h3 class="install-step-title">授权系统权限</h3>
+              <p class="install-step-desc">
+                首次启动授予：屏幕录制、麦克风（录屏时）、辅助功能（快捷键）、自动化（可选）。
+              </p>
+            </li>
+          </ol>
+
+          <div class="install-cta">
+            <a href="#" class="btn btn-primary btn-lg">下载 snipX · 0.1.86</a>
+            <p class="install-req">macOS 14+ · Apple Silicon / Intel · 约 12 MB</p>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section about-section">
+          <div class="section-head">
+            <p class="section-eyebrow">关于</p>
+            <h2 class="section-title">关于 snipX</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card">
+              <h3 class="about-card-title">原生开发</h3>
+              <p class="about-card-desc">
+                Swift + AppKit + SwiftUI + ScreenCaptureKit + AVFoundation + Carbon 编写，无 WebView、无 Electron、无包装层。
+              </p>
+            </div>
+            <div class="about-card">
+              <h3 class="about-card-title">隐私优先</h3>
+              <p class="about-card-desc">
+                零网络、零账号、零上传、零远程配置、零第三方依赖。所有数据都在你的 Mac 上。
+              </p>
+            </div>
+            <div class="about-card">
+              <h3 class="about-card-title">持续维护</h3>
+              <p class="about-card-desc">
+                当前版本 <span class="ph-version">0.1.86</span>。每个版本均经过手测、单元测试、功能测试三道关。
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="topbar-brand-mark" aria-hidden="true"></span>
+            <span class="footer-brand-text">snipX</span>
+          </div>
+
+          <nav class="footer-links" aria-label="次要导航">
+            <a href="#features">特性</a>
+            <a href="#install">下载</a>
+            <a href="#about">关于</a>
+          </nav>
+
+          <div class="footer-contact">
+            <a href="mailto:hi@snipx.app" class="footer-contact-link">hi@snipx.app</a>
+            <span class="footer-sep" aria-hidden="true">·</span>
+            <span class="footer-meta">
+              当前版本 <span class="ph-version">0.1.86</span>
+            </span>
+          </div>
+
+          <p class="footer-copyright">
+            © 2026 snipX. All rights reserved.
+            <span class="footer-sep" aria-hidden="true">·</span>
+            <a href="#" class="footer-icp">ICP 备案号 待回填</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="assets/js/space-canvas.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+  </body>
+</html>
