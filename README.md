@@ -48,3 +48,9 @@ snipX-site/
 
 - 备案期临时方案：Cloudflare Pages（详见 `docs/DEPLOY-CLOUDFLARE.md`）
 - 备案后正式方案：腾讯云 CloudBase 静态托管（详见 `docs/DEPLOY-TENCENT.md`，待补充）
+
+## 部署状态
+
+- 主站：https://snipx.tongkun.top
+- 临时：https://snipx-site.pages.dev
+- Git 集成：自动部署（push to main）
