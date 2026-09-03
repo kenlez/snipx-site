@@ -1,4 +1,4 @@
-/* snipX-site · 星空背景 canvas
+/* SnipX-site · 星空背景 canvas
  * 轻量级：仅生成静态星点 + 慢速闪烁，避免重渲染。
  * 遵循 prefers-reduced-motion。
  */

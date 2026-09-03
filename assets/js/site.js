@@ -1,4 +1,4 @@
-/* snipX-site · 主脚本
+/* SnipX-site · 主脚本
  * - TopBar 滚动时变高变小 + 加毛玻璃
  * - IntersectionObserver reveal 动效
  * - 平滑锚点跳转（处理 sticky topbar 偏移）

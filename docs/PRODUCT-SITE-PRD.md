@@ -1,11 +1,11 @@
-# snipX 产品官网 PRD
+# SnipX 产品官网 PRD
 
 > 版本：v0.1（框架阶段，所有图片为占位）
 > 风格参考：https://fg.vkr.me/mac
 
 ## 1. 产品定位
 
-**snipX**：macOS 14+ 菜单栏截屏 + MP4 录屏原生应用。
+**SnipX**：macOS 14+ 菜单栏截屏 + MP4 录屏原生应用。
 
 **价值主张**：
 - 浮于眼前，一触即达（菜单栏常驻）
@@ -17,17 +17,17 @@
 ## 2. 页面结构（单页）
 
 ### 2.1 顶部导航（TopBar）
-- 左侧：snipX Logo（占位）
+- 左侧：SnipX Logo（占位）
 - 中间：锚点导航（特性 / 功能 / 下载 / 关于）
 - 右侧：下载按钮（CTA）
 
 ### 2.2 Hero 区
 - eyebrow：「macOS 14+ · 原生应用」
-- 主标题：「snipX」
+- 主标题：「SnipX」
 - 副标题：「Mac 截屏与录屏，一触即达」
 - 描述：「原生 AppKit + Swift + ScreenCaptureKit。物理像素输出、可编辑快捷键、长截图拼接、本地 MP4 录制。零网络、零账号、零上传。」
 - 双 CTA：
-  - 主：「下载 snipX」（按钮）
+  - 主：「下载 SnipX」（按钮）
   - 次：「查看功能」（锚点）
 - 主视觉：大图（占位 → `hero.webp`）
 
@@ -53,7 +53,7 @@
 - 系统要求：macOS 14+、Apple Silicon / Intel
 
 ### 2.5 关于与隐私（About + Privacy）
-- 关于 snipX：原生开发、维护计划、版本号（占位 → 0.1.86）
+- 关于 SnipX：原生开发、维护计划、版本号（占位 → 0.1.86）
 - 隐私承诺：本地运行、数据不出本机
 
 ### 2.6 Footer
@@ -62,8 +62,8 @@
 
 ## 3. 文案大纲（占位文字）
 
-- meta title：`snipX - Mac 截屏与录屏，一触即达`
-- meta description：`snipX：macOS 14+ 菜单栏截屏与 MP4 录屏原生应用。物理像素输出、可编辑快捷键、长截图拼接、本地 MP4 录制。零网络、零账号、零上传。`
+- meta title：`SnipX - Mac 截屏与录屏，一触即达`
+- meta description：`SnipX：macOS 14+ 菜单栏截屏与 MP4 录屏原生应用。物理像素输出、可编辑快捷键、长截图拼接、本地 MP4 录制。零网络、零账号、零上传。`
 - OG image：品牌图标（占位 → `assets/brand/icon-snipx.png`）
 
 ## 4. 占位图清单

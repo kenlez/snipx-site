@@ -1,6 +1,6 @@
 # 腾讯云 CloudBase 静态托管部署指南（备案后正式方案）
 
-> 适用：snipX-site 静态站点
+> 适用：SnipX-site 静态站点
 > 前提：**域名已完成 ICP 备案**
 > 免费额度：1GB 存储 + 5GB 流量/月（足够个人产品站）
 
@@ -36,7 +36,7 @@
 ### 4.1 通过 CloudBase 控制台上传（最简单）
 1. 静态网站托管 → 「文件管理」
 2. 进入根目录 `/`
-3. 上传整个 `snipX-site/` 项目内容：
+3. 上传整个 `SnipX-site/` 项目内容：
    - `index.html`
    - `assets/` 整个目录
 4. 上传路径直接是根目录 `/`
@@ -45,7 +45,7 @@
 ```bash
 npm install -g @cloudbase/cli
 cloudbase login
-cd /Users/brad/Documents/snipX-site
+cd /Users/brad/Documents/SnipX-site
 cloudbase hosting deploy ./ . -e snipx-prod
 ```
 
@@ -86,4 +86,4 @@ cloudbase hosting deploy ./ . -e snipx-prod
 | 流量 | 5 GB/月 | ¥0.21/GB |
 | 请求 | 5 万次/月 | ¥0.01/万次 |
 
-snipX 个人产品站预估月流量 < 1GB，**完全免费**。
+SnipX 个人产品站预估月流量 < 1GB，**完全免费**。

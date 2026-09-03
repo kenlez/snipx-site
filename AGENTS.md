@@ -1,6 +1,6 @@
-# snipX-site 项目约定
+# SnipX-site 项目约定
 
-snipX 官方产品介绍站点（独立项目，与 `shotX` 应用源码分离）。
+SnipX 官方产品介绍站点（独立项目，与 `shotX` 应用源码分离）。
 
 ## 文档
 

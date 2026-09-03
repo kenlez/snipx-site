@@ -1,6 +1,6 @@
 # Cloudflare Pages 部署指南（备案期临时方案）
 
-> 适用：snipX-site 静态站点
+> 适用：SnipX-site 静态站点
 > 特点：**免备案、即开即用、无限流量、全球 CDN**，对国内访问延迟约 100–300ms（够用）
 
 ## 1. 准备
@@ -14,10 +14,10 @@
 ## 2. 推送代码到 GitHub
 
 ```bash
-cd /Users/brad/Documents/snipX-site
+cd /Users/brad/Documents/SnipX-site
 git add -A
-git commit -m "feat: 初始化 snipX 官网骨架（占位图、占位文案）"
-gh repo create snipX-site --public --source=. --remote=origin --push
+git commit -m "feat: 初始化 SnipX 官网骨架（占位图、占位文案）"
+gh repo create SnipX-site --public --source=. --remote=origin --push
 ```
 
 > ⚠️ GitHub 上传后建议进入 Settings → Pages → **关闭** GitHub Pages 避免冲突（我们用 Cloudflare Pages 托管）。
@@ -28,7 +28,7 @@ gh repo create snipX-site --public --source=. --remote=origin --push
 
 1. 登录 https://dash.cloudflare.com/
 2. 左侧菜单 → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**
-3. 选择 GitHub 仓库 `snipX-site`
+3. 选择 GitHub 仓库 `SnipX-site`
 4. **Build settings**：
    - Framework preset: **None**
    - Build command: *（留空）*
@@ -41,8 +41,8 @@ gh repo create snipX-site --public --source=. --remote=origin --push
 ### 方式 B：Dashboard 手动创建 + Direct Upload（适合一次性部署）
 
 1. 左侧菜单 → **Workers & Pages** → **Create** → **Pages** → **Drag and drop**
-2. 输入项目名 `snipX-site`
-3. 将整个 `snipX-site/` 目录拖入（或打包 zip 拖入）
+2. 输入项目名 `SnipX-site`
+3. 将整个 `SnipX-site/` 目录拖入（或打包 zip 拖入）
 4. 点 **Deploy site**
 
 ### 方式 C：API + wrangler CLI（已验证，可完全脚本化）
@@ -65,7 +65,7 @@ curl -X POST \
 #### 3.3 用 wrangler CLI 部署
 
 ```bash
-cd /Users/brad/Documents/snipX-site
+cd /Users/brad/Documents/SnipX-site
 CLOUDFLARE_API_TOKEN="$CF_TOKEN" \
 CLOUDFLARE_ACCOUNT_ID="$CF_ACCOUNT_ID" \
 npx --yes wrangler@latest pages deploy . \
@@ -90,7 +90,7 @@ CF Pages 会自动签发 SSL 证书（Let's Encrypt，1–5 分钟）。
 ## 4. 配置自定义域名
 
 ### 4.1 临时子域名
-Cloudflare Pages 自动分配 `snipX-site.pages.dev`，立即可访问。
+Cloudflare Pages 自动分配 `SnipX-site.pages.dev`，立即可访问。
 
 ### 4.2 绑定自有域名（DNS 留腾讯云 DNSPod，本项目当前方案）
 
@@ -119,7 +119,7 @@ Cloudflare Pages 自动分配 `snipX-site.pages.dev`，立即可访问。
 **如果用 wrangler CLI / Direct Upload**：
 
 ```bash
-cd /Users/brad/Documents/snipX-site
+cd /Users/brad/Documents/SnipX-site
 CLOUDFLARE_API_TOKEN="$CF_TOKEN" \
 CLOUDFLARE_ACCOUNT_ID="$CF_ACCOUNT_ID" \
 npx wrangler@latest pages deploy . --project-name=snipx-site
@@ -168,7 +168,7 @@ A: Cloudflare Pages 免费计划：
 - 每月 500 次构建
 - 最多 100 个项目
 
-对 snipX 站点完全够用。
+对 SnipX 站点完全够用。
 
 ## 8. 本项目实际部署记录（2026-09-02）
 

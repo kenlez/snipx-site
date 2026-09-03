@@ -1,6 +1,6 @@
-# snipX-site
+# SnipX-site
 
-snipX 官方产品介绍站点（独立静态站点）。
+SnipX 官方产品介绍站点（独立静态站点）。
 
 ## 快速开始
 
@@ -12,7 +12,7 @@ python3 -m http.server 8080
 ## 目录结构
 
 ```
-snipX-site/
+SnipX-site/
 ├── index.html                # 站点入口（产品主页）
 ├── assets/
 │   ├── css/
