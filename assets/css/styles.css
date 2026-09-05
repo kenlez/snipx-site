@@ -591,7 +591,7 @@ button {
 
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
 }
 
@@ -855,4 +855,71 @@ button {
   .footer {
     padding: 40px 0 28px;
   }
+}
+
+/* ===== Hero tags (Universal 2 / OCR / Pro) ===== */
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 0;
+}
+
+.hero-tag {
+  display: inline-block;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+/* ===== Feature note (e.g. SnipX Pro) ===== */
+.feature-note {
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(106, 167, 255, 0.08);
+  border: 1px solid rgba(106, 167, 255, 0.22);
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.feature-note strong {
+  color: var(--text);
+}
+
+/* ===== Install pro note ===== */
+.install-pro {
+  margin: 14px 0 0;
+  font-size: 14px;
+  color: var(--faint);
+}
+
+.install-pro a {
+  color: var(--accent-blue);
+  border-bottom: 1px solid rgba(106, 167, 255, 0.3);
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.install-pro a:hover {
+  color: var(--text);
+  border-bottom-color: var(--text);
+}
+
+/* ===== About card inline links ===== */
+.about-card-desc a {
+  color: var(--accent-blue);
+  border-bottom: 1px solid rgba(106, 167, 255, 0.3);
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.about-card-desc a:hover {
+  color: var(--text);
+  border-bottom-color: var(--text);
 }
