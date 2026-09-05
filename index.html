@@ -6,12 +6,12 @@
     <meta name="theme-color" content="#050505" />
     <meta
       name="description"
-      content="SnipX：macOS 14+ 菜单栏截屏与 MP4 录屏原生应用。物理像素输出、可编辑快捷键、长截图拼接、本地 MP4 录制。零网络、零账号、零上传。"
+      content="SnipX 0.1.99：macOS 14+ 菜单栏截屏与 MP4 录屏原生应用。物理像素输出、本地 OCR、可编辑快捷键、长截图拼接、Universal 2（Apple Silicon + Intel）。零网络、零账号、零上传。"
     />
     <meta property="og:title" content="SnipX - Mac 截屏与录屏，一触即达" />
     <meta
       property="og:description"
-      content="SnipX：macOS 14+ 菜单栏截屏与 MP4 录屏原生应用。物理像素输出、可编辑快捷键、长截图拼接、本地 MP4 录制。零网络、零账号、零上传。"
+      content="SnipX 0.1.99：macOS 14+ 菜单栏截屏与 MP4 录屏原生应用。物理像素输出、本地 OCR、可编辑快捷键、长截图拼接、Universal 2（Apple Silicon + Intel）。零网络、零账号、零上传。"
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="zh_CN" />
@@ -61,7 +61,13 @@
                 Mac 截屏与录屏，一触即达。
               </p>
               <p class="hero-desc">
-                原生 AppKit + Swift + ScreenCaptureKit。物理像素输出、可编辑快捷键、长截图拼接、本地 MP4 录制。零网络、零账号、零上传。
+                原生 AppKit + Swift + ScreenCaptureKit。物理像素输出、本地 OCR、可编辑快捷键、长截图拼接、本地 MP4 录制。零网络、零账号、零上传。
+              </p>
+              <p class="hero-tags">
+                <span class="hero-tag">macOS 14+</span>
+                <span class="hero-tag">Universal 2 · Apple Silicon + Intel</span>
+                <span class="hero-tag">本地 OCR</span>
+                <span class="hero-tag">SnipX Pro 录屏/GIF</span>
               </p>
 
               <div class="hero-cta">
@@ -154,7 +160,29 @@
               </div>
             </article>
 
-            <article class="feature-row feature-row-reverse" id="feature-annotation">
+            <article class="feature-row feature-row-reverse" id="feature-ocr">
+              <div class="feature-visual">
+                <div class="ph-image" data-label="feature-ocr.webp" data-aspect="16/10">
+                  <span class="ph-icon" aria-hidden="true">⌗</span>
+                  <span class="ph-label">feature-ocr.webp</span>
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">本地 OCR（0.1.99 新增）</p>
+                <h3 class="feature-title">截图里的文字，一键识别</h3>
+                <p class="feature-desc">
+                  基于 Apple Vision 框架，在你的 Mac 上直接识别截图中的中文、英文与中英混合文本。识别结果可编辑、可复制，不上传任何内容。
+                </p>
+                <ul class="feature-list">
+                  <li>中文（简/繁）、英文与中英混排</li>
+                  <li>完全本地识别，截图与文字不出本机</li>
+                  <li>识别后可编辑、复制或取消</li>
+                  <li>适用于截屏后的二次编辑与提取</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-row" id="feature-annotation">
               <div class="feature-visual">
                 <div class="ph-image" data-label="feature-annotation.webp" data-aspect="16/10">
                   <span class="ph-icon" aria-hidden="true">✎</span>
@@ -175,7 +203,7 @@
               </div>
             </article>
 
-            <article class="feature-row" id="feature-recording">
+            <article class="feature-row feature-row-reverse" id="feature-recording">
               <div class="feature-visual">
                 <div class="ph-image" data-label="feature-recording.webp" data-aspect="16/10">
                   <span class="ph-icon" aria-hidden="true">●</span>
@@ -183,21 +211,25 @@
                 </div>
               </div>
               <div class="feature-copy">
-                <p class="feature-eyebrow">本地 MP4 录屏</p>
-                <h3 class="feature-title">倒计时 · 状态指示 · 自动停止</h3>
+                <p class="feature-eyebrow">本地 MP4 录屏 · SnipX Pro</p>
+                <h3 class="feature-title">倒计时 · 系统声 + 麦克风 · 自动恢复</h3>
                 <p class="feature-desc">
-                  基于 ScreenCaptureKit 本地录制，倒计时、磁盘保护、Recovery 保留一应俱全。头尾裁剪导出，无需第三方编辑器。
+                  基于 ScreenCaptureKit 本地录制，支持同时录制系统声音与麦克风，倒计时、磁盘保护、异常恢复一应俱全。头尾裁剪导出，无需第三方编辑器。
                 </p>
                 <ul class="feature-list">
+                  <li>区域 / 窗口 / 显示器三种录屏模式</li>
+                  <li>系统声音与麦克风同时录制，单一音轨</li>
                   <li>倒计时与状态指示，录屏不打断</li>
-                  <li>磁盘空间不足自动停止，文件不损坏</li>
                   <li>异常退出后 Recovery 保留录制</li>
                   <li>头尾裁剪导出为新 MP4</li>
                 </ul>
+                <p class="feature-note">
+                  录屏与 GIF 录制需解锁 <strong>SnipX Pro</strong>（¥12 一次性买断，首发优惠 ¥6）。截屏、标注、长截图永久免费。
+                </p>
               </div>
             </article>
 
-            <article class="feature-row feature-row-reverse" id="feature-privacy">
+            <article class="feature-row" id="feature-privacy">
               <div class="feature-visual">
                 <div class="ph-image" data-label="feature-privacy.webp" data-aspect="16/10">
                   <span class="ph-icon" aria-hidden="true">⏻</span>
@@ -234,7 +266,7 @@
               <span class="install-step-num">1</span>
               <h3 class="install-step-title">下载 .dmg</h3>
               <p class="install-step-desc">
-                点击下方按钮下载 SnipX-<span class="ph-version">0.1.86</span>.dmg。
+                点击下方按钮下载 SnipX-<span class="ph-version">0.1.99</span>.dmg。
               </p>
             </li>
             <li class="install-step">
@@ -254,8 +286,11 @@
           </ol>
 
           <div class="install-cta">
-            <a href="#" class="btn btn-primary btn-lg">下载 SnipX · 0.1.86</a>
-            <p class="install-req">macOS 14+ · Apple Silicon / Intel · 约 12 MB</p>
+            <a href="#" class="btn btn-primary btn-lg">下载 SnipX · 0.1.99</a>
+            <p class="install-req">macOS 14+ · Universal 2（Apple Silicon + Intel）· 约 12 MB</p>
+            <p class="install-pro">
+              基础截屏永久免费 · 录屏与 GIF 录制需 <a href="./#about">SnipX Pro</a>（¥12 / 首发 ¥6）
+            </p>
           </div>
         </section>
 
@@ -276,13 +311,22 @@
             <div class="about-card">
               <h3 class="about-card-title">隐私优先</h3>
               <p class="about-card-desc">
-                零网络、零账号、零上传、零远程配置、零第三方依赖。所有数据都在你的 Mac 上。
+                零网络、零账号、零上传、零远程配置、零第三方依赖。所有数据都在你的 Mac 上。详见
+                <a href="./privacy.html">隐私政策</a>。
+              </p>
+            </div>
+            <div class="about-card">
+              <h3 class="about-card-title">SnipX Pro</h3>
+              <p class="about-card-desc">
+                截屏、标注、长截图、置顶永久免费。<strong>¥12</strong> 一次性买断解锁 MP4 录屏与 GIF 录制，首发优惠
+                <strong>¥6</strong>。
               </p>
             </div>
             <div class="about-card">
               <h3 class="about-card-title">持续维护</h3>
               <p class="about-card-desc">
-                当前版本 <span class="ph-version">0.1.86</span>。每个版本均经过手测、单元测试、功能测试三道关。
+                当前版本 <span class="ph-version">0.1.99</span>。每个版本均经过手测、单元测试、功能测试三道关。需要帮助？
+                <a href="./support.html">支持页</a>。
               </p>
             </div>
           </div>
@@ -301,13 +345,15 @@
             <a href="#features">特性</a>
             <a href="#install">下载</a>
             <a href="#about">关于</a>
+            <a href="./support.html">支持</a>
+            <a href="./privacy.html">隐私政策</a>
           </nav>
 
           <div class="footer-contact">
             <a href="mailto:hi@snipx.app" class="footer-contact-link">hi@snipx.app</a>
             <span class="footer-sep" aria-hidden="true">·</span>
             <span class="footer-meta">
-              当前版本 <span class="ph-version">0.1.86</span>
+              当前版本 <span class="ph-version">0.1.99</span>
             </span>
           </div>
 

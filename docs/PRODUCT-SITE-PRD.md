@@ -40,9 +40,10 @@
 | F1 | 菜单栏常驻 | 浮于菜单栏，点击即开 | 截屏 / 录屏 / 标注 / 设置 全部直达 | feature-menu.webp | 左图右文 |
 | F2 | 可编辑快捷键 | 全局快捷键可自由绑定 | 截屏、录屏、标注、长截图独立绑定 | feature-shortcut.webp | 左文右图 |
 | F3 | 四类截屏模式 | 区域 / 窗口 / 全屏 / 长截图 | 物理像素输出、自动命名、PNG 直存 | feature-modes.webp | 左图右文 |
-| F4 | 标注工具 | 矩形 / 箭头 / 文字 / 马赛克 | 可移动、可删除、撤销 / 重做、裁剪 | feature-annotation.webp | 左文右图 |
-| F5 | 本地 MP4 录制 | 倒计时、状态指示、自动停止 | 磁盘保护、Recovery 保留、头尾裁剪导出 | feature-recording.webp | 左图右文 |
-| F6 | 零数据外传 | 完全离线运行 | 无网络请求、无账号体系、无遥测 | feature-privacy.webp | 左文右图 |
+| F4 | 本地 OCR（0.1.99 新增） | 截图文字一键识别 | Vision 框架、中英混排、完全本地 | feature-ocr.webp | 左文右图 |
+| F5 | 标注工具 | 矩形 / 箭头 / 文字 / 马赛克 | 可移动、可删除、撤销 / 重做、裁剪 | feature-annotation.webp | 左图右文 |
+| F6 | 本地 MP4 录制（SnipX Pro） | 倒计时、系统声+麦克风、自动恢复 | 区域/窗口/显示器、Recovery、头尾裁剪 | feature-recording.webp | 左文右图 |
+| F7 | 零数据外传 | 完全离线运行 | 无网络请求、无账号体系、无遥测 | feature-privacy.webp | 左图右文 |
 
 ### 2.4 安装与下载（Install）
 - 标题：「立即开始」
@@ -53,12 +54,19 @@
 - 系统要求：macOS 14+、Apple Silicon / Intel
 
 ### 2.5 关于与隐私（About + Privacy）
-- 关于 SnipX：原生开发、维护计划、版本号（占位 → 0.1.86）
+- 关于 SnipX：原生开发、维护计划、版本号（占位 → 0.1.99）
 - 隐私承诺：本地运行、数据不出本机
+- SnipX Pro：基础截屏永久免费；录屏/GIF ¥12 一次性买断（首发 ¥6）
 
 ### 2.6 Footer
 - 版权、联系方式（小红书 / 抖音 / QQ 群 / 邮箱）
 - 备案号（待 ICP 备案后回填）
+- 内链：主页 / 特性 / 下载 / 关于 / 支持（support.html）/ 隐私政策（privacy.html）
+
+### 2.7 内页（App Store 上线必需）
+- `support.html`：系统要求、首次启动权限引导、FAQ、反馈渠道、相关链接
+- `privacy.html`：数据收集声明、API 使用、内购、第三方 SDK、用户权利、联系方式
+- 两页均挂在 `snipx.tongkun.top/` 域名下，作为 App Store Connect 的 Support URL / Privacy Policy URL
 
 ## 3. 文案大纲（占位文字）
 
@@ -77,9 +85,10 @@
 | `feature-menu.webp` | 1280×800 | F1 菜单栏 | 占位 |
 | `feature-shortcut.webp` | 1280×800 | F2 快捷键 | 占位 |
 | `feature-modes.webp` | 1280×800 | F3 截屏模式 | 占位 |
-| `feature-annotation.webp` | 1280×800 | F4 标注 | 占位 |
-| `feature-recording.webp` | 1280×800 | F5 录屏 | 占位 |
-| `feature-privacy.webp` | 1280×800 | F6 隐私 | 占位 |
+| `feature-ocr.webp` | 1280×800 | F4 本地 OCR（0.1.99 新增） | 占位 |
+| `feature-annotation.webp` | 1280×800 | F5 标注 | 占位 |
+| `feature-recording.webp` | 1280×800 | F6 录屏 | 占位 |
+| `feature-privacy.webp` | 1280×800 | F7 隐私 | 占位 |
 | `platform-macos.png` | 128×128 | 平台标识 | 占位 |
 
 ## 5. 技术栈
@@ -103,4 +112,5 @@
 
 | 版本 | 日期 | 内容 |
 |---|---|---|
+| v0.2 | 2026-09-05 | 新增 F4 本地 OCR feature 行；F6 录制补 SnipX Pro 说明；About 增 Pro 卡片；版本号 0.1.86 → 0.1.99；Hero tags 增 Universal 2；新增 support.html / privacy.html 两个内页（App Store Connect 必需 URL）；Footer 增支持/隐私链接 |
 | v0.1 | 2026-09-02 | 初版框架（占位图、占位文案） |

@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="robots" content="index,follow" />
+    <meta
+      name="description"
+      content="SnipX 支持页面：FAQ、权限引导、反馈渠道、系统要求与版本说明。"
+    />
+    <meta property="og:title" content="SnipX 支持与帮助" />
+    <meta
+      property="og:description"
+      content="SnipX FAQ、权限引导、反馈渠道与系统要求。"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="zh_CN" />
+    <link id="favicon" rel="icon" href="assets/brand/icon-snipx.png" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/legal.css" />
+    <title>SnipX 支持与帮助 · SnipX</title>
+  </head>
+  <body>
+    <canvas id="space-canvas" aria-hidden="true"></canvas>
+
+    <div class="site-shell">
+      <header class="topbar is-stuck" id="topbar">
+        <div class="topbar-inner">
+          <a href="./" class="topbar-brand" aria-label="SnipX">
+            <span class="topbar-brand-mark" aria-hidden="true"></span>
+            <span class="topbar-brand-text">SnipX</span>
+          </a>
+
+          <nav class="topbar-nav" aria-label="主导航">
+            <a href="./#features">特性</a>
+            <a href="./#install">下载</a>
+            <a href="./#about">关于</a>
+          </nav>
+
+          <div class="topbar-actions">
+            <a href="./#install" class="topbar-cta">下载 SnipX</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="app" class="legal-page">
+        <article class="legal">
+          <header class="legal-head">
+            <p class="legal-eyebrow">Support</p>
+            <h1 class="legal-title">SnipX 支持与帮助</h1>
+            <p class="legal-meta">
+              FAQ、权限引导、反馈渠道 · 适用于 SnipX 0.1.99 及以上版本
+            </p>
+          </header>
+
+          <section class="legal-section">
+            <h2>系统要求</h2>
+            <ul class="legal-list">
+              <li>macOS 14.0 Sonoma 或更高版本</li>
+              <li>支持 Apple Silicon（M1 / M2 / M3 / M4）与 Intel Mac</li>
+              <li>
+                通用构建（Universal 2）同时包含 <code>arm64</code> 与
+                <code>x86_64</code>
+              </li>
+              <li>无需联网即可使用全部功能</li>
+            </ul>
+          </section>
+
+          <section class="legal-section">
+            <h2>首次启动：权限引导</h2>
+            <p>
+              SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS
+              默认流程，不会启动即弹窗。
+            </p>
+            <ol class="legal-list">
+              <li>
+                <strong>屏幕录制</strong>：首次截屏或录屏时系统会弹窗。授权后到「系统设置 → 隐私与安全性 →
+                屏幕录制」可看到 SnipX。
+              </li>
+              <li>
+                <strong>麦克风</strong>：仅在你开启「录制麦克风」开关时申请。
+              </li>
+              <li>
+                <strong>摄像头</strong>：仅在你开启「录制摄像头」开关时申请。
+              </li>
+              <li>
+                <strong>辅助功能</strong>：用于注册全局快捷键；首次设置快捷键时申请。
+              </li>
+            </ol>
+            <p>
+              如果误点了「拒绝」，可以到「系统设置 → 隐私与安全性」手动开启；SnipX
+              内置的「权限」面板也会引导你跳转到对应位置。
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>FAQ</h2>
+
+            <h3>Q1：SnipX 联网吗？会上传我的截图吗？</h3>
+            <p>
+              <strong>不联网、不上传。</strong
+              >截屏、录屏、OCR 识别结果、标注内容都仅保存在你的 Mac
+              上。可用 Little Snitch 等网络监控工具验证。
+            </p>
+
+            <h3>Q2：SnipX Pro 是什么？哪些功能需要付费？</h3>
+            <p>
+              截屏、标注、长截图、置顶、复制、保存、分享等基础功能永久免费。<strong
+                >SnipX Pro（¥12 一次性买断，首发优惠 ¥6）</strong
+              >解锁：
+            </p>
+            <ul class="legal-list">
+              <li>MP4 录屏（区域 / 窗口 / 显示器）</li>
+              <li>GIF 录制</li>
+              <li>系统声音 + 麦克风同时录制</li>
+              <li>摄像头画中画</li>
+              <li>倒计时与异常自动恢复</li>
+              <li>头尾裁剪导出</li>
+            </ul>
+
+            <h3>Q3：如何恢复购买？</h3>
+            <p>
+              打开 SnipX → 菜单栏 → 设置 → 录屏 → 付费墙卡底部「恢复购买」按钮。App
+              会通过 StoreKit 2 重新校验你的购买状态。
+            </p>
+
+            <h3>Q4：可以更换已授权的功能吗？</h3>
+            <p>
+              截屏、标注、长截图的快捷键都可以在「设置 → 快捷键」中自定义，冲突时会自动提示。
+            </p>
+
+            <h3>Q5：为什么我截不到 SnipX 自己的窗口？</h3>
+            <p>
+              SnipX 在录屏与截屏时会自动排除自身的菜单栏蒙层、操作浮层与录屏浮动条，避免污染画面。其他 SnipX
+              窗口（如设置、编辑录屏）默认会被正常捕获。
+            </p>
+
+            <h3>Q6：OCR 支持哪些语言？</h3>
+            <p>
+              0.1.99 起，OCR 支持中文（简/繁）、英文及中英混合文本，由 Apple Vision
+              框架在本地完成识别，无网络依赖。
+            </p>
+
+            <h3>Q7：录屏文件保存在哪里？</h3>
+            <p>
+              默认保存到 <code>Movies/SnipX/</code
+              >，可在「设置 → 录屏」中修改保存目录。异常退出时的 Recovery
+              文件保留在
+              <code>~/Library/Application Support/SnipX/Recovery/</code
+              >，下次启动时可在录屏列表中恢复或丢弃。
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>反馈与问题上报</h2>
+            <p>如果你遇到 bug、有功能建议或希望贡献想法：</p>
+            <ul class="legal-list">
+              <li>邮箱：<a href="mailto:hi@snipx.app">hi@snipx.app</a></li>
+              <li>请附上：macOS 版本、SnipX 版本、复现步骤、必要时附截图或录屏</li>
+              <li>
+                SnipX 在异常退出时会保留崩溃日志到
+                <code>~/Library/Application Support/SnipX/CrashLogs/</code
+                >，提交问题时一并附上可大幅加快定位
+              </li>
+            </ul>
+          </section>
+
+          <section class="legal-section">
+            <h2>版本与更新</h2>
+            <p>
+              当前最新版本：<strong>SnipX 0.1.99</strong>（OCR MVP + Universal 2）。
+            </p>
+            <p>
+              完整版本变更说明见
+              <a href="https://github.com/kenlez/SnipX/blob/main/RELEASE-NOTES.md" rel="noopener">RELEASE-NOTES.md</a>。
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>相关链接</h2>
+            <ul class="legal-list">
+              <li><a href="./">产品主页</a></li>
+              <li><a href="./privacy.html">隐私政策</a></li>
+              <li>
+                <a
+                  href="https://github.com/kenlez/SnipX"
+                  rel="noopener"
+                  >SnipX GitHub</a
+                >
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="topbar-brand-mark" aria-hidden="true"></span>
+            <span class="footer-brand-text">SnipX</span>
+          </div>
+
+          <nav class="footer-links" aria-label="次要导航">
+            <a href="./">主页</a>
+            <a href="./#features">特性</a>
+            <a href="./#install">下载</a>
+            <a href="./support.html">支持</a>
+            <a href="./privacy.html">隐私政策</a>
+          </nav>
+
+          <div class="footer-contact">
+            <a href="mailto:hi@snipx.app" class="footer-contact-link">hi@snipx.app</a>
+            <span class="footer-sep" aria-hidden="true">·</span>
+            <span class="footer-meta">
+              当前版本 <span class="ph-version">0.1.99</span>
+            </span>
+          </div>
+
+          <p class="footer-copyright">
+            © 2026 SnipX. All rights reserved.
+            <span class="footer-sep" aria-hidden="true">·</span>
+            <a href="#" class="footer-icp">ICP 备案号 待回填</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="assets/js/space-canvas.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+  </body>
+</html>
