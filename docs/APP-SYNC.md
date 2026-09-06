@@ -22,7 +22,7 @@
 | 内购解锁范围 | MP4 录屏（区域 / 窗口 / 显示器）、GIF 录制、声音录制、摄像头画中画、异常恢复、头尾裁剪导出 |
 | Bundle ID | `com.brad.SnipX` |
 | 内购产品 ID | `com.brad.SnipX.pro.unlock` |
-| 客服邮箱 | `hi@snipx.app` |
+| 客服邮箱 | `snipx@tongkun.top` |
 | 隐私政策 URL | https://snipx.tongkun.top/privacy.html |
 | 支持 URL | https://snipx.tongkun.top/support.html |
 | 营销 URL | https://snipx.tongkun.top/ |
