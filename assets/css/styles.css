@@ -129,11 +129,9 @@ button {
   width: 26px;
   height: 26px;
   border-radius: 8px;
-  background:
-    linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-pink) 100%);
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.16) inset,
-    0 6px 18px rgba(106, 167, 255, 0.34);
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(106, 167, 255, 0.28);
 }
 
 .topbar-brand-text {
