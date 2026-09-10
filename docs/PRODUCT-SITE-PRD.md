@@ -60,7 +60,6 @@
 
 ### 2.6 Footer
 - 版权、联系方式（小红书 / 抖音 / QQ 群 / 邮箱）
-- 备案号（待 ICP 备案后回填）
 - 内链：主页 / 特性 / 下载 / 关于 / 支持（support.html）/ 隐私政策（privacy.html）
 
 ### 2.7 内页（App Store 上线必需）
@@ -74,22 +73,24 @@
 - meta description：`SnipX：macOS 14+ 菜单栏截屏与 MP4 录屏原生应用。物理像素输出、可编辑快捷键、长截图拼接、本地 MP4 录制。零网络、零账号、零上传。`
 - OG image：品牌图标（占位 → `assets/brand/icon-snipx.png`）
 
-## 4. 占位图清单
+## 4. 图片资源清单
 
-所有占位图存放于 `assets/images/placeholder/`，文件名与最终真实图保持一致。
+- 未到位的图用 HTML 内的 `.ph-image` 占位（纯 CSS 渐变 + 文件名标签，无外部文件）。
+- 真实图按用途存放：品牌资源 `assets/brand/`，功能截图 `assets/screenshots/`，产品截图 `assets/products/`。
+- 接入方式：在对应 `.ph-image` 容器内放 `<img>`（CSS 已适配绝对定位铺满）。
 
 | 文件名 | 尺寸建议 | 用途 | 状态 |
 |---|---|---|---|
-| `icon-snipx.png` | 256×256 | 品牌图标 / favicon | 占位（待用户提供） |
-| `hero.webp` | 1920×1200 | Hero 主视觉 | 占位 |
-| `feature-menu.webp` | 1280×800 | F1 菜单栏 | 占位 |
-| `feature-shortcut.webp` | 1280×800 | F2 快捷键 | 占位 |
-| `feature-modes.webp` | 1280×800 | F3 截屏模式 | 占位 |
-| `feature-ocr.webp` | 1280×800 | F4 本地 OCR（0.1.99 新增） | 占位 |
-| `feature-annotation.webp` | 1280×800 | F5 标注 | 占位 |
-| `feature-recording.webp` | 1280×800 | F6 录屏 | 占位 |
-| `feature-privacy.webp` | 1280×800 | F7 隐私 | 占位 |
-| `platform-macos.png` | 128×128 | 平台标识 | 占位 |
+| `icon-snipx.png` | 256×256 | 品牌图标 / favicon | ✅ 已到位（`assets/brand/`，320×320） |
+| `hero.webp` | 1920×1200 | Hero 主视觉 | ⏳ 占位（待补） |
+| `feature-menu.webp` | 1280×800 | F1 菜单栏 | ✅ 已到位（`assets/screenshots/`） |
+| `feature-shortcut.webp` | 1280×800 | F2 快捷键 | ✅ 已到位 |
+| `feature-modes.webp` | 1280×800 | F3 截屏模式 | ✅ 已到位 |
+| `feature-ocr.webp` | 1280×800 | F4 本地 OCR | ✅ 已到位 |
+| `feature-annotation.webp` | 1280×800 | F5 标注 | ✅ 已到位 |
+| `feature-recording.webp` | 1280×800 | F6 录屏 | ✅ 已到位 |
+| `feature-privacy.webp` | 1280×800 | F7 隐私 | ✅ 已到位 |
+| `platform-macos.png` | 128×128 | 平台标识 | ⏳ 占位（当前未使用） |
 
 ## 5. 技术栈
 
@@ -101,12 +102,12 @@
 
 ## 6. 待补充
 
-- [ ] 真实品牌图标（用户提供 PNG/SVG）
-- [ ] 真实产品截图（用户提供 .webp）
-- [ ] 域名确认（ICP 备案域名）
-- [ ] 下载链接（dmg 静态托管地址）
+- [x] 真实品牌图标（`assets/brand/icon-snipx.png`）
+- [x] 真实功能截图（`assets/screenshots/feature-*.webp`）
+- [ ] Hero 主视觉 `hero.webp`
+- [x] 分发渠道：Mac App Store（不再提供 .dmg 直装）
+- [ ] App Store 应用页链接（回填 `#appstore-download`）
 - [ ] 联系信息（小红书 / 抖音 / QQ 群）
-- [ ] 备案号（ICP 备案后回填到 Footer）
 
 ## 7. 版本历史
 

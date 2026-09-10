@@ -33,9 +33,9 @@ npx --yes serve -l 8080 .
 - 一个分支只解决一个问题，不夹带无关修改。
 - 涉及 UI 视觉或交互、文案、域名、备案、部署的改动，必须在合并前等待用户手测确认。
 
-## 占位图约定
+## 图片约定
 
-- 所有图片占位存放在 `assets/images/placeholder/`，文件名与真实图一致（如 `hero.webp`、`feature-screenshot.webp`）。
-- 占位图为纯 CSS 渐变 + 文字标签，不依赖外部资源。
-- 真实图到位后覆盖同名文件即可，无需改 HTML/CSS。
-- 占位图清单见 `docs/PRODUCT-SITE-PRD.md`。
+- 未到位的图用 HTML 内 `.ph-image` 占位（纯 CSS 渐变 + 文件名标签，无外部文件）。
+- 真实图存放：品牌 `assets/brand/`，功能截图 `assets/screenshots/`，产品截图 `assets/products/`。
+- 接入方式：在对应 `.ph-image` 容器内放 `<img loading="lazy">`；CSS 已适配铺满，无需改样式。
+- 清单与状态见 `docs/PRODUCT-SITE-PRD.md`。

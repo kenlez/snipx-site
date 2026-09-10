@@ -811,15 +811,6 @@ button {
   color: var(--faint);
 }
 
-.footer-icp {
-  color: var(--muted);
-  transition: color 180ms ease;
-}
-
-.footer-icp:hover {
-  color: var(--text);
-}
-
 /* ===== Reveal 动效 ===== */
 .reveal {
   opacity: 0;

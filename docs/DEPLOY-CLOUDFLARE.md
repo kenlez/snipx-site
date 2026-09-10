@@ -1,4 +1,4 @@
-# Cloudflare Pages 部署指南（备案期临时方案）
+# Cloudflare Pages 部署指南（当前正式方案）
 
 > 适用：SnipX-site 静态站点
 > 特点：**免备案、即开即用、无限流量、全球 CDN**，对国内访问延迟约 100–300ms（够用）
@@ -153,7 +153,7 @@ A: manifest hash 校验失败。不要手动构造 manifest + zip 上传，直�
 A: 首次使用需要先在 Dashboard 安装 GitHub App。也可改用 wrangler CLI（无需 GitHub App）。
 
 **Q: Cloudflare Pages 国内访问速度？**
-A: 平均 100–300ms，可用 https://www.webpagetest.org/ 自测。备案后切回腾讯云 CloudBase，国内延迟可降到 30–80ms。
+A: 平均 100–300ms，可用 https://www.webpagetest.org/ 自测。如需大陆更低延迟，可考虑境内托管（需 ICP 备案，本项目暂不需要）。
 
 **Q: 是否会被 Cloudflare 审查内容？**
 A: 不会。Cloudflare Pages 只托管静态文件，不审查内容。

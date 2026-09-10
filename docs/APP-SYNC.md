@@ -26,7 +26,7 @@
 | 隐私政策 URL | https://snipx.tongkun.top/privacy.html |
 | 支持 URL | https://snipx.tongkun.top/support.html |
 | 营销 URL | https://snipx.tongkun.top/ |
-| 营销域名 | https://snipx.tongkun.top（CF Pages 临时托管，待 ICP 备案后切腾讯云） |
+| 营销域名 | https://snipx.tongkun.top（Cloudflare Pages 托管，长期方案） |
 | 备用托管 | https://snipx-site.pages.dev |
 
 ---
@@ -99,8 +99,7 @@
 
 ## 待办
 
-- [ ] ICP 备案号回填到 footer（app 完成 `docs/icp-filing-guide.md` 后）
 - [ ] 联系信息（小红书 / 抖音 / QQ 群）补全到 footer
 - [ ] 真实品牌图标（用户提供 PNG/SVG）
-- [ ] 真实产品截图（用户提供 .webp，覆盖 `assets/images/placeholder/` 同名文件即可）
+- [x] 真实产品截图（已接入 `assets/screenshots/feature-*.webp`；`hero.webp` 待补）
 - [ ] App Store 审核通过后：回填 `index.html` 的 `#appstore-download`（`href` + `data-appstore-url`），移除 `.install-pending` 占位提示，并把营销 URL 切换为 App Store 应用页
