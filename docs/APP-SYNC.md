@@ -101,5 +101,5 @@
 
 - [ ] 联系信息（小红书 / 抖音 / QQ 群）补全到 footer
 - [ ] 真实品牌图标（用户提供 PNG/SVG）
-- [x] 真实产品截图（已接入 `assets/screenshots/feature-*.webp`；`hero.webp` 待补）
+- [x] 真实产品截图（已接入 `assets/screenshots/`：`hero.jpg` + `feature-*.webp`）
 - [ ] App Store 审核通过后：回填 `index.html` 的 `#appstore-download`（`href` + `data-appstore-url`），移除 `.install-pending` 占位提示，并把营销 URL 切换为 App Store 应用页

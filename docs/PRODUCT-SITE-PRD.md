@@ -29,7 +29,7 @@
 - 双 CTA：
   - 主：「下载 SnipX」（按钮）
   - 次：「查看功能」（锚点）
-- 主视觉：大图（占位 → `hero.webp`）
+- 主视觉：大图（`assets/screenshots/hero.jpg`）
 
 ### 2.3 Features 区（多行图文）
 
@@ -82,7 +82,7 @@
 | 文件名 | 尺寸建议 | 用途 | 状态 |
 |---|---|---|---|
 | `icon-snipx.png` | 256×256 | 品牌图标 / favicon | ✅ 已到位（`assets/brand/`，320×320） |
-| `hero.webp` | 1920×1200 | Hero 主视觉 | ⏳ 占位（待补） |
+| `hero.jpg` | 1920×1152 | Hero 主视觉 | ✅ 已到位（`assets/screenshots/`，原 PNG 4.6MB 压至 0.6MB） |
 | `feature-menu.webp` | 1280×800 | F1 菜单栏 | ✅ 已到位（`assets/screenshots/`） |
 | `feature-shortcut.webp` | 1280×800 | F2 快捷键 | ✅ 已到位 |
 | `feature-modes.webp` | 1280×800 | F3 截屏模式 | ✅ 已到位 |
@@ -104,7 +104,7 @@
 
 - [x] 真实品牌图标（`assets/brand/icon-snipx.png`）
 - [x] 真实功能截图（`assets/screenshots/feature-*.webp`）
-- [ ] Hero 主视觉 `hero.webp`
+- [x] Hero 主视觉 `hero.jpg`（原 PNG 压缩为 JPEG）
 - [x] 分发渠道：Mac App Store（不再提供 .dmg 直装）
 - [ ] App Store 应用页链接（回填 `#appstore-download`）
 - [ ] 联系信息（小红书 / 抖音 / QQ 群）

@@ -127,7 +127,7 @@ npx wrangler@latest pages deploy . --project-name=snipx-site
 
 ### 5.2 占位图替换为真实图
 
-1. 把真实图放到 `assets/images/{products,screenshots,brand}/` 对应位置，文件名保持一致（如 `hero.webp`）
+1. 把真实图放到 `assets/{brand,screenshots,products}/` 对应位置（如 `assets/screenshots/hero.jpg`）
 2. 重新部署（同上）
 3. 浏览器强制刷新（Cmd+Shift+R）查看效果
 
