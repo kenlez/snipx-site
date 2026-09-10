@@ -82,7 +82,7 @@
 - 版本号：1.0.0
 
 ### Meta
-- `og:image`: `assets/brand/icon-snipx.png`（占位）
+- `og:image`: `assets/brand/icon-snipx.png`（真实图标，源自 app 仓库 `SnipX/icon/snipx.png`）
 - description 含 OCR + Universal 2
 
 ---
@@ -101,6 +101,6 @@
 ## 待办
 
 - [ ] 联系信息（小红书 / 抖音 / QQ 群）补全到 footer
-- [ ] 真实品牌图标（用户提供 PNG/SVG）
+- [x] 真实品牌图标（`assets/brand/icon-snipx.png`，源自 app 仓库 `SnipX/icon/snipx.png`）
 - [x] 真实产品截图（已接入 `assets/screenshots/`：`hero.jpg` + `feature-*.webp`）
 - [ ] App Store 审核通过后：回填 `index.html` 的 `#appstore-download`（`href` + `data-appstore-url`），移除 `.install-pending` 占位提示，并把营销 URL 切换为 App Store 应用页

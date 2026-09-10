@@ -71,7 +71,7 @@
 
 - meta title：`SnipX - Mac 截屏与录屏，一触即达`
 - meta description：`SnipX：macOS 14+ 菜单栏截屏与 MP4 录屏原生应用。物理像素输出、可编辑快捷键、长截图拼接、本地 MP4 录制。零网络、零账号、零上传。`
-- OG image：品牌图标（占位 → `assets/brand/icon-snipx.png`）
+- OG image：品牌图标（`assets/brand/icon-snipx.png`）
 
 ## 4. 图片资源清单
 
@@ -81,7 +81,7 @@
 
 | 文件名 | 尺寸建议 | 用途 | 状态 |
 |---|---|---|---|
-| `icon-snipx.png` | 256×256 | 品牌图标 / favicon | ✅ 已到位（`assets/brand/`，320×320） |
+| `icon-snipx.png` | 256×256 | 品牌图标 / favicon | ✅ 已到位（`assets/brand/`，1024×1024，源自 app 仓库） |
 | `hero.jpg` | 1920×1152 | Hero 主视觉 | ✅ 已到位（`assets/screenshots/`，原 PNG 4.6MB 压至 0.6MB） |
 | `feature-menu.webp` | 1280×800 | F1 菜单栏 | ✅ 已到位（`assets/screenshots/`） |
 | `feature-shortcut.webp` | 1280×800 | F2 快捷键 | ✅ 已到位 |
