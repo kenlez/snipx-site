@@ -40,7 +40,7 @@
 | F1 | 菜单栏常驻 | 浮于菜单栏，点击即开 | 截屏 / 录屏 / 标注 / 设置 全部直达 | feature-menu.webp | 左图右文 |
 | F2 | 可编辑快捷键 | 全局快捷键可自由绑定 | 截屏、录屏、标注、长截图独立绑定 | feature-shortcut.webp | 左文右图 |
 | F3 | 四类截屏模式 | 区域 / 窗口 / 全屏 / 长截图 | 物理像素输出、自动命名、PNG 直存 | feature-modes.webp | 左图右文 |
-| F4 | 本地 OCR（0.1.99 新增） | 截图文字一键识别 | Vision 框架、中英混排、完全本地 | feature-ocr.webp | 左文右图 |
+| F4 | 本地 OCR（1.0.0 新增） | 截图文字一键识别 | Vision 框架、中英混排、完全本地 | feature-ocr.webp | 左文右图 |
 | F5 | 标注工具 | 矩形 / 箭头 / 文字 / 马赛克 | 可移动、可删除、撤销 / 重做、裁剪 | feature-annotation.webp | 左图右文 |
 | F6 | 本地 MP4 录制（SnipX Pro） | 倒计时、系统声+麦克风、自动恢复 | 区域/窗口/显示器、Recovery、头尾裁剪 | feature-recording.webp | 左文右图 |
 | F7 | 零数据外传 | 完全离线运行 | 无网络请求、无账号体系、无遥测 | feature-privacy.webp | 左图右文 |
@@ -54,7 +54,7 @@
 - 系统要求：macOS 14+、Apple Silicon / Intel
 
 ### 2.5 关于与隐私（About + Privacy）
-- 关于 SnipX：原生开发、维护计划、版本号（占位 → 0.1.99）
+- 关于 SnipX：原生开发、维护计划、版本号（1.0.0）
 - 隐私承诺：本地运行、数据不出本机
 - SnipX Pro：基础截屏永久免费；录屏/GIF ¥12 一次性买断（首发 ¥6）
 
@@ -113,5 +113,6 @@
 
 | 版本 | 日期 | 内容 |
 |---|---|---|
+| v0.3 | 2026-09-10 | 接入真实图片（hero.jpg + feature-*.webp + icon-snipx.png）；移除 ICP 备案占位；下载区改为 App Store 引导；版本号 0.1.99 → 1.0.0 |
 | v0.2 | 2026-09-05 | 新增 F4 本地 OCR feature 行；F6 录制补 SnipX Pro 说明；About 增 Pro 卡片；版本号 0.1.86 → 0.1.99；Hero tags 增 Universal 2；新增 support.html / privacy.html 两个内页（App Store Connect 必需 URL）；Footer 增支持/隐私链接 |
 | v0.1 | 2026-09-02 | 初版框架（占位图、占位文案） |
