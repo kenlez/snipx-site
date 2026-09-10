@@ -17,7 +17,7 @@
 | 当前版本 | **1.0.0** |
 | 系统要求 | **macOS 14.0+**（Sonoma 及以上） |
 | 架构 | **Universal 2**：arm64 + x86_64（Apple Silicon + Intel） |
-| 体积 | 约 12 MB |
+| 体积 | 仅 3 MB |
 | 价格模型 | 基础截屏永久免费；SnipX Pro ¥12 一次性买断（首发优惠 ¥6） |
 | 内购解锁范围 | MP4 录屏（区域 / 窗口 / 显示器）、GIF 录制、声音录制、摄像头画中画、异常恢复、头尾裁剪导出 |
 | Bundle ID | `com.brad.SnipX` |
@@ -68,7 +68,7 @@
 ### Install 区
 - 分发渠道：**Mac App Store**（不再提供 .dmg 直装；App Store 版内购走 Apple IAP）
 - 下载按钮：`#appstore-download` 为占位（`href="#"`、`data-appstore-url=""`），待 App Store 应用页上线后回填
-- 系统要求：`macOS 14+ · Universal 2（Apple Silicon + Intel）· 约 12 MB`
+- 系统要求：`macOS 14+ · Universal 2（Apple Silicon + Intel）· 仅 3 MB`
 - 附注：`基础截屏永久免费 · 录屏与 GIF 录制需 SnipX Pro（¥12 / 首发 ¥6）`
 
 ### About 区
