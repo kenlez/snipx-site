@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="description" content="Soporte de SnipX: FAQ, guía de permisos, canales de feedback, requisitos del sistema y notas de versión." />
+    <meta property="og:title" content="Soporte de SnipX · SnipX" />
+    <meta property="og:description" content="Soporte de SnipX: FAQ, guía de permisos, canales de feedback, requisitos del sistema y notas de versión." />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="es_ES" />
+    <title>Soporte de SnipX · SnipX</title>
+    <meta name="robots" content="index,follow" />
+    <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
+    <script>
+      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      (function () {{
+        try {{
+          var mode = localStorage.getItem("snipx-theme") || "system";
+          var resolved = mode === "system"
+            ? (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+            : mode;
+          document.documentElement.setAttribute("data-theme", resolved);
+          document.documentElement.setAttribute("data-theme-mode", mode);
+          var mc = document.querySelector('meta[name="theme-color"]');
+          if (mc) mc.setAttribute("content", resolved === "light" ? "#f5f5f0" : "#050505");
+        }} catch (e) {{}}
+      }})();
+    </script>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/i18n.css" />
+
+  <body>
+    <canvas id="space-canvas" aria-hidden="true"></canvas>
+
+    <div class="site-shell">
+      <header class="topbar is-stuck" id="topbar">
+        <div class="topbar-inner">
+          <a href="/es/" class="topbar-brand" aria-label="SnipX">
+            <img class="topbar-brand-mark" src="/assets/brand/icon-snipx.png" alt="" width="26" height="26" aria-hidden="true" />
+            <span class="topbar-brand-text">SnipX</span>
+          </a>
+
+          <nav class="topbar-nav" aria-label="主导航">
+            <a href="/es/#features">Características [MT]</a>
+            <a href="/es/#install">Descargar [MT]</a>
+            <a href="/es/#about">Acerca de [MT]</a>
+          </nav>
+
+          <div class="topbar-actions">
+            <div class="lang-switcher">
+              <button
+                class="lang-switcher-toggle"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-label="Language: Español"
+              >
+                <span class="lang-switcher-label">Español</span>
+                <span class="lang-switcher-chevron" aria-hidden="true">⌄</span>
+              </button>
+              <ul class="lang-switcher-menu" role="listbox" hidden></ul>
+            </div>
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="Tema: seguir sistema [MT]"
+              title="Tema: seguir sistema [MT]"
+              data-mode="system"
+            >
+              <span class="theme-toggle-icon" aria-hidden="true">◐</span>
+            </button>
+            <a href="/es/#install" class="topbar-cta">Descargar SnipX [MT]</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="app" class="legal-page">
+        <article class="legal">
+          <header class="legal-head">
+            <p class="legal-eyebrow">Support</p>
+            <h1 class="legal-title">Soporte de SnipX [MT]</h1>
+            <p class="legal-meta">
+              FAQ, guía de permisos y canales de feedback · para SnipX 1.0.0 y posteriores [MT]
+            </p>
+          </header>
+
+          <section class="legal-section">
+            <h2>Requisitos del sistema [MT]</h2>
+            <ul class="legal-list">
+              <li>macOS 14.0 Sonoma o posterior [MT]</li>
+              <li>Compatible con Apple Silicon (M1 / M2 / M3 / M4) y Mac Intel [MT]</li>
+              <li>
+                La compilación Universal 2 incluye ambas [MT] <code>arm64</code> 与
+                <code>x86_64</code>
+              </li>
+              <li>Captura, grabación y OCR se procesan en el dispositivo; la carga del producto, compra y restauración pueden requerir internet. [MT]</li>
+            </ul>
+          </section>
+
+          <section class="legal-section">
+            <h2>Primer inicio: guía de permisos [MT]</h2>
+            <p>
+              SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS
+              默认流程，不会启动即弹窗。
+            </p>
+            <ol class="legal-list">
+              <li>
+                <strong>屏幕录制</strong>：首次截屏或录屏时系统会弹窗。授权后到「系统设置 → 隐私与安全性 →
+                屏幕录制」可看到 SnipX。
+              </li>
+              <li>
+                <strong>麦克风</strong>：Se solicita solo al activar la captura de micrófono. [MT]
+              </li>
+              <li>
+                <strong>摄像头</strong>：Se solicita solo al activar la captura de cámara. [MT]
+              </li>
+              <li><strong>Audio del sistema: [MT]</strong>Para capturar el audio del ordenador, sigue el aviso de permiso de pantalla y audio del sistema de macOS. [MT]</li>
+            </ol>
+            <p>
+              如果误点了「拒绝」，可以到「系统设置 → 隐私与安全性」手动开启；SnipX
+              内置的「权限」面板也会引导你跳转到对应位置。
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>FAQ</h2>
+
+            <h3>P1: ¿SnipX se conecta a internet? ¿Sube mis capturas? [MT]</h3>
+            <p>
+              Captura, grabación, OCR y anotación se procesan en el dispositivo y nunca se suben al desarrollador. Las compras y restauraciones pasan por Apple y pueden requerir internet. Si compartes o envías por correo, el contenido se entrega al servicio correspondiente según tu acción. [MT]
+            </p>
+
+            <h3>P2: ¿Qué es SnipX Pro [MT]? ¿Qué funciones son de pago? [MT]</h3>
+            <p>
+              Captura, anotación, captura larga, fijado, copiar, guardar, compartir y otras funciones básicas son gratis para siempre. [MT]<strong
+                >SnipX Pro [MT](compra única, precio fijado por Apple) [MT]</strong
+              >desbloquea: [MT]
+            </p>
+            <ul class="legal-list">
+              <li>Grabación MP4 (región / pantalla seleccionada) [MT]</li>
+              <li>Captura GIF [MT]</li>
+              <li>Audio del sistema + micrófono a la vez [MT]</li>
+              <li>Cámara picture-in-picture [MT]</li>
+              <li>Cuenta atrás y recuperación tras cierre inesperado [MT]</li>
+              <li>Recortar inicio y fin y exportar [MT]</li>
+            </ul>
+
+            <h3>P3: ¿Cómo restauro una compra? [MT]</h3>
+            <p>
+              打开 SnipX → 菜单栏 → 设置 → 录屏 → 付费墙卡底部「恢复购买」按钮。App
+              会通过 StoreKit 2 重新校验你的购买状态。
+            </p>
+
+            <h3>P4: ¿Puedo cambiar una función ya autorizada? [MT]</h3>
+            <p>
+              Los atajos de captura, anotación y captura larga se personalizan en Ajustes → Atajos, con avisos automáticos ante conflictos. [MT]
+            </p>
+
+            <h3>P5: ¿Por qué no puedo capturar la propia ventana de SnipX? [MT]</h3>
+            <p>
+              SnipX 在录屏与截屏时会自动排除自身的菜单栏蒙层、操作浮层与录屏浮动条，避免污染画面。其他 SnipX
+              窗口（如设置、编辑录屏）默认会被正常捕获。
+            </p>
+
+            <h3>P6: ¿Qué idiomas admite el OCR? [MT]</h3>
+            <p>
+              1.0.0 起，OCR Soporte [MT]中文（简/繁）、英文及中英混合文本，由 Apple Vision
+              框架在本地完成识别，无网络依赖。
+            </p>
+
+            <h3>P7: ¿Dónde se guardan mis grabaciones? [MT]</h3>
+            <p>
+              Se exportan mediante un diálogo a la ubicación que elijas. Los archivos en curso se guardan en SnipX/Recovery dentro del directorio de soporte de la app (en el contenedor de macOS para la versión sandbox). La app conserva archivos recuperables; guarda lo necesario antes de salir. [MT]
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>Comentarios e informes de errores [MT]</h2>
+            <p>Si encuentras un bug, tienes una idea de función o quieres aportar: [MT]</p>
+            <ul class="legal-list">
+              <li>Correo: [MT]<a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a></li>
+              <li>Adjunta: versión de macOS, versión de SnipX, pasos para reproducir y, si es posible, una captura o grabación [MT]</li>
+              <li>
+                SnipX conserva los registros de cierre en [MT]
+                <code>Library/Logs/SnipX/CrashLogs/（沙盒版位于应用容器内）</code
+                >，adjuntarlos acelera mucho el diagnóstico [MT]
+              </li>
+            </ul>
+          </section>
+
+          <section class="legal-section">
+            <h2>Versiones y actualizaciones [MT]</h2>
+            <p>
+              Versión más reciente: [MT]<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。
+            </p>
+            <p>
+              Las notas completas están en [MT]
+              <a href="https://github.com/kenlez/SnipX/blob/main/RELEASE-NOTES.md" rel="noopener">RELEASE-NOTES.md</a>。
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>Enlaces relacionados [MT]</h2>
+            <ul class="legal-list">
+              <li><a href="./">Página del producto [MT]</a></li>
+              <li><a href="./privacy.html">Política de privacidad [MT]</a></li>
+              <li>
+                <a
+                  href="https://github.com/kenlez/SnipX"
+                  rel="noopener"
+                  >SnipX GitHub</a
+                >
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <img class="topbar-brand-mark" src="/assets/brand/icon-snipx.png" alt="" width="26" height="26" aria-hidden="true" />
+            <span class="footer-brand-text">SnipX</span>
+          </div>
+
+          <nav class="footer-links" aria-label="次要导航">
+            <a href="/es/">Inicio [MT]</a>
+            <a href="/es/#features">Características [MT]</a>
+            <a href="/es/#install">Descargar [MT]</a>
+            <a href="/es/support.html">Soporte [MT]</a>
+            <a href="/es/privacy.html">Política de privacidad [MT]</a>
+          </nav>
+
+          <div class="footer-contact">
+            <a href="mailto:snipx@tongkun.top" class="footer-contact-link">snipx@tongkun.top</a>
+            <span class="footer-sep" aria-hidden="true">·</span>
+            <span class="footer-meta">
+              Versión actual [MT] <span class="ph-version">1.0.0</span>
+            </span>
+          </div>
+
+          <p class="footer-copyright">
+            © 2026 SnipX. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/assets/js/space-canvas.js" defer></script>
+    <script src="/assets/js/site.js" defer></script>
+    <script src="/assets/js/i18n.js" defer></script>
+  </body>
+</html>

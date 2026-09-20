@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="description" content="SnipX 1.0.0：macOS 14+ 対応、メニュー常駐のスクリーンショット・MP4 録画ネイティブアプリ。物理ピクセル出力、オンデバイス OCR、ショートカット編集可、スクロールキャプチャ、Universal 2（Apple Silicon + Intel）対応。すべて Mac 内で処理。" />
+    <meta property="og:title" content="SnipX - Mac のスクリーンショットと録画を、ワンタップで" />
+    <meta property="og:description" content="SnipX 1.0.0：macOS 14+ 対応、メニュー常駐のスクリーンショット・MP4 録画ネイティブアプリ。物理ピクセル出力、オンデバイス OCR、ショートカット編集可、スクロールキャプチャ、Universal 2（Apple Silicon + Intel）対応。すべて Mac 内で処理。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:image" content="/assets/brand/icon-snipx.png" />
+    <title>SnipX - Mac のスクリーンショットと録画を、ワンタップで</title>
+    <meta name="robots" content="index,follow" />
+    <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
+    <script>
+      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      (function () {{
+        try {{
+          var mode = localStorage.getItem("snipx-theme") || "system";
+          var resolved = mode === "system"
+            ? (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+            : mode;
+          document.documentElement.setAttribute("data-theme", resolved);
+          document.documentElement.setAttribute("data-theme-mode", mode);
+          var mc = document.querySelector('meta[name="theme-color"]');
+          if (mc) mc.setAttribute("content", resolved === "light" ? "#f5f5f0" : "#050505");
+        }} catch (e) {{}}
+      }})();
+    </script>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/i18n.css" />
+
+  <body>
+    <canvas id="space-canvas" aria-hidden="true"></canvas>
+
+    <div class="site-shell">
+      <header class="topbar" id="topbar">
+        <div class="topbar-inner">
+          <a href="/ja/" class="topbar-brand" aria-label="SnipX">
+            <img class="topbar-brand-mark" src="/assets/brand/icon-snipx.png" alt="" width="26" height="26" aria-hidden="true" />
+            <span class="topbar-brand-text">SnipX</span>
+          </a>
+
+          <nav class="topbar-nav" aria-label="主导航">
+            <a href="/ja/#features">機能</a>
+            <a href="/ja/#install">ダウンロード</a>
+            <a href="/ja/#about">概要</a>
+          </nav>
+
+          <div class="topbar-actions">
+            <div class="lang-switcher">
+              <button
+                class="lang-switcher-toggle"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-label="Language: 日本語"
+              >
+                <span class="lang-switcher-label">日本語</span>
+                <span class="lang-switcher-chevron" aria-hidden="true">⌄</span>
+              </button>
+              <ul class="lang-switcher-menu" role="listbox" hidden></ul>
+            </div>
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="テーマ：システムに合わせる"
+              title="テーマ：システムに合わせる"
+              data-mode="system"
+            >
+              <span class="theme-toggle-icon" aria-hidden="true">◐</span>
+            </button>
+            <a href="/ja/#install" class="topbar-cta">SnipX をダウンロード</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="app">
+        <!-- Hero -->
+        <section id="home" class="hero">
+          <div class="hero-meteors" aria-hidden="true"></div>
+          <div class="hero-stardust" aria-hidden="true"></div>
+
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <p class="hero-eyebrow">macOS 14+ · ネイティブアプリ</p>
+              <h1 class="hero-title">SnipX</h1>
+              <p class="hero-title-note">
+                Mac のスクリーンショットと録画を、ワンタップで。
+              </p>
+              <p class="hero-desc">
+                ネイティブ AppKit + Swift + ScreenCaptureKit。物理ピクセル出力、デバイス内 OCR、編集可能なショートカット、スクロールキャプチャ、デバイス内 MP4 録画。すべての処理は Mac 上で完結し、SnipX アカウントの登録は不要です。
+              </p>
+              <p class="hero-tags">
+                <span class="hero-tag">macOS 14+</span>
+                <span class="hero-tag">Universal 2 · Apple Silicon + Intel</span>
+                <span class="hero-tag">デバイス内 OCR</span>
+                <span class="hero-tag">SnipX Pro 録画/GIF</span>
+              </p>
+
+              <div class="hero-cta">
+                <a href="#install" class="btn btn-primary">SnipX をダウンロード</a>
+                <a href="#features" class="btn btn-ghost">機能を見る</a>
+              </div>
+            </div>
+
+            <div class="hero-visual">
+              <div class="ph-image ph-image-hero" data-aspect="16/10">
+                <img
+                  src="/assets/screenshots/hero.jpg"
+                  alt="SnipX インターフェースのプレビュー"
+                  width="1920"
+                  height="1152"
+                  fetchpriority="high"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Features -->
+        <section id="features" class="section features-section">
+          <div class="section-head">
+            <p class="section-eyebrow">機能</p>
+            <h2 class="section-title">メニューバーに常駐、見てすぐキャプチャ</h2>
+            <p class="section-desc">
+              キャプチャ、注釈、録画、スクロールキャプチャを、メニューバーからワンタップで。
+            </p>
+          </div>
+
+          <div class="features">
+            <article class="feature-row" id="feature-menu">
+              <div class="feature-visual">
+                <div class="ph-image" data-aspect="16/10">
+                  <img src="/assets/screenshots/feature-menu.webp" alt="SnipX メニューバーのキャプチャ入口" width="1424" height="855" loading="lazy" />
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">メニューバーに常駐</p>
+                <h3 class="feature-title">クリックで開く、邪魔しない</h3>
+                <p class="feature-desc">
+                  SnipX は画面端のメニューバーに静かに常駐します。メインウィンドウを開かなくても、ワンクリックでキャプチャ / 録画の入口が現れます。
+                </p>
+                <ul class="feature-list">
+                  <li>キャプチャ、録画、注釈、設定にワンタップでアクセス</li>
+                  <li>フォーカスを奪わず、作業の邪魔をしない</li>
+                  <li>macOS のデザイン言語に準拠したネイティブのアイコン</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-row feature-row-reverse" id="feature-shortcut">
+              <div class="feature-visual">
+                <div class="ph-image" data-aspect="16/10">
+                  <img src="/assets/screenshots/feature-shortcut.webp" alt="SnipX グローバルショートカット設定" width="1362" height="912" loading="lazy" />
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">編集可能なショートカット</p>
+                <h3 class="feature-title">グローバルショートカットを自由に割り当て</h3>
+                <p class="feature-desc">
+                  キャプチャ、録画、注釈、スクロールキャプチャ — すべてのアクションに独立したショートカットを割り当てられ、競合があれば事前に警告します。
+                </p>
+                <ul class="feature-list">
+                  <li>単一キー / 組み合わせ / 修飾キーに対応</li>
+                  <li>競合検出とワンクリックでデフォルト復元</li>
+                  <li>録画とキャプチャは独立バインド、注釈は即時呼び出し</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-row" id="feature-modes">
+              <div class="feature-visual">
+                <div class="ph-image" data-aspect="16/10">
+                  <img src="/assets/screenshots/feature-modes.webp" alt="SnipX 範囲 / ウィンドウ / フルスクリーン / スクロールキャプチャ" width="1460" height="912" loading="lazy" />
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">4 つのキャプチャモード</p>
+                <h3 class="feature-title">範囲 / ウィンドウ / フルスクリーン / スクロール</h3>
+                <p class="feature-desc">
+                  物理ピクセル出力で、ディスプレイ倍率に合わせて自動レンダリング。ウィンドウキャプチャはアプリウィンドウの端を自動認識し、スクロールキャプチャは継ぎ目なく拼接します。
+                </p>
+                <ul class="feature-list">
+                  <li>範囲キャプチャ：ドラッグで選択、物理ピクセル精度</li>
+                  <li>ウィンドウキャプチャ：自動選択、背景透明</li>
+                  <li>フルスクリーンキャプチャ：複数ディスプレイを同時に</li>
+                  <li>スクロールキャプチャ：自動拼接、ズレなし</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-row feature-row-reverse" id="feature-ocr">
+              <div class="feature-visual">
+                <div class="ph-image" data-aspect="16/10">
+                  <img src="/assets/screenshots/feature-ocr.webp" alt="SnipX デバイス内 OCR でキャプチャ内テキストを認識" width="1460" height="912" loading="lazy" />
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">デバイス内 OCR（1.0.0 新機能）</p>
+                <h3 class="feature-title">キャプチャ内の文字をワンタップで認識</h3>
+                <p class="feature-desc">
+                  Apple Vision フレームワークにより、Mac 上で直接キャプチャ内の中国語・英語・中英混在テキストを認識します。結果は編集・コピー可能で、何もアップロードしません。
+                </p>
+                <ul class="feature-list">
+                  <li>簡体字・繁体字・英語および中英混在</li>
+                  <li>完全ローカル認識、画像とテキストは Mac 内</li>
+                  <li>認識後に編集、コピー、キャンセルが可能</li>
+                  <li>キャプチャ後の編集やテキスト抽出に最適</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-row" id="feature-annotation">
+              <div class="feature-visual">
+                <div class="ph-image" data-aspect="16/10">
+                  <img src="/assets/screenshots/feature-annotation.webp" alt="SnipX 注釈ツール" width="1460" height="912" loading="lazy" />
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">注釈ツール</p>
+                <h3 class="feature-title">四角形 / 矢印 / テキスト / モザイク</h3>
+                <p class="feature-desc">
+                  キャプチャ直後にすぐに注釈を追加でき、すべての要素は移動・削除・Undo / Redo が可能。クロップ、モザイク、カラーピッカーも標準搭載。
+                </p>
+                <ul class="feature-list">
+                  <li>四角形、楕円、矢印、ペン、テキスト</li>
+                  <li>モザイクで機密情報をぼかす</li>
+                  <li>元に戻す / やり直し / クロップ / カラーピッカー</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-row feature-row-reverse" id="feature-recording">
+              <div class="feature-visual">
+                <div class="ph-image" data-aspect="16/10">
+                  <img src="/assets/screenshots/feature-recording.webp" alt="SnipX MP4 録画" width="1460" height="912" loading="lazy" />
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">デバイス内 MP4 録画 · SnipX Pro</p>
+                <h3 class="feature-title">カウントダウン · システム音声 + マイク · 自動復元</h3>
+                <p class="feature-desc">
+                  ScreenCaptureKit ベースのローカル録画で、システム音声とマイクの同時録音に対応。カウントダウン、ディスク保護、異常復元も万全。先頭と末尾をトリムして書き出せるので、サードパーティ製エディタは不要です。
+                </p>
+                <ul class="feature-list">
+                  <li>範囲 / ウィンドウ / ディスプレイの 3 つの録画モード</li>
+                  <li>システム音声とマイクを 1 つのトラックに同時録音</li>
+                  <li>カウントダウンと状態表示で録画を止めない</li>
+                  <li>異常終了時は Recovery が録画を保護</li>
+                  <li>先頭と末尾をトリムして新しい MP4 に書き出し</li>
+                </ul>
+                <p class="feature-note">
+                  录屏与 GIF 録画需解锁 <strong>SnipX Pro</strong>（一次性买断，价格以 App Store 为准）。截屏、标注、长截图永久免费。
+                </p>
+              </div>
+            </article>
+
+            <article class="feature-row" id="feature-privacy">
+              <div class="feature-visual">
+                <div class="ph-image" data-aspect="16/10">
+                  <img src="/assets/screenshots/feature-privacy.webp" alt="SnipX は完全オフラインで動作" width="1460" height="912" loading="lazy" />
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">データは一切外部送信されません</p>
+                <h3 class="feature-title">完全オフラインで動作</h3>
+                <p class="feature-desc">
+                  キャプチャ、録画、OCR は Mac 上で処理され、コンテンツやテレメトリの自動アップロードは行いません。購入と復元は Apple のサービスを経由します。
+                </p>
+                <ul class="feature-list">
+                  <li>購入と復元にはネット接続が必要な場合があります</li>
+                  <li>アカウント・ログイン・クラウド同期なし</li>
+                  <li>サードパーティ SDK・トラッカーなし</li>
+                  <li>オープンソースに配慮したローカルストレージ</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Install -->
+        <section id="install" class="section install-section">
+          <div class="section-head">
+            <p class="section-eyebrow">ダウンロード</p>
+            <h2 class="section-title">Mac App Store で入手</h2>
+            <p class="section-desc">App Store でワンクリックインストール。アプリ内課金、アップデート、購入復元は Apple が処理します。</p>
+          </div>
+
+          <ol class="install-steps">
+            <li class="install-step">
+              <span class="install-step-num">1</span>
+              <h3 class="install-step-title">App Store を開く</h3>
+              <p class="install-step-desc">
+                下のボタンをクリックすると、Mac App Store の SnipX ページに移動します。
+              </p>
+            </li>
+            <li class="install-step">
+              <span class="install-step-num">2</span>
+              <h3 class="install-step-title">インストールして開く</h3>
+              <p class="install-step-desc">
+                「入手」をクリックして SnipX をインストールし、完了後は「アプリケーション」フォルダまたはメニューバーから起動してください。
+              </p>
+            </li>
+            <li class="install-step">
+              <span class="install-step-num">3</span>
+              <h3 class="install-step-title">システム権限を許可</h3>
+              <p class="install-step-desc">
+                使用する機能に応じて許可：画面収録、システム音声、マイク、カメラ。
+              </p>
+            </li>
+          </ol>
+
+          <div class="install-cta">
+            <a
+              id="appstore-download"
+              href="#"
+              data-appstore-url=""
+              class="btn btn-primary btn-lg"
+              aria-disabled="true"
+            >App Store でダウンロード</a>
+            <p class="install-pending">App Store ページは近日公開予定です。リンクは決まり次第反映します。</p>
+            <p class="install-req">macOS 14+ · Universal 2（Apple Silicon + Intel）· わずか 3 MB</p>
+            <p class="install-pro">
+              基础截屏永久免费 · 录屏与 GIF 録画需 <a href="./#about">SnipX Pro</a>（一次性买断）
+            </p>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section about-section">
+          <div class="section-head">
+            <p class="section-eyebrow">概要</p>
+            <h2 class="section-title">SnipX について</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card">
+              <h3 class="about-card-title">ネイティブ開発</h3>
+              <p class="about-card-desc">
+                Swift + AppKit + SwiftUI + ScreenCaptureKit + AVFoundation + Carbon で記述。WebView も Electron もラッパー層もありません。
+              </p>
+            </div>
+            <div class="about-card">
+              <h3 class="about-card-title">プライバシーを最優先</h3>
+              <p class="about-card-desc">
+                コンテンツ処理はすべて Mac 上で完結し、SnipX アカウントの登録は不要です。購入は Apple が処理し、能動的な共有はあなたの選択次第です。詳しくは
+                <a href="./privacy.html">プライバシーポリシー</a>。
+              </p>
+            </div>
+            <div class="about-card">
+              <h3 class="about-card-title">SnipX Pro</h3>
+              <p class="about-card-desc">
+                キャプチャ、注釈、スクロールキャプチャ、ピン留めは永久無料。MP4 録画と GIF 録画は買い切りでロック解除、価格は App Store 準拠です。
+              </p>
+            </div>
+            <div class="about-card">
+              <h3 class="about-card-title">継続的にメンテナンス</h3>
+              <p class="about-card-desc">
+                現在のバージョン <span class="ph-version">1.0.0</span>。すべてのバージョンは手動テスト、ユニットテスト、機能テストの三段階をクリアしています。ヘルプが必要ですか？
+                <a href="./support.html">サポートページ</a>。
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <img class="topbar-brand-mark" src="/assets/brand/icon-snipx.png" alt="" width="26" height="26" aria-hidden="true" />
+            <span class="footer-brand-text">SnipX</span>
+          </div>
+
+          <nav class="footer-links" aria-label="次要导航">
+            <a href="/ja/">ホーム</a>
+            <a href="/ja/#features">機能</a>
+            <a href="/ja/#install">ダウンロード</a>
+            <a href="/ja/support.html">サポート</a>
+            <a href="/ja/privacy.html">プライバシーポリシー</a>
+          </nav>
+
+          <div class="footer-contact">
+            <a href="mailto:snipx@tongkun.top" class="footer-contact-link">snipx@tongkun.top</a>
+            <span class="footer-sep" aria-hidden="true">·</span>
+            <span class="footer-meta">
+              現在のバージョン <span class="ph-version">1.0.0</span>
+            </span>
+          </div>
+
+          <p class="footer-copyright">
+            © 2026 SnipX. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/assets/js/space-canvas.js" defer></script>
+    <script src="/assets/js/site.js" defer></script>
+    <script src="/assets/js/i18n.js" defer></script>
+  </body>
+</html>
