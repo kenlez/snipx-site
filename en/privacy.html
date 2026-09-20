@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="description" content="SnipX Privacy Policy: captures, recordings, and OCR are processed on-device; purchases go through Apple." />
+    <meta property="og:title" content="SnipX Privacy Policy · SnipX" />
+    <meta property="og:description" content="SnipX Privacy Policy: captures, recordings, and OCR are processed on-device; purchases go through Apple." />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <title>SnipX Privacy Policy · SnipX</title>
+    <meta name="robots" content="index,follow" />
+    <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
+    <script>
+      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      (function () {{
+        try {{
+          var mode = localStorage.getItem("snipx-theme") || "system";
+          var resolved = mode === "system"
+            ? (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+            : mode;
+          document.documentElement.setAttribute("data-theme", resolved);
+          document.documentElement.setAttribute("data-theme-mode", mode);
+          var mc = document.querySelector('meta[name="theme-color"]');
+          if (mc) mc.setAttribute("content", resolved === "light" ? "#f5f5f0" : "#050505");
+        }} catch (e) {{}}
+      }})();
+    </script>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/i18n.css" />
+
+  <body>
+    <canvas id="space-canvas" aria-hidden="true"></canvas>
+
+    <div class="site-shell">
+      <header class="topbar is-stuck" id="topbar">
+        <div class="topbar-inner">
+          <a href="/en/" class="topbar-brand" aria-label="SnipX">
+            <img class="topbar-brand-mark" src="/assets/brand/icon-snipx.png" alt="" width="26" height="26" aria-hidden="true" />
+            <span class="topbar-brand-text">SnipX</span>
+          </a>
+
+          <nav class="topbar-nav" aria-label="主导航">
+            <a href="/en/#features">Features</a>
+            <a href="/en/#install">Download</a>
+            <a href="/en/#about">About</a>
+          </nav>
+
+          <div class="topbar-actions">
+            <div class="lang-switcher">
+              <button
+                class="lang-switcher-toggle"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-label="Language: English"
+              >
+                <span class="lang-switcher-label">English</span>
+                <span class="lang-switcher-chevron" aria-hidden="true">⌄</span>
+              </button>
+              <ul class="lang-switcher-menu" role="listbox" hidden></ul>
+            </div>
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="Theme: follow system"
+              title="Theme: follow system"
+              data-mode="system"
+            >
+              <span class="theme-toggle-icon" aria-hidden="true">◐</span>
+            </button>
+            <a href="/en/#install" class="topbar-cta">Download SnipX</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="app" class="legal-page">
+        <article class="legal">
+          <header class="legal-head">
+            <p class="legal-eyebrow">Privacy Policy</p>
+            <h1 class="legal-title">SnipX Privacy Policy</h1>
+            <p class="legal-meta">Last updated: September 6, 2026 · applies to the SnipX macOS app and this website</p>
+          </header>
+          <section class="legal-section">
+            <h2>Content is processed on-device</h2>
+            <p>Screenshots, recordings, audio, camera frames, OCR results, and annotations are all processed on your Mac. SnipX does not upload your content or local diagnostic logs, and does not embed ads, trackers, or third-party analytics SDKs.</p>
+            <p>When you actively use system share, send feedback, or save files into a cloud-synced folder, the content is handed to the corresponding service per your action, and that service's privacy policy applies.</p>
+          </section>
+          <section class="legal-section">
+            <h2>1. System permissions</h2>
+            <ul class="legal-list">
+              <li><strong>Screen recording:</strong>required for capture, scrolling capture, and recording.</li>
+              <li><strong>System audio:</strong>written into the local video when you enable computer-audio capture.</li>
+              <li><strong>Microphone:</strong>requested only when you enable mic capture, for recording audio.</li>
+              <li><strong>Camera:</strong>requested only when you enable camera overlay, for picture-in-picture.</li>
+            </ul>
+            <p>You can manage permissions in macOS System Settings → Privacy & Security. Declining or revoking a permission disables the related features. Global shortcuts don't require Accessibility; revealing files in Finder doesn't require Automation.</p>
+          </section>
+          <section class="legal-section">
+            <h2>2. Files, settings, and local logs</h2>
+            <p>Captures and recordings are exported via a save dialog to a location you choose. In-progress recordings live in the app's support directory under SnipX/Recovery; local diagnostic logs go to Library/Logs/SnipX/CrashLogs. In the sandbox build these directories live inside the macOS-assigned container for SnipX; the development build may also use a CrashLogs folder next to the project.</p>
+            <p>SnipX stores preferences such as shortcuts locally and checks available disk space to protect recordings. This data is not automatically sent to the developer. OCR runs on-device through the Apple Vision framework — images and recognition results never reach a server.</p>
+            <p>Uninstalling SnipX does not guarantee deletion of exported files, recovery files, or logs. Save anything you want to keep first, then clean up files you no longer need. Don't delete recovery files while a recording is in progress.</p>
+          </section>
+          <section class="legal-section">
+            <h2>3. Purchases & restore</h2>
+            <p>SnipX Pro is a one-time-purchase non-consumable in-app purchase. The price is shown in the app and in Apple's purchase confirmation. Product loading, purchase, restore, and transaction-state sync go through Apple's StoreKit service and may require internet.</p>
+            <p>Apple handles payments. SnipX verifies the transaction and entitlement data Apple provides locally to decide whether to unlock recording and GIF. The developer does not collect your card or payment-account info through the app. For information Apple handles, <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's Privacy Policy applies</a>。</p>
+          </section>
+          <section class="legal-section">
+            <h2>4. Contacting support & visiting the site</h2>
+            <p>When you email us, we receive the email address, problem description, and any attachments you provide — used only to reply and debug. Please don't send unrelated personal info, passwords, or sensitive screenshots. You can email the address below to request deletion of your feedback materials.</p>
+            <p>This site includes no ads or analytics SDKs. The hosting provider may process IP addresses, browser requests, and access logs needed to serve the site and keep it secure — that's separate from how the app processes captures locally.</p>
+          </section>
+          <section class="legal-section">
+            <h2>5. Changes & contact</h2>
+            <p>If our privacy practices change, we'll update this page and its date. For privacy questions or to request deletion of feedback materials, email <a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a>。</p>
+            <p>See usage notes at <a href="./support.html">Support</a>。</p>
+          </section>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <img class="topbar-brand-mark" src="/assets/brand/icon-snipx.png" alt="" width="26" height="26" aria-hidden="true" />
+            <span class="footer-brand-text">SnipX</span>
+          </div>
+
+          <nav class="footer-links" aria-label="次要导航">
+            <a href="/en/">Home</a>
+            <a href="/en/#features">Features</a>
+            <a href="/en/#install">Download</a>
+            <a href="/en/support.html">Support</a>
+            <a href="/en/privacy.html">Privacy Policy</a>
+          </nav>
+
+          <div class="footer-contact">
+            <a href="mailto:snipx@tongkun.top" class="footer-contact-link">snipx@tongkun.top</a>
+            <span class="footer-sep" aria-hidden="true">·</span>
+            <span class="footer-meta">
+              Current version <span class="ph-version">1.0.0</span>
+            </span>
+          </div>
+
+          <p class="footer-copyright">
+            © 2026 SnipX. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/assets/js/space-canvas.js" defer></script>
+    <script src="/assets/js/site.js" defer></script>
+    <script src="/assets/js/i18n.js" defer></script>
+  </body>
+</html>

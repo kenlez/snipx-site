@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="description" content="SnipX 1.0.0: a native macOS 14+ menu-bar app for screenshots and MP4 recording. Pixel-perfect output, on-device OCR, editable shortcuts, scrolling capture, Universal 2 (Apple Silicon + Intel). Everything stays on your Mac." />
+    <meta property="og:title" content="SnipX - Mac screenshots & recording, one tap away" />
+    <meta property="og:description" content="SnipX 1.0.0: a native macOS 14+ menu-bar app for screenshots and MP4 recording. Pixel-perfect output, on-device OCR, editable shortcuts, scrolling capture, Universal 2 (Apple Silicon + Intel). Everything stays on your Mac." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="/assets/brand/icon-snipx.png" />
+    <title>SnipX - Mac screenshots & recording, one tap away</title>
+    <meta name="robots" content="index,follow" />
+    <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
+    <script>
+      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      (function () {{
+        try {{
+          var mode = localStorage.getItem("snipx-theme") || "system";
+          var resolved = mode === "system"
+            ? (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+            : mode;
+          document.documentElement.setAttribute("data-theme", resolved);
+          document.documentElement.setAttribute("data-theme-mode", mode);
+          var mc = document.querySelector('meta[name="theme-color"]');
+          if (mc) mc.setAttribute("content", resolved === "light" ? "#f5f5f0" : "#050505");
+        }} catch (e) {{}}
+      }})();
+    </script>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/i18n.css" />
+
+  <body>
+    <canvas id="space-canvas" aria-hidden="true"></canvas>
+
+    <div class="site-shell">
+      <header class="topbar" id="topbar">
+        <div class="topbar-inner">
+          <a href="/en/" class="topbar-brand" aria-label="SnipX">
+            <img class="topbar-brand-mark" src="/assets/brand/icon-snipx.png" alt="" width="26" height="26" aria-hidden="true" />
+            <span class="topbar-brand-text">SnipX</span>
+          </a>
+
+          <nav class="topbar-nav" aria-label="主导航">
+            <a href="/en/#features">Features</a>
+            <a href="/en/#install">Download</a>
+            <a href="/en/#about">About</a>
+          </nav>
+
+          <div class="topbar-actions">
+            <div class="lang-switcher">
+              <button
+                class="lang-switcher-toggle"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-label="Language: English"
+              >
+                <span class="lang-switcher-label">English</span>
+                <span class="lang-switcher-chevron" aria-hidden="true">⌄</span>
+              </button>
+              <ul class="lang-switcher-menu" role="listbox" hidden></ul>
+            </div>
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="Theme: follow system"
+              title="Theme: follow system"
+              data-mode="system"
+            >
+              <span class="theme-toggle-icon" aria-hidden="true">◐</span>
+            </button>
+            <a href="/en/#install" class="topbar-cta">Download SnipX</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="app">
+        <!-- Hero -->
+        <section id="home" class="hero">
+          <div class="hero-meteors" aria-hidden="true"></div>
+          <div class="hero-stardust" aria-hidden="true"></div>
+
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <p class="hero-eyebrow">macOS 14+ · Native app</p>
+              <h1 class="hero-title">SnipX</h1>
+              <p class="hero-title-note">
+                Mac screenshot & recording, one tap away.
+              </p>
+              <p class="hero-desc">
+                Native AppKit + Swift + ScreenCaptureKit. Pixel-perfect output, on-device OCR, editable shortcuts, scrolling capture, local MP4 recording. Everything stays on your Mac — no SnipX account required.
+              </p>
+              <p class="hero-tags">
+                <span class="hero-tag">macOS 14+</span>
+                <span class="hero-tag">Universal 2 · Apple Silicon + Intel</span>
+                <span class="hero-tag">On-device OCR</span>
+                <span class="hero-tag">SnipX Pro recording/GIF</span>
+              </p>
+
+              <div class="hero-cta">
+                <a href="#install" class="btn btn-primary">Download SnipX</a>
+                <a href="#features" class="btn btn-ghost">See features</a>
+              </div>
+            </div>
+
+            <div class="hero-visual">
+              <div class="ph-image ph-image-hero" data-aspect="16/10">
+                <img
+                  src="/assets/screenshots/hero.jpg"
+                  alt="SnipX interface preview"
+                  width="1920"
+                  height="1152"
+                  fetchpriority="high"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Features -->
+        <section id="features" class="section features-section">
+          <div class="section-head">
+            <p class="section-eyebrow">Features</p>
+            <h2 class="section-title">Always there in the menu bar</h2>
+            <p class="section-desc">
+              Capture, annotate, record, and scroll-capture — all from the menu bar in one tap.
+            </p>
+          </div>
+
+          <div class="features">
+            <article class="feature-row" id="feature-menu">
+              <div class="feature-visual">
+                <div class="ph-image" data-aspect="16/10">
+                  <img src="/assets/screenshots/feature-menu.webp" alt="SnipX menu bar capture entry" width="1424" height="855" loading="lazy" />
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">Lives in the menu bar</p>
+                <h3 class="feature-title">Click to open, never in the way</h3>
+                <p class="feature-desc">
+                  SnipX lives quietly in the corner of your menu bar. No main window to open — a single click reveals the capture / recording entry points.
+                </p>
+                <ul class="feature-list">
+                  <li>Capture, recording, annotation, settings — one tap each</li>
+                  <li>Never steals focus or breaks your flow</li>
+                  <li>Native menu bar icon that follows macOS design</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-row feature-row-reverse" id="feature-shortcut">
+              <div class="feature-visual">
+                <div class="ph-image" data-aspect="16/10">
+                  <img src="/assets/screenshots/feature-shortcut.webp" alt="SnipX global shortcut settings" width="1362" height="912" loading="lazy" />
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">Editable shortcuts</p>
+                <h3 class="feature-title">Global shortcuts, freely assigned</h3>
+                <p class="feature-desc">
+                  Capture, recording, annotation, scroll-capture — each action gets its own shortcut, with warnings before any conflict.
+                </p>
+                <ul class="feature-list">
+                  <li>Single keys / combos / modifiers</li>
+                  <li>Conflict detection, one-click reset</li>
+                  <li>Independent shortcuts for record & capture, annotation on demand</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-row" id="feature-modes">
+              <div class="feature-visual">
+                <div class="ph-image" data-aspect="16/10">
+                  <img src="/assets/screenshots/feature-modes.webp" alt="SnipX region / window / full screen / scrolling capture" width="1460" height="912" loading="lazy" />
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">Four capture modes</p>
+                <h3 class="feature-title">Region / window / full screen / scrolling</h3>
+                <p class="feature-desc">
+                  Pixel-perfect output, automatically rendered at your display scale. Window capture auto-detects app window edges; scrolling capture stitches seamlessly.
+                </p>
+                <ul class="feature-list">
+                  <li>Region: drag to select, pixel-accurate</li>
+                  <li>Window: auto-detect, transparent background</li>
+                  <li>Full screen: multi-display at once</li>
+                  <li>Scrolling: auto-stitched, no seams</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-row feature-row-reverse" id="feature-ocr">
+              <div class="feature-visual">
+                <div class="ph-image" data-aspect="16/10">
+                  <img src="/assets/screenshots/feature-ocr.webp" alt="SnipX on-device OCR recognizes capture text" width="1460" height="912" loading="lazy" />
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">On-device OCR (new in 1.0.0)</p>
+                <h3 class="feature-title">One-tap text recognition from your captures</h3>
+                <p class="feature-desc">
+                  Powered by the Apple Vision framework, SnipX recognizes Chinese, English, and mixed Chinese/English text directly on your Mac. Edit or copy the result — nothing is uploaded.
+                </p>
+                <ul class="feature-list">
+                  <li>Simplified & Traditional Chinese, English, and mixed</li>
+                  <li>Fully on-device, never leaves your Mac</li>
+                  <li>Edit, copy, or cancel after recognition</li>
+                  <li>Great for extracting text from captures</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-row" id="feature-annotation">
+              <div class="feature-visual">
+                <div class="ph-image" data-aspect="16/10">
+                  <img src="/assets/screenshots/feature-annotation.webp" alt="SnipX annotation tools" width="1460" height="912" loading="lazy" />
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">Annotation tools</p>
+                <h3 class="feature-title">Rectangle / arrow / text / mosaic</h3>
+                <p class="feature-desc">
+                  Annotate the moment you capture. Move, delete, undo, redo anything. Crop, mosaic, and a color picker — all built in.
+                </p>
+                <ul class="feature-list">
+                  <li>Rectangle, ellipse, arrow, pen, text</li>
+                  <li>Mosaic sensitive details</li>
+                  <li>Undo / redo / crop / color picker</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-row feature-row-reverse" id="feature-recording">
+              <div class="feature-visual">
+                <div class="ph-image" data-aspect="16/10">
+                  <img src="/assets/screenshots/feature-recording.webp" alt="SnipX MP4 recording" width="1460" height="912" loading="lazy" />
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">Local MP4 recording · SnipX Pro</p>
+                <h3 class="feature-title">Countdown · system audio + mic · auto-recovery</h3>
+                <p class="feature-desc">
+                  Built on ScreenCaptureKit for fully local recording. Capture system audio and mic simultaneously, with countdown, disk protection, and crash recovery. Trim head & tail and export — no third-party editor needed.
+                </p>
+                <ul class="feature-list">
+                  <li>Region / window / display, three modes</li>
+                  <li>System audio + mic, single mixed track</li>
+                  <li>Countdown & live status, no interruption</li>
+                  <li>Crash recovery preserves the last clip</li>
+                  <li>Trim head & tail, export a new MP4</li>
+                </ul>
+                <p class="feature-note">
+                  录屏与 GIF capture需解锁 <strong>SnipX Pro</strong>（一次性买断，价格以 App Store 为准）。截屏、标注、长截图永久免费。
+                </p>
+              </div>
+            </article>
+
+            <article class="feature-row" id="feature-privacy">
+              <div class="feature-visual">
+                <div class="ph-image" data-aspect="16/10">
+                  <img src="/assets/screenshots/feature-privacy.webp" alt="SnipX runs fully offline" width="1460" height="912" loading="lazy" />
+                </div>
+              </div>
+              <div class="feature-copy">
+                <p class="feature-eyebrow">Zero data leaving your Mac</p>
+                <h3 class="feature-title">Fully offline</h3>
+                <p class="feature-desc">
+                  Capture, recording, and OCR are processed locally. Nothing is uploaded, and there is no telemetry. Purchases and restore go through Apple.
+                </p>
+                <ul class="feature-list">
+                  <li>Purchases & restore may need internet</li>
+                  <li>No account, no sign-in, no cloud sync</li>
+                  <li>No third-party SDK, no trackers</li>
+                  <li>Local-first storage, friendly to open source</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Install -->
+        <section id="install" class="section install-section">
+          <div class="section-head">
+            <p class="section-eyebrow">Download</p>
+            <h2 class="section-title">Get it on the Mac App Store</h2>
+            <p class="section-desc">One-click install on the App Store. Purchases, updates, and restore are handled by Apple.</p>
+          </div>
+
+          <ol class="install-steps">
+            <li class="install-step">
+              <span class="install-step-num">1</span>
+              <h3 class="install-step-title">Go to the App Store</h3>
+              <p class="install-step-desc">
+                Tap the button below to jump to SnipX on the Mac App Store.
+              </p>
+            </li>
+            <li class="install-step">
+              <span class="install-step-num">2</span>
+              <h3 class="install-step-title">Install & open</h3>
+              <p class="install-step-desc">
+                Tap "Get" to install SnipX, then launch from Applications or the menu bar.
+              </p>
+            </li>
+            <li class="install-step">
+              <span class="install-step-num">3</span>
+              <h3 class="install-step-title">Grant system permissions</h3>
+              <p class="install-step-desc">
+                Authorize per feature: screen recording, system audio, microphone, and camera.
+              </p>
+            </li>
+          </ol>
+
+          <div class="install-cta">
+            <a
+              id="appstore-download"
+              href="#"
+              data-appstore-url=""
+              class="btn btn-primary btn-lg"
+              aria-disabled="true"
+            >Get SnipX on the App Store</a>
+            <p class="install-pending">The App Store listing is coming soon — link will be filled in.</p>
+            <p class="install-req">macOS 14+ · Universal 2 (Apple Silicon + Intel) · only 3 MB</p>
+            <p class="install-pro">
+              基础截屏永久免费 · 录屏与 GIF capture需 <a href="./#about">SnipX Pro</a>（一次性买断）
+            </p>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section about-section">
+          <div class="section-head">
+            <p class="section-eyebrow">About</p>
+            <h2 class="section-title">About SnipX</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card">
+              <h3 class="about-card-title">Built native</h3>
+              <p class="about-card-desc">
+                Written in Swift + AppKit + SwiftUI + ScreenCaptureKit + AVFoundation + Carbon. No WebView, no Electron, no wrapper layer.
+              </p>
+            </div>
+            <div class="about-card">
+              <h3 class="about-card-title">Privacy first</h3>
+              <p class="about-card-desc">
+                All processing stays on your Mac — no SnipX account required. Purchases go through Apple; sharing is always your choice. Details in
+                <a href="./privacy.html">Privacy Policy</a>。
+              </p>
+            </div>
+            <div class="about-card">
+              <h3 class="about-card-title">SnipX Pro</h3>
+              <p class="about-card-desc">
+                Capture, annotation, scrolling capture, and pinning stay free forever. A one-time purchase unlocks MP4 recording and GIF capture. Price set in the App Store.
+              </p>
+            </div>
+            <div class="about-card">
+              <h3 class="about-card-title">Continuously maintained</h3>
+              <p class="about-card-desc">
+                Current version <span class="ph-version">1.0.0</span>。Every release goes through manual testing, unit tests, and functional tests. Need help?
+                <a href="./support.html">support page</a>。
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <img class="topbar-brand-mark" src="/assets/brand/icon-snipx.png" alt="" width="26" height="26" aria-hidden="true" />
+            <span class="footer-brand-text">SnipX</span>
+          </div>
+
+          <nav class="footer-links" aria-label="次要导航">
+            <a href="/en/">Home</a>
+            <a href="/en/#features">Features</a>
+            <a href="/en/#install">Download</a>
+            <a href="/en/support.html">Support</a>
+            <a href="/en/privacy.html">Privacy Policy</a>
+          </nav>
+
+          <div class="footer-contact">
+            <a href="mailto:snipx@tongkun.top" class="footer-contact-link">snipx@tongkun.top</a>
+            <span class="footer-sep" aria-hidden="true">·</span>
+            <span class="footer-meta">
+              Current version <span class="ph-version">1.0.0</span>
+            </span>
+          </div>
+
+          <p class="footer-copyright">
+            © 2026 SnipX. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/assets/js/space-canvas.js" defer></script>
+    <script src="/assets/js/site.js" defer></script>
+    <script src="/assets/js/i18n.js" defer></script>
+  </body>
+</html>

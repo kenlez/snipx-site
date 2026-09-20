@@ -23,11 +23,12 @@
 | Bundle ID | `com.brad.SnipX` |
 | 内购产品 ID | `com.brad.SnipX.pro.unlock` |
 | 客服邮箱 | `snipx@tongkun.top` |
-| 隐私政策 URL | https://snipx.tongkun.top/privacy.html |
-| 支持 URL | https://snipx.tongkun.top/support.html |
+| 隐私政策 URL | https://snipx.tongkun.top/{lang}/privacy.html （7 语，根路径自动判断） |
+| 支持 URL | https://snipx.tongkun.top/{lang}/support.html （7 语，根路径自动判断） |
 | 营销 URL | https://snipx.tongkun.top/ |
 | 营销域名 | https://snipx.tongkun.top（Cloudflare Pages 托管，长期方案） |
 | 备用托管 | https://snipx-site.pages.dev |
+| 支持语种 | zh-CN / zh-TW / en / ja / ko / es / pt（详见 `docs/I18N.md`） |
 
 ---
 

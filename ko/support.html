@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="description" content="SnipX 지원: FAQ, 권한 안내, 피드백 채널, 시스템 요구 사항 및 릴리스 노트." />
+    <meta property="og:title" content="SnipX 지원 · SnipX" />
+    <meta property="og:description" content="SnipX 지원: FAQ, 권한 안내, 피드백 채널, 시스템 요구 사항 및 릴리스 노트." />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="ko_KR" />
+    <title>SnipX 지원 · SnipX</title>
+    <meta name="robots" content="index,follow" />
+    <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
+    <script>
+      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      (function () {{
+        try {{
+          var mode = localStorage.getItem("snipx-theme") || "system";
+          var resolved = mode === "system"
+            ? (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+            : mode;
+          document.documentElement.setAttribute("data-theme", resolved);
+          document.documentElement.setAttribute("data-theme-mode", mode);
+          var mc = document.querySelector('meta[name="theme-color"]');
+          if (mc) mc.setAttribute("content", resolved === "light" ? "#f5f5f0" : "#050505");
+        }} catch (e) {{}}
+      }})();
+    </script>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/i18n.css" />
+
+  <body>
+    <canvas id="space-canvas" aria-hidden="true"></canvas>
+
+    <div class="site-shell">
+      <header class="topbar is-stuck" id="topbar">
+        <div class="topbar-inner">
+          <a href="/ko/" class="topbar-brand" aria-label="SnipX">
+            <img class="topbar-brand-mark" src="/assets/brand/icon-snipx.png" alt="" width="26" height="26" aria-hidden="true" />
+            <span class="topbar-brand-text">SnipX</span>
+          </a>
+
+          <nav class="topbar-nav" aria-label="主导航">
+            <a href="/ko/#features">기능</a>
+            <a href="/ko/#install">다운로드</a>
+            <a href="/ko/#about">정보</a>
+          </nav>
+
+          <div class="topbar-actions">
+            <div class="lang-switcher">
+              <button
+                class="lang-switcher-toggle"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-label="Language: 한국어"
+              >
+                <span class="lang-switcher-label">한국어</span>
+                <span class="lang-switcher-chevron" aria-hidden="true">⌄</span>
+              </button>
+              <ul class="lang-switcher-menu" role="listbox" hidden></ul>
+            </div>
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="테마: 시스템과 동기화"
+              title="테마: 시스템과 동기화"
+              data-mode="system"
+            >
+              <span class="theme-toggle-icon" aria-hidden="true">◐</span>
+            </button>
+            <a href="/ko/#install" class="topbar-cta">SnipX 다운로드</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="app" class="legal-page">
+        <article class="legal">
+          <header class="legal-head">
+            <p class="legal-eyebrow">Support</p>
+            <h1 class="legal-title">SnipX 지원</h1>
+            <p class="legal-meta">
+              FAQ, 권한 안내, 피드백 채널 · SnipX 1.0.0 이상 버전 기준
+            </p>
+          </header>
+
+          <section class="legal-section">
+            <h2>시스템 요구 사항</h2>
+            <ul class="legal-list">
+              <li>macOS 14.0 Sonoma 이상</li>
+              <li>Apple Silicon (M1 / M2 / M3 / M4) 및 Intel Mac 지원</li>
+              <li>
+                Universal 2 빌드는 다음 두 가지 모두 포함 <code>arm64</code> 与
+                <code>x86_64</code>
+              </li>
+              <li>캡처, 녹화, OCR은 Mac에서 처리되며 상품 로드, 구매, 복구에는 인터넷 연결이 필요할 수 있습니다.</li>
+            </ul>
+          </section>
+
+          <section class="legal-section">
+            <h2>최초 실행: 권한 안내</h2>
+            <p>
+              SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS
+              默认流程，不会启动即弹窗。
+            </p>
+            <ol class="legal-list">
+              <li>
+                <strong>屏幕录制</strong>：首次截屏或录屏时系统会弹窗。授权后到「系统设置 → 隐私与安全性 →
+                屏幕录制」可看到 SnipX。
+              </li>
+              <li>
+                <strong>麦克风</strong>：마이크 녹음을 활성화했을 때만 요청됩니다.
+              </li>
+              <li>
+                <strong>摄像头</strong>：카메라 캡처를 활성화했을 때만 요청됩니다.
+              </li>
+              <li><strong>시스템 음성:</strong>컴퓨터 음성을 녹음할 때는 macOS의 화면 및 시스템 음성 녹화 권한 안내를 따르세요.</li>
+            </ol>
+            <p>
+              如果误点了「拒绝」，可以到「系统设置 → 隐私与安全性」手动开启；SnipX
+              内置的「权限」面板也会引导你跳转到对应位置。
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>FAQ</h2>
+
+            <h3>Q1: SnipX는 인터넷에 연결되나요? 내 캡처를 업로드하나요?</h3>
+            <p>
+              캡처, 녹화, OCR, 주석은 로컬에서 처리되며 개발자에게 자동으로 업로드되지 않습니다. 구매와 복구는 Apple 서비스를 통해 처리되며 인터넷 연결이 필요할 수 있고, 능동적 공유나 이메일 발신 시 콘텐츠는 사용자의 작업에 따라 해당 서비스로 전달됩니다.
+            </p>
+
+            <h3>Q2: SnipX Pro란? 어떤 기능이 유료인가요?</h3>
+            <p>
+              캡처, 주석, 스크롤 캡처, 고정하기, 복사, 저장, 공유 등 기본 기능은 영구 무료입니다.<strong
+                >SnipX Pro(일회성 구매, 가격은 Apple 구매 화면 기준)</strong
+              >잠금 해제 시 제공:
+            </p>
+            <ul class="legal-list">
+              <li>MP4 녹화 (선정 영역 / 디스플레이)</li>
+              <li>GIF 녹화</li>
+              <li>시스템 음성 + 마이크 동시 녹음</li>
+              <li>카메라 PIP</li>
+              <li>카운트다운 및 비정상 자동 복구</li>
+              <li>머리/꼬리 잘라 내보내기</li>
+            </ul>
+
+            <h3>Q3: 구매를 복구하려면 어떻게 하나요?</h3>
+            <p>
+              打开 SnipX → 菜单栏 → 设置 → 录屏 → 付费墙卡底部「恢复购买」按钮。App
+              会通过 StoreKit 2 重新校验你的购买状态。
+            </p>
+
+            <h3>Q4: 이미 활성화된 기능을 변경할 수 있나요?</h3>
+            <p>
+              캡처, 주석, 스크롤 캡처의 단축키는 「설정 → 단축키」에서 사용자 지정할 수 있으며 충돌 시 자동으로 경고합니다.
+            </p>
+
+            <h3>Q5: 왜 SnipX 자체 창은 캡처되지 않나요?</h3>
+            <p>
+              SnipX 在录屏与截屏时会自动排除自身的菜单栏蒙层、操作浮层与录屏浮动条，避免污染画面。其他 SnipX
+              窗口（如设置、编辑录屏）默认会被正常捕获。
+            </p>
+
+            <h3>Q6: OCR은 어떤 언어를 지원하나요?</h3>
+            <p>
+              1.0.0 起，OCR 지원中文（简/繁）、英文及中英混合文本，由 Apple Vision
+              框架在本地完成识别，无网络依赖。
+            </p>
+
+            <h3>Q7: 녹화 파일은 어디에 저장되나요?</h3>
+            <p>
+              저장 대화상자를 통해 사용자가 선택한 위치로 내보냅니다. 진행 중인 녹화 파일은 앱 지원 디렉터리의 SnipX/Recovery에 저장되며, 샌드박스 버전은 SnipX의 macOS 컨테이너 안에 있습니다. 앱은 복구 가능한 파일을 보존하므로 종료 전에 필요한 내용을 먼저 저장하세요.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>피드백 및 버그 신고</h2>
+            <p>버그를 발견했거나 기능 제안, 아이디어를 공유하고 싶다면:</p>
+            <ul class="legal-list">
+              <li>이메일:<a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a></li>
+              <li>다음 정보를 함께 보내주세요: macOS 버전, SnipX 버전, 재현 단계, 필요 시 스크린샷 또는 녹화</li>
+              <li>
+                SnipX는 비정상 종료 시 크래시 로그를 다음 위치에 보존합니다:
+                <code>Library/Logs/SnipX/CrashLogs/（沙盒版位于应用容器内）</code
+                >，신고 시 함께 첨부해 주시면 원인 파악이 빨라집니다
+              </li>
+            </ul>
+          </section>
+
+          <section class="legal-section">
+            <h2>버전 및 업데이트</h2>
+            <p>
+              최신 버전:<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。
+            </p>
+            <p>
+              전체 변경 내역은
+              <a href="https://github.com/kenlez/SnipX/blob/main/RELEASE-NOTES.md" rel="noopener">RELEASE-NOTES.md</a>。
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>관련 링크</h2>
+            <ul class="legal-list">
+              <li><a href="./">제품 홈</a></li>
+              <li><a href="./privacy.html">개인정보 처리방침</a></li>
+              <li>
+                <a
+                  href="https://github.com/kenlez/SnipX"
+                  rel="noopener"
+                  >SnipX GitHub</a
+                >
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <img class="topbar-brand-mark" src="/assets/brand/icon-snipx.png" alt="" width="26" height="26" aria-hidden="true" />
+            <span class="footer-brand-text">SnipX</span>
+          </div>
+
+          <nav class="footer-links" aria-label="次要导航">
+            <a href="/ko/">홈</a>
+            <a href="/ko/#features">기능</a>
+            <a href="/ko/#install">다운로드</a>
+            <a href="/ko/support.html">지원</a>
+            <a href="/ko/privacy.html">개인정보 처리방침</a>
+          </nav>
+
+          <div class="footer-contact">
+            <a href="mailto:snipx@tongkun.top" class="footer-contact-link">snipx@tongkun.top</a>
+            <span class="footer-sep" aria-hidden="true">·</span>
+            <span class="footer-meta">
+              현재 버전 <span class="ph-version">1.0.0</span>
+            </span>
+          </div>
+
+          <p class="footer-copyright">
+            © 2026 SnipX. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/assets/js/space-canvas.js" defer></script>
+    <script src="/assets/js/site.js" defer></script>
+    <script src="/assets/js/i18n.js" defer></script>
+  </body>
+</html>

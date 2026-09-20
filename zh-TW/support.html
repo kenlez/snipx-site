@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="description" content="SnipX 支援頁面：FAQ、權限引導、回饋渠道、系統需求與版本說明。" />
+    <meta property="og:title" content="SnipX 支援與說明 · SnipX" />
+    <meta property="og:description" content="SnipX 支援頁面：FAQ、權限引導、回饋渠道、系統需求與版本說明。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="zh_TW" />
+    <title>SnipX 支援與說明 · SnipX</title>
+    <meta name="robots" content="index,follow" />
+    <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
+    <script>
+      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      (function () {{
+        try {{
+          var mode = localStorage.getItem("snipx-theme") || "system";
+          var resolved = mode === "system"
+            ? (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+            : mode;
+          document.documentElement.setAttribute("data-theme", resolved);
+          document.documentElement.setAttribute("data-theme-mode", mode);
+          var mc = document.querySelector('meta[name="theme-color"]');
+          if (mc) mc.setAttribute("content", resolved === "light" ? "#f5f5f0" : "#050505");
+        }} catch (e) {{}}
+      }})();
+    </script>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/i18n.css" />
+
+  <body>
+    <canvas id="space-canvas" aria-hidden="true"></canvas>
+
+    <div class="site-shell">
+      <header class="topbar is-stuck" id="topbar">
+        <div class="topbar-inner">
+          <a href="/zh-TW/" class="topbar-brand" aria-label="SnipX">
+            <img class="topbar-brand-mark" src="/assets/brand/icon-snipx.png" alt="" width="26" height="26" aria-hidden="true" />
+            <span class="topbar-brand-text">SnipX</span>
+          </a>
+
+          <nav class="topbar-nav" aria-label="主导航">
+            <a href="/zh-TW/#features">特色</a>
+            <a href="/zh-TW/#install">下載</a>
+            <a href="/zh-TW/#about">關於</a>
+          </nav>
+
+          <div class="topbar-actions">
+            <div class="lang-switcher">
+              <button
+                class="lang-switcher-toggle"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-label="Language: 繁體中文"
+              >
+                <span class="lang-switcher-label">繁體中文</span>
+                <span class="lang-switcher-chevron" aria-hidden="true">⌄</span>
+              </button>
+              <ul class="lang-switcher-menu" role="listbox" hidden></ul>
+            </div>
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="主題：跟隨系統"
+              title="主題：跟隨系統"
+              data-mode="system"
+            >
+              <span class="theme-toggle-icon" aria-hidden="true">◐</span>
+            </button>
+            <a href="/zh-TW/#install" class="topbar-cta">下載 SnipX</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="app" class="legal-page">
+        <article class="legal">
+          <header class="legal-head">
+            <p class="legal-eyebrow">Support</p>
+            <h1 class="legal-title">SnipX 支援與說明</h1>
+            <p class="legal-meta">
+              FAQ、權限引導、回饋渠道 · 適用於 SnipX 1.0.0 及以上版本
+            </p>
+          </header>
+
+          <section class="legal-section">
+            <h2>系統需求</h2>
+            <ul class="legal-list">
+              <li>macOS 14.0 Sonoma 或更高版本</li>
+              <li>支援 Apple Silicon（M1 / M2 / M3 / M4）與 Intel Mac</li>
+              <li>
+                通用建置（Universal 2）同時包含 <code>arm64</code> 与
+                <code>x86_64</code>
+              </li>
+              <li>截圖、錄螢與 OCR 在本機處理；商品載入、購買與復原可能需要連線。</li>
+            </ul>
+          </section>
+
+          <section class="legal-section">
+            <h2>首次啟動：權限引導</h2>
+            <p>
+              SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS
+              默认流程，不会启动即弹窗。
+            </p>
+            <ol class="legal-list">
+              <li>
+                <strong>屏幕录制</strong>：首次截屏或录屏时系统会弹窗。授权后到「系统设置 → 隐私与安全性 →
+                屏幕录制」可看到 SnipX。
+              </li>
+              <li>
+                <strong>麦克风</strong>：僅在你開啟「錄製麥克風」開關時申請。
+              </li>
+              <li>
+                <strong>摄像头</strong>：僅在你開啟「錄製攝影機」開關時申請。
+              </li>
+              <li><strong>系統聲音：</strong>錄製電腦聲音時，按 macOS 的螢幕與系統音訊錄製權限提示操作。</li>
+            </ol>
+            <p>
+              如果误点了「拒绝」，可以到「系统设置 → 隐私与安全性」手动开启；SnipX
+              内置的「权限」面板也会引导你跳转到对应位置。
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>FAQ</h2>
+
+            <h3>Q1：SnipX 連線嗎？會上傳我的截圖嗎？</h3>
+            <p>
+              截圖、錄螢、OCR 與標註在本機處理，不會自動上傳給開發者。購買與復原透過 Apple 服務完成，可能需要連線；主動分享或發郵件時，內容按你的操作交給相應服務。
+            </p>
+
+            <h3>Q2：SnipX Pro 是什麼？哪些功能需要付費？</h3>
+            <p>
+               一鍵永久免費。<strong
+                >SnipX Pro（一次性買斷，價格以 Apple 購買介面為準）</strong
+              >解鎖：
+            </p>
+            <ul class="legal-list">
+              <li>MP4 錄螢（選定區域 / 顯示器）</li>
+              <li>GIF 錄製</li>
+              <li>系統聲音 + 麥克風同時錄製</li>
+              <li>攝影機子母畫面</li>
+              <li>倒數計時與異常自動復原</li>
+              <li>頭尾裁剪匯出</li>
+            </ul>
+
+            <h3>Q3：如何復原購買？</h3>
+            <p>
+              打开 SnipX → 菜单栏 → 设置 → 录屏 → 付费墙卡底部「恢复购买」按钮。App
+              会通过 StoreKit 2 重新校验你的购买状态。
+            </p>
+
+            <h3>Q4：可以更換已授權的功能嗎？</h3>
+            <p>
+              截圖、標註、長截圖的快捷鍵都可以在「設定 → 快捷鍵」中自訂，衝突時會自動提示。
+            </p>
+
+            <h3>Q5：為什麼我截不到 SnipX 自己的視窗？</h3>
+            <p>
+              SnipX 在录屏与截屏时会自动排除自身的菜单栏蒙层、操作浮层与录屏浮动条，避免污染画面。其他 SnipX
+              窗口（如设置、编辑录屏）默认会被正常捕获。
+            </p>
+
+            <h3>Q6：OCR 支援哪些語言？</h3>
+            <p>
+              1.0.0 起，OCR 支援中文（简/繁）、英文及中英混合文本，由 Apple Vision
+              框架在本地完成识别，无网络依赖。
+            </p>
+
+            <h3>Q7：錄螢檔案儲存在哪裡？</h3>
+            <p>
+              透過儲存對話框匯出到你選擇的位置。錄製過程檔案儲存在應用支援目錄的 SnipX/Recovery 中，沙盒版位於 SnipX 的 macOS 容器內。應用程式會保留可復原檔案；退出前請先儲存需要的內容。
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>回饋與問題回報</h2>
+            <p>如果你遇到 bug、有功能建議或希望貢獻想法：</p>
+            <ul class="legal-list">
+              <li>電子郵件：<a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a></li>
+              <li>請附上：macOS 版本、SnipX 版本、重現步驟、必要時附截圖或錄螢</li>
+              <li>
+                SnipX 在異常退出時會保留當機記錄到
+                <code>Library/Logs/SnipX/CrashLogs/（沙盒版位于应用容器内）</code
+                >，提交問題時一併附上可大幅加快定位
+              </li>
+            </ul>
+          </section>
+
+          <section class="legal-section">
+            <h2>版本與更新</h2>
+            <p>
+              目前最新版本：<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。
+            </p>
+            <p>
+              完整版本變更說明見
+              <a href="https://github.com/kenlez/SnipX/blob/main/RELEASE-NOTES.md" rel="noopener">RELEASE-NOTES.md</a>。
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>相關連結</h2>
+            <ul class="legal-list">
+              <li><a href="./">產品首頁</a></li>
+              <li><a href="./privacy.html">隱私政策</a></li>
+              <li>
+                <a
+                  href="https://github.com/kenlez/SnipX"
+                  rel="noopener"
+                  >SnipX GitHub</a
+                >
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <img class="topbar-brand-mark" src="/assets/brand/icon-snipx.png" alt="" width="26" height="26" aria-hidden="true" />
+            <span class="footer-brand-text">SnipX</span>
+          </div>
+
+          <nav class="footer-links" aria-label="次要导航">
+            <a href="/zh-TW/">首頁</a>
+            <a href="/zh-TW/#features">特色</a>
+            <a href="/zh-TW/#install">下載</a>
+            <a href="/zh-TW/support.html">支援</a>
+            <a href="/zh-TW/privacy.html">隱私政策</a>
+          </nav>
+
+          <div class="footer-contact">
+            <a href="mailto:snipx@tongkun.top" class="footer-contact-link">snipx@tongkun.top</a>
+            <span class="footer-sep" aria-hidden="true">·</span>
+            <span class="footer-meta">
+              目前版本 <span class="ph-version">1.0.0</span>
+            </span>
+          </div>
+
+          <p class="footer-copyright">
+            © 2026 SnipX. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/assets/js/space-canvas.js" defer></script>
+    <script src="/assets/js/site.js" defer></script>
+    <script src="/assets/js/i18n.js" defer></script>
+  </body>
+</html>

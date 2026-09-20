@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="description" content="Política de privacidad de SnipX: las capturas, grabaciones y OCR se procesan en el dispositivo; las compras pasan por Apple." />
+    <meta property="og:title" content="Política de privacidad de SnipX · SnipX" />
+    <meta property="og:description" content="Política de privacidad de SnipX: las capturas, grabaciones y OCR se procesan en el dispositivo; las compras pasan por Apple." />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="es_ES" />
+    <title>Política de privacidad de SnipX · SnipX</title>
+    <meta name="robots" content="index,follow" />
+    <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
+    <script>
+      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      (function () {{
+        try {{
+          var mode = localStorage.getItem("snipx-theme") || "system";
+          var resolved = mode === "system"
+            ? (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+            : mode;
+          document.documentElement.setAttribute("data-theme", resolved);
+          document.documentElement.setAttribute("data-theme-mode", mode);
+          var mc = document.querySelector('meta[name="theme-color"]');
+          if (mc) mc.setAttribute("content", resolved === "light" ? "#f5f5f0" : "#050505");
+        }} catch (e) {{}}
+      }})();
+    </script>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/i18n.css" />
+
+  <body>
+    <canvas id="space-canvas" aria-hidden="true"></canvas>
+
+    <div class="site-shell">
+      <header class="topbar is-stuck" id="topbar">
+        <div class="topbar-inner">
+          <a href="/es/" class="topbar-brand" aria-label="SnipX">
+            <img class="topbar-brand-mark" src="/assets/brand/icon-snipx.png" alt="" width="26" height="26" aria-hidden="true" />
+            <span class="topbar-brand-text">SnipX</span>
+          </a>
+
+          <nav class="topbar-nav" aria-label="主导航">
+            <a href="/es/#features">Características [MT]</a>
+            <a href="/es/#install">Descargar [MT]</a>
+            <a href="/es/#about">Acerca de [MT]</a>
+          </nav>
+
+          <div class="topbar-actions">
+            <div class="lang-switcher">
+              <button
+                class="lang-switcher-toggle"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-label="Language: Español"
+              >
+                <span class="lang-switcher-label">Español</span>
+                <span class="lang-switcher-chevron" aria-hidden="true">⌄</span>
+              </button>
+              <ul class="lang-switcher-menu" role="listbox" hidden></ul>
+            </div>
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="Tema: seguir sistema [MT]"
+              title="Tema: seguir sistema [MT]"
+              data-mode="system"
+            >
+              <span class="theme-toggle-icon" aria-hidden="true">◐</span>
+            </button>
+            <a href="/es/#install" class="topbar-cta">Descargar SnipX [MT]</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="app" class="legal-page">
+        <article class="legal">
+          <header class="legal-head">
+            <p class="legal-eyebrow">Privacy Policy</p>
+            <h1 class="legal-title">Política de privacidad de SnipX [MT]</h1>
+            <p class="legal-meta">Última actualización: 6 de septiembre de 2026 · se aplica a la app SnipX para macOS y a este sitio web [MT]</p>
+          </header>
+          <section class="legal-section">
+            <h2>El contenido se procesa en el dispositivo [MT]</h2>
+            <p>Capturas, grabaciones, audio, vídeo de cámara, resultados de OCR y anotaciones se procesan en tu Mac. SnipX no sube tu contenido ni registros de diagnóstico locales, ni integra anuncios, rastreadores ni SDKs de terceros. [MT]</p>
+            <p>Cuando compartes, envías comentarios o guardas archivos en una carpeta sincronizada en la nube, el contenido pasa al servicio correspondiente según tu acción y se aplica su política de privacidad. [MT]</p>
+          </section>
+          <section class="legal-section">
+            <h2>1. Permisos del sistema [MT]</h2>
+            <ul class="legal-list">
+              <li><strong>Grabación de pantalla: [MT]</strong>necesaria para captura, captura larga y grabación. [MT]</li>
+              <li><strong>Audio del sistema: [MT]</strong>se escribe en el vídeo local al activar la captura de audio del ordenador. [MT]</li>
+              <li><strong>Micrófono: [MT]</strong>se solicita solo al activar la captura de micrófono. [MT]</li>
+              <li><strong>Cámara: [MT]</strong>se solicita solo al activar la superposición de cámara (picture-in-picture). [MT]</li>
+            </ul>
+            <p>Gestiona los permisos en Ajustes del Sistema → Privacidad y seguridad de macOS. Denegar o revocar un permiso desactiva la función correspondiente. Los atajos globales no requieren Accesibilidad; mostrar archivos en Finder no requiere Automatización. [MT]</p>
+          </section>
+          <section class="legal-section">
+            <h2>2. Archivos, ajustes y registros locales [MT]</h2>
+            <p>Las capturas y grabaciones se exportan mediante un diálogo a la ubicación que elijas. Las grabaciones en curso se guardan en SnipX/Recovery dentro del directorio de soporte de la app; los registros diagnósticos locales van a Library/Logs/SnipX/CrashLogs. En la versión sandbox estas carpetas están dentro del contenedor asignado por macOS a SnipX; la versión de desarrollo puede usar una carpeta CrashLogs junto al proyecto. [MT]</p>
+            <p>La app guarda localmente ajustes como los atajos y comprueba el espacio en disco para proteger las grabaciones. Estos datos no se envían automáticamente al desarrollador. El OCR se ejecuta en el dispositivo con Apple Vision; las imágenes y resultados nunca llegan a un servidor. [MT]</p>
+            <p>Desinstalar la app no garantiza el borrado de archivos exportados, archivos de recuperación ni registros. Guarda primero lo que quieras conservar y luego limpia lo que no necesites. No borres archivos de recuperación durante una grabación. [MT]</p>
+          </section>
+          <section class="legal-section">
+            <h2>3. Compras y restauración [MT]</h2>
+            <p>SnipX Pro [MT] es una compra in-app no consumible de un solo pago. El precio se muestra en la app y en la confirmación de compra de Apple. La carga del producto, compra, restauración y sincronización del estado de la transacción pasan por StoreKit de Apple y pueden requerir internet. [MT]</p>
+            <p>Apple gestiona los pagos. SnipX verifica localmente la transacción y los datos de derecho que Apple proporciona para decidir si desbloquea grabación y GIF. El desarrollador no recoge datos de tarjeta ni de cuenta de pago a través de la app. Para la información que Apple trata, [MT] <a href="https://www.apple.com/legal/privacy/" rel="noopener">se aplica la Política de privacidad de Apple [MT]</a>。</p>
+          </section>
+          <section class="legal-section">
+            <h2>4. Contactar con soporte y visitar el sitio [MT]</h2>
+            <p>Cuando nos escribes, recibimos el correo, la descripción del problema y los adjuntos que envíes, que usamos solo para responder y depurar. No envíes datos personales no relacionados, contraseñas ni capturas sensibles. Puedes escribir a la dirección de abajo para solicitar la eliminación del material que proporcionaste. [MT]</p>
+            <p>Este sitio no incluye anuncios ni SDKs de análisis. El proveedor de hosting puede procesar direcciones IP, peticiones del navegador y registros de acceso necesarios para servir y asegurar el sitio, algo distinto del procesamiento local de capturas en la app. [MT]</p>
+          </section>
+          <section class="legal-section">
+            <h2>5. Cambios y contacto [MT]</h2>
+            <p>Si cambian nuestras prácticas de privacidad, actualizaremos esta página y su fecha. Para preguntas de privacidad o solicitudes de eliminación de material de feedback, escribe a [MT] <a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a>。</p>
+            <p>Las instrucciones de uso están en [MT] <a href="./support.html">Soporte y ayuda [MT]</a>。</p>
+          </section>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <img class="topbar-brand-mark" src="/assets/brand/icon-snipx.png" alt="" width="26" height="26" aria-hidden="true" />
+            <span class="footer-brand-text">SnipX</span>
+          </div>
+
+          <nav class="footer-links" aria-label="次要导航">
+            <a href="/es/">Inicio [MT]</a>
+            <a href="/es/#features">Características [MT]</a>
+            <a href="/es/#install">Descargar [MT]</a>
+            <a href="/es/support.html">Soporte [MT]</a>
+            <a href="/es/privacy.html">Política de privacidad [MT]</a>
+          </nav>
+
+          <div class="footer-contact">
+            <a href="mailto:snipx@tongkun.top" class="footer-contact-link">snipx@tongkun.top</a>
+            <span class="footer-sep" aria-hidden="true">·</span>
+            <span class="footer-meta">
+              Versión actual [MT] <span class="ph-version">1.0.0</span>
+            </span>
+          </div>
+
+          <p class="footer-copyright">
+            © 2026 SnipX. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/assets/js/space-canvas.js" defer></script>
+    <script src="/assets/js/site.js" defer></script>
+    <script src="/assets/js/i18n.js" defer></script>
+  </body>
+</html>
