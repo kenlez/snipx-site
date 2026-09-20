@@ -17,6 +17,22 @@
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="zh_CN" />
     <link id="favicon" rel="icon" href="assets/brand/icon-snipx.png" />
+    <script>
+      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      (function () {
+        try {
+          var mode = localStorage.getItem("snipx-theme") || "system";
+          var resolved = mode === "system"
+            ? (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+            : mode;
+          document.documentElement.setAttribute("data-theme", resolved);
+          document.documentElement.setAttribute("data-theme-mode", mode);
+          /* 同步 meta theme-color，浅色下用 #f5f5f0 让 Safari 地址栏配色匹配 */
+          var mc = document.querySelector('meta[name="theme-color"]');
+          if (mc) mc.setAttribute("content", resolved === "light" ? "#f5f5f0" : "#050505");
+        } catch (e) {}
+      })();
+    </script>
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/legal.css" />
     <title>SnipX 隐私政策 · SnipX</title>
@@ -39,6 +55,15 @@
           </nav>
 
           <div class="topbar-actions">
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="主题：跟随系统"
+              title="主题：跟随系统"
+              data-mode="system"
+            >
+              <span class="theme-toggle-icon" aria-hidden="true">◐</span>
+            </button>
             <a href="./#install" class="topbar-cta">下载 SnipX</a>
           </div>
         </div>

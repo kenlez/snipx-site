@@ -5,13 +5,42 @@
   color-scheme: dark;
   --bg: #050505;
   --bg-soft: #0b0c0e;
+  --bg-aura-blue: rgba(106, 167, 255, 0.18);
+  --bg-aura-pink: rgba(245, 168, 255, 0.12);
+  --bg-aura-cyan: rgba(113, 226, 212, 0.07);
   --panel: rgba(255, 255, 255, 0.055);
   --panel-strong: rgba(255, 255, 255, 0.1);
   --line: rgba(255, 255, 255, 0.14);
   --line-soft: rgba(255, 255, 255, 0.08);
+  --line-hover: rgba(255, 255, 255, 0.22);
   --text: #f7f7f4;
   --muted: rgba(247, 247, 244, 0.68);
   --faint: rgba(247, 247, 244, 0.45);
+  --text-on-primary: #050505;
+  --topbar-stuck-bg: rgba(11, 12, 14, 0.72);
+  --topbar-stuck-border: rgba(255, 255, 255, 0.06);
+  --cta-shadow: rgba(247, 247, 244, 0.12);
+  --cta-shadow-hover: rgba(247, 247, 244, 0.18);
+  --btn-primary-shadow: rgba(247, 247, 244, 0.16);
+  --btn-primary-shadow-hover: rgba(247, 247, 244, 0.22);
+  --footer-bg: rgba(8, 9, 11, 0.6);
+  --hero-title-grad-1: #ffffff;
+  --hero-title-grad-2: #ffffff;
+  --hero-title-grad-3: rgba(255, 255, 255, 0.74);
+  --hero-title-grad-4: rgba(255, 255, 255, 0.42);
+  --ph-bg-1: #0e1014;
+  --ph-bg-2: #15181f;
+  --ph-grid: rgba(255, 255, 255, 0.025);
+  --ph-icon: rgba(255, 255, 255, 0.4);
+  --ph-icon-glow: rgba(106, 167, 255, 0.3);
+  --ph-label-color: rgba(255, 255, 255, 0.45);
+  --ph-label-bg: rgba(0, 0, 0, 0.3);
+  --ph-label-border: rgba(255, 255, 255, 0.08);
+  --ph-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
+  --ph-inset: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  --ph-hero-shadow: 0 36px 90px rgba(0, 0, 0, 0.42),
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
   --accent-blue: #6aa7ff;
   --accent-pink: #f5a8ff;
   --accent-cyan: #71e2d4;
@@ -25,6 +54,119 @@
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+/* ===== Light theme override ===== */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f5f5f0;
+  --bg-soft: #ececea;
+  --bg-aura-blue: rgba(106, 167, 255, 0.10);
+  --bg-aura-pink: rgba(245, 168, 255, 0.08);
+  --bg-aura-cyan: rgba(113, 226, 212, 0.05);
+  --panel: rgba(20, 22, 28, 0.035);
+  --panel-strong: rgba(20, 22, 28, 0.07);
+  --line: rgba(20, 22, 28, 0.10);
+  --line-soft: rgba(20, 22, 28, 0.06);
+  --line-hover: rgba(20, 22, 28, 0.18);
+  --text: #1a1a1a;
+  --muted: rgba(26, 26, 26, 0.70);
+  --faint: rgba(26, 26, 26, 0.48);
+  --text-on-primary: #ffffff;
+  --topbar-stuck-bg: rgba(245, 245, 240, 0.82);
+  --topbar-stuck-border: rgba(20, 22, 28, 0.06);
+  --cta-shadow: rgba(26, 26, 26, 0.10);
+  --cta-shadow-hover: rgba(26, 26, 26, 0.16);
+  --btn-primary-shadow: rgba(26, 26, 26, 0.14);
+  --btn-primary-shadow-hover: rgba(26, 26, 26, 0.22);
+  --footer-bg: rgba(245, 245, 240, 0.7);
+  --hero-title-grad-1: #1a1a1a;
+  --hero-title-grad-2: #1a1a1a;
+  --hero-title-grad-3: rgba(26, 26, 26, 0.74);
+  --hero-title-grad-4: rgba(26, 26, 26, 0.42);
+  --ph-bg-1: #fafaf6;
+  --ph-bg-2: #ebe9e3;
+  --ph-grid: rgba(20, 22, 28, 0.04);
+  --ph-icon: rgba(20, 22, 28, 0.32);
+  --ph-icon-glow: rgba(106, 167, 255, 0.18);
+  --ph-label-color: rgba(20, 22, 28, 0.55);
+  --ph-label-bg: rgba(255, 255, 255, 0.7);
+  --ph-label-border: rgba(20, 22, 28, 0.08);
+  --ph-shadow: 0 24px 60px rgba(20, 22, 28, 0.10);
+  --ph-inset: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  --ph-hero-shadow: 0 36px 90px rgba(20, 22, 28, 0.12),
+    0 0 0 1px rgba(20, 22, 28, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  --accent-blue: #3a7bd5;
+  --accent-pink: #c75ad6;
+  --accent-cyan: #2bb5a6;
+  --accent-amber: #c98c2a;
+  --shadow: 0 24px 80px rgba(20, 22, 28, 0.18);
+}
+
+/* 浅色主题下隐藏星空 canvas（性能 + 可读性） */
+:root[data-theme="light"] #space-canvas {
+  display: none;
+}
+
+/* 浅色主题下隐藏 hero 流星（白色在浅色背景不可见） */
+:root[data-theme="light"] .hero-meteors {
+  display: none;
+}
+
+/* ===== Theme toggle button ===== */
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  margin-right: 8px;
+  padding: 0;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.theme-toggle:hover {
+  background: var(--panel-strong);
+  border-color: var(--line-hover);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+.theme-toggle:active {
+  transform: translateY(0);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+.theme-toggle-icon {
+  font-family:
+    "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji",
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+}
+
+@media (max-width: 560px) {
+  .theme-toggle {
+    width: 34px;
+    height: 34px;
+    margin-right: 6px;
+    font-size: 16px;
+  }
 }
 
 * {
@@ -42,13 +184,14 @@ body {
   min-height: 100%;
   margin: 0;
   background:
-    radial-gradient(circle at 74% 8%, rgba(106, 167, 255, 0.18), transparent 34rem),
-    radial-gradient(circle at 20% 22%, rgba(245, 168, 255, 0.12), transparent 28rem),
-    radial-gradient(circle at 52% 42%, rgba(113, 226, 212, 0.07), transparent 32rem),
+    radial-gradient(circle at 74% 8%, var(--bg-aura-blue), transparent 34rem),
+    radial-gradient(circle at 20% 22%, var(--bg-aura-pink), transparent 28rem),
+    radial-gradient(circle at 52% 42%, var(--bg-aura-cyan), transparent 32rem),
     var(--bg);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 220ms ease;
 }
 
 a {
@@ -99,8 +242,8 @@ button {
 
 .topbar.is-stuck {
   height: var(--topbar-h-on-scroll);
-  background: rgba(11, 12, 14, 0.72);
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+  background: var(--topbar-stuck-bg);
+  box-shadow: inset 0 -1px 0 var(--topbar-stuck-border);
   backdrop-filter: blur(24px) saturate(1.18);
   -webkit-backdrop-filter: blur(24px) saturate(1.18);
 }
@@ -160,18 +303,18 @@ button {
   padding: 0 18px;
   border-radius: 999px;
   background: var(--text);
-  color: var(--bg);
+  color: var(--text-on-primary);
   font-size: 14px;
   font-weight: 600;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease;
-  box-shadow: 0 10px 28px rgba(247, 247, 244, 0.12);
+  box-shadow: 0 10px 28px var(--cta-shadow);
 }
 
 .topbar-cta:hover {
   transform: translateY(-1px);
-  box-shadow: 0 14px 36px rgba(247, 247, 244, 0.18);
+  box-shadow: 0 14px 36px var(--cta-shadow-hover);
 }
 
 @media (max-width: 720px) {
@@ -262,10 +405,10 @@ button {
   font-weight: 700;
   background: linear-gradient(
     180deg,
-    #ffffff 0%,
-    #ffffff 35%,
-    rgba(255, 255, 255, 0.74) 75%,
-    rgba(255, 255, 255, 0.42) 100%
+    var(--hero-title-grad-1) 0%,
+    var(--hero-title-grad-2) 35%,
+    var(--hero-title-grad-3) 75%,
+    var(--hero-title-grad-4) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -341,13 +484,13 @@ button {
 
 .btn-primary {
   background: var(--text);
-  color: var(--bg);
-  box-shadow: 0 14px 36px rgba(247, 247, 244, 0.16);
+  color: var(--text-on-primary);
+  box-shadow: 0 14px 36px var(--btn-primary-shadow);
 }
 
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 18px 44px rgba(247, 247, 244, 0.22);
+  box-shadow: 0 18px 44px var(--btn-primary-shadow-hover);
 }
 
 .btn-ghost {
@@ -358,7 +501,7 @@ button {
 
 .btn-ghost:hover {
   background: var(--panel);
-  border-color: rgba(255, 255, 255, 0.24);
+  border-color: var(--line-hover);
 }
 
 /* ===== Section ===== */
@@ -528,7 +671,7 @@ button {
 
 .install-step:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.22);
+  border-color: var(--line-hover);
   background: var(--panel-strong);
 }
 
@@ -618,7 +761,7 @@ button {
 
 .about-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.22);
+  border-color: var(--line-hover);
   background: var(--panel-strong);
 }
 
@@ -651,15 +794,13 @@ button {
   aspect-ratio: var(--ph-aspect, 16 / 10);
   border-radius: var(--radius-lg);
   background:
-    radial-gradient(circle at 28% 22%, rgba(106, 167, 255, 0.18), transparent 60%),
-    radial-gradient(circle at 78% 78%, rgba(245, 168, 255, 0.16), transparent 60%),
-    linear-gradient(135deg, #0e1014 0%, #15181f 100%);
+    radial-gradient(circle at 28% 22%, var(--bg-aura-blue), transparent 60%),
+    radial-gradient(circle at 78% 78%, var(--bg-aura-pink), transparent 60%),
+    linear-gradient(135deg, var(--ph-bg-1) 0%, var(--ph-bg-2) 100%);
   border: 1px solid var(--line-soft);
   overflow: hidden;
   isolation: isolate;
-  box-shadow:
-    0 24px 60px rgba(0, 0, 0, 0.32),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  box-shadow: var(--ph-shadow), var(--ph-inset);
 }
 
 .ph-image::before {
@@ -667,8 +808,8 @@ button {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(var(--ph-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ph-grid) 1px, transparent 1px);
   background-size: 32px 32px;
   pointer-events: none;
   z-index: 0;
@@ -679,7 +820,7 @@ button {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.06), transparent 50%);
+    radial-gradient(circle at 50% 0%, var(--ph-grid), transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
@@ -694,8 +835,8 @@ button {
   z-index: 1;
   font-size: clamp(48px, 6vw, 80px);
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.4);
-  text-shadow: 0 4px 28px rgba(106, 167, 255, 0.3);
+  color: var(--ph-icon);
+  text-shadow: 0 4px 28px var(--ph-icon-glow);
   margin-bottom: 12px;
 }
 
@@ -704,12 +845,12 @@ button {
   z-index: 1;
   font-size: 13px;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--ph-label-color);
   letter-spacing: 0.04em;
   padding: 6px 14px;
   border-radius: 999px;
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--ph-label-bg);
+  border: 1px solid var(--ph-label-border);
 }
 
 /* 真实图到位后的样式（替换为 <img> 时无需改 CSS） */
@@ -726,10 +867,7 @@ button {
 .ph-image-hero {
   --ph-aspect: 16 / 10;
   border-radius: 28px;
-  box-shadow:
-    0 36px 90px rgba(0, 0, 0, 0.42),
-    0 0 0 1px rgba(255, 255, 255, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  box-shadow: var(--ph-hero-shadow);
 }
 
 /* ===== Footer ===== */
@@ -737,7 +875,7 @@ button {
   margin-top: 80px;
   padding: 56px 0 40px;
   border-top: 1px solid var(--line-soft);
-  background: rgba(8, 9, 11, 0.6);
+  background: var(--footer-bg);
   backdrop-filter: blur(16px) saturate(1.1);
   -webkit-backdrop-filter: blur(16px) saturate(1.1);
 }
