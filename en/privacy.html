@@ -82,13 +82,19 @@
             <h1 class="legal-title">SnipX Privacy Policy</h1>
             <p class="legal-meta">Last updated: September 6, 2026 · applies to the SnipX macOS app and this website</p>
           </header>
-          <section class="legal-section">
-            <h2>Content is processed on-device</h2>
+          <section class="legal-section" id="privacy-summary">
+            <header class="legal-section-head">
+              <span class="legal-section-num">00</span>
+              <h2>Content is processed on-device</h2>
+            </header>
             <p>Screenshots, recordings, audio, camera frames, OCR results, and annotations are all processed on your Mac. SnipX does not upload your content or local diagnostic logs, and does not embed ads, trackers, or third-party analytics SDKs.</p>
             <p>When you actively use system share, send feedback, or save files into a cloud-synced folder, the content is handed to the corresponding service per your action, and that service's privacy policy applies.</p>
           </section>
-          <section class="legal-section">
-            <h2>1. System permissions</h2>
+          <section class="legal-section" id="privacy-permissions">
+            <header class="legal-section-head">
+              <span class="legal-section-num">01</span>
+              <h2>系统权限</h2>
+            </header>
             <ul class="legal-list">
               <li><strong>Screen recording:</strong>required for capture, scrolling capture, and recording.</li>
               <li><strong>System audio:</strong>written into the local video when you enable computer-audio capture.</li>
@@ -97,24 +103,36 @@
             </ul>
             <p>You can manage permissions in macOS System Settings → Privacy & Security. Declining or revoking a permission disables the related features. Global shortcuts don't require Accessibility; revealing files in Finder doesn't require Automation.</p>
           </section>
-          <section class="legal-section">
-            <h2>2. Files, settings, and local logs</h2>
+          <section class="legal-section" id="privacy-files">
+            <header class="legal-section-head">
+              <span class="legal-section-num">02</span>
+              <h2>文件、设置与本地日志</h2>
+            </header>
             <p>Captures and recordings are exported via a save dialog to a location you choose. In-progress recordings live in the app's support directory under SnipX/Recovery; local diagnostic logs go to Library/Logs/SnipX/CrashLogs. In the sandbox build these directories live inside the macOS-assigned container for SnipX; the development build may also use a CrashLogs folder next to the project.</p>
             <p>SnipX stores preferences such as shortcuts locally and checks available disk space to protect recordings. This data is not automatically sent to the developer. OCR runs on-device through the Apple Vision framework — images and recognition results never reach a server.</p>
             <p>Uninstalling SnipX does not guarantee deletion of exported files, recovery files, or logs. Save anything you want to keep first, then clean up files you no longer need. Don't delete recovery files while a recording is in progress.</p>
           </section>
-          <section class="legal-section">
-            <h2>3. Purchases & restore</h2>
+          <section class="legal-section" id="privacy-purchase">
+            <header class="legal-section-head">
+              <span class="legal-section-num">03</span>
+              <h2>购买与恢复购买</h2>
+            </header>
             <p>SnipX Pro is a one-time-purchase non-consumable in-app purchase. The price is shown in the app and in Apple's purchase confirmation. Product loading, purchase, restore, and transaction-state sync go through Apple's StoreKit service and may require internet.</p>
             <p>Apple handles payments. SnipX verifies the transaction and entitlement data Apple provides locally to decide whether to unlock recording and GIF. The developer does not collect your card or payment-account info through the app. For information Apple handles, <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's Privacy Policy applies</a>。</p>
           </section>
-          <section class="legal-section">
-            <h2>4. Contacting support & visiting the site</h2>
+          <section class="legal-section" id="privacy-contact">
+            <header class="legal-section-head">
+              <span class="legal-section-num">04</span>
+              <h2>主动联系Support与访问官网</h2>
+            </header>
             <p>When you email us, we receive the email address, problem description, and any attachments you provide — used only to reply and debug. Please don't send unrelated personal info, passwords, or sensitive screenshots. You can email the address below to request deletion of your feedback materials.</p>
             <p>This site includes no ads or analytics SDKs. The hosting provider may process IP addresses, browser requests, and access logs needed to serve the site and keep it secure — that's separate from how the app processes captures locally.</p>
           </section>
-          <section class="legal-section">
-            <h2>5. Changes & contact</h2>
+          <section class="legal-section" id="privacy-changes">
+            <header class="legal-section-head">
+              <span class="legal-section-num">05</span>
+              <h2>政策变更与联系方式</h2>
+            </header>
             <p>If our privacy practices change, we'll update this page and its date. For privacy questions or to request deletion of feedback materials, email <a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a>。</p>
             <p>See usage notes at <a href="./support.html">Support</a>。</p>
           </section>

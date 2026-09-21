@@ -1960,13 +1960,19 @@ def body_privacy() -> str:
             <h1 class="legal-title">SnipX 隐私政策</h1>
             <p class="legal-meta">最后更新：2026 年 9 月 6 日 · 适用于 SnipX macOS 应用与本站</p>
           </header>
-          <section class="legal-section">
-            <h2>内容在本机处理</h2>
+          <section class="legal-section" id="privacy-summary">
+            <header class="legal-section-head">
+              <span class="legal-section-num">00</span>
+              <h2>内容在本机处理</h2>
+            </header>
             <p>截图、录屏、声音、摄像头画面、OCR 识别结果和标注均在你的 Mac 上处理。SnipX 不会自动把这些内容或本地诊断日志上传给开发者，不集成广告、追踪或第三方分析 SDK。</p>
             <p>当你主动使用系统分享、发送反馈或将文件保存到云盘同步目录时，内容会按你的操作交给相应服务，其处理方式适用该服务的隐私政策。</p>
           </section>
-          <section class="legal-section">
-            <h2>1. 系统权限</h2>
+          <section class="legal-section" id="privacy-permissions">
+            <header class="legal-section-head">
+              <span class="legal-section-num">01</span>
+              <h2>系统权限</h2>
+            </header>
             <ul class="legal-list">
               <li><strong>屏幕录制：</strong>用于截屏、长截图与录屏。</li>
               <li><strong>系统声音：</strong>在你启用电脑声音录制时写入本地视频。</li>
@@ -1975,24 +1981,36 @@ def body_privacy() -> str:
             </ul>
             <p>你可以在 macOS「系统设置 → 隐私与安全性」中管理权限。拒绝或撤销权限会影响对应功能。全局快捷键不要求额外开启辅助功能；在 Finder 中显示文件不要求自动化权限。</p>
           </section>
-          <section class="legal-section">
-            <h2>2. 文件、设置与本地日志</h2>
+          <section class="legal-section" id="privacy-files">
+            <header class="legal-section-head">
+              <span class="legal-section-num">02</span>
+              <h2>文件、设置与本地日志</h2>
+            </header>
             <p>截图与录屏通过保存对话框导出到你选择的位置。录屏过程文件保存在应用支持目录的 SnipX/Recovery 中；本地诊断日志保存在 Library/Logs/SnipX/CrashLogs 中。沙盒版的这些应用目录位于 macOS 为 SnipX 分配的容器内，开发测试版也可能使用项目旁的 CrashLogs 目录。</p>
             <p>应用在本机保存快捷键等偏好设置，并检查可用磁盘空间以保护录制文件。这些信息不会自动发送给开发者。OCR 使用 Apple Vision 框架在本机完成，不向服务器上传图片或识别结果。</p>
             <p>删除应用本身不保证删除已导出文件、恢复文件和日志。请先保存需要保留的内容，再自行清理不需要的文件；不要在录制过程中删除恢复文件。</p>
           </section>
-          <section class="legal-section">
-            <h2>3. 购买与恢复购买</h2>
+          <section class="legal-section" id="privacy-purchase">
+            <header class="legal-section-head">
+              <span class="legal-section-num">03</span>
+              <h2>购买与恢复购买</h2>
+            </header>
             <p>SnipX Pro 为一次性买断的非消耗型内购，价格以 App 内和 Apple 购买确认界面为准。商品加载、购买、恢复及交易状态同步通过 Apple StoreKit 服务完成，可能需要联网。</p>
             <p>Apple 处理付款。SnipX 在本机验证 Apple 提供的交易及权益信息，以决定是否解锁录屏和 GIF。开发者不通过应用收集你的银行卡或支付账户信息。Apple 对其处理的信息适用 <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple 隐私政策</a>。</p>
           </section>
-          <section class="legal-section">
-            <h2>4. 主动联系支持与访问官网</h2>
+          <section class="legal-section" id="privacy-contact">
+            <header class="legal-section-head">
+              <span class="legal-section-num">04</span>
+              <h2>主动联系支持与访问官网</h2>
+            </header>
             <p>你主动发送邮件时，我们会收到你提供的邮箱、问题描述及附件，仅用于回复和排查问题。请勿发送无关的个人信息、密码或敏感截图；可以联系下方邮箱请求删除你提供的反馈材料。</p>
             <p>本站没有加入广告或分析 SDK。网站托管服务可能处理提供页面和保障服务所需的 IP 地址、浏览器请求及访问日志；这与应用在本机处理截图的行为不同。</p>
           </section>
-          <section class="legal-section">
-            <h2>5. 政策变更与联系方式</h2>
+          <section class="legal-section" id="privacy-changes">
+            <header class="legal-section-head">
+              <span class="legal-section-num">05</span>
+              <h2>政策变更与联系方式</h2>
+            </header>
             <p>隐私处理方式变化时，我们会更新本页面及更新日期。隐私问题或删除反馈材料的请求请联系 <a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a>。</p>
             <p>使用说明见 <a href="./support.html">支持与帮助</a>。</p>
           </section>
@@ -2011,21 +2029,24 @@ def body_support() -> str:
             </p>
           </header>
 
-          <section class="legal-section">
-            <h2>系统要求</h2>
-            <ul class="legal-list">
+          <section class="legal-section" id="support-requirements">
+            <header class="legal-section-head">
+              <span class="legal-section-num">00</span>
+              <h2>系统要求</h2>
+            </header>
+            <ul class="sysreq">
               <li>macOS 14.0 Sonoma 或更高版本</li>
               <li>支持 Apple Silicon（M1 / M2 / M3 / M4）与 Intel Mac</li>
-              <li>
-                通用构建（Universal 2）同时包含 <code>arm64</code> 与
-                <code>x86_64</code>
-              </li>
+              <li>通用构建（Universal 2）同时包含 <code>arm64</code> 与 <code>x86_64</code></li>
               <li>截图、录屏与 OCR 在本机处理；商品加载、购买与恢复可能需要联网。</li>
             </ul>
           </section>
 
-          <section class="legal-section">
-            <h2>首次启动：权限引导</h2>
+          <section class="legal-section" id="support-permissions">
+            <header class="legal-section-head">
+              <span class="legal-section-num">01</span>
+              <h2>首次启动：权限引导</h2>
+            </header>
             <p>
               SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS
               默认流程，不会启动即弹窗。
@@ -2043,66 +2064,101 @@ def body_support() -> str:
               </li>
               <li><strong>系统声音：</strong>录制电脑声音时，按 macOS 的屏幕与系统音频录制权限提示操作。</li>
             </ol>
-            <p>
-              如果误点了「拒绝」，可以到「系统设置 → 隐私与安全性」手动开启；SnipX
-              内置的「权限」面板也会引导你跳转到对应位置。
-            </p>
+            <div class="legal-callout">
+              <p>如果误点了「拒绝」，可以到「系统设置 → 隐私与安全性」手动开启；SnipX 内置的「权限」面板也会引导你跳转到对应位置。</p>
+            </div>
           </section>
 
-          <section class="legal-section">
-            <h2>FAQ</h2>
+          <section class="legal-section" id="support-faq">
+            <header class="legal-section-head">
+              <span class="legal-section-num">02</span>
+              <h2>FAQ</h2>
+            </header>
 
-            <h3>Q1：SnipX 联网吗？会上传我的截图吗？</h3>
-            <p>
-              截图、录屏、OCR 与标注在本机处理，不会自动上传给开发者。购买与恢复通过 Apple 服务完成，可能需要联网；主动分享或发邮件时，内容按你的操作交给相应服务。
-            </p>
+            <div class="faq-item" id="faq-q1">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q1</span>
+                <h3>Q1：SnipX 联网吗？会上传我的截图吗？</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>截图、录屏、OCR 与标注在本机处理，不会自动上传给开发者。购买与恢复通过 Apple 服务完成，可能需要联网；主动分享或发邮件时，内容按你的操作交给相应服务。</p>
+              </div>
+            </div>
 
-            <h3>Q2：SnipX Pro 是什么？哪些功能需要付费？</h3>
-            <p>
-              截屏、标注、长截图、置顶、复制、保存、分享等基础功能永久免费。<strong
-                >SnipX Pro（一次性买断，价格以 Apple 购买界面为准）</strong
-              >解锁：
-            </p>
-            <ul class="legal-list">
-              <li>MP4 录屏（选定区域 / 显示器）</li>
-              <li>GIF 录制</li>
-              <li>系统声音 + 麦克风同时录制</li>
-              <li>摄像头画中画</li>
-              <li>倒计时与异常自动恢复</li>
-              <li>头尾裁剪导出</li>
-            </ul>
+            <div class="faq-item" id="faq-q2">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q2</span>
+                <h3>Q2：SnipX Pro 是什么？哪些功能需要付费？</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>截屏、标注、长截图、置顶、复制、保存、分享等基础功能永久免费。<strong>SnipX Pro（一次性买断，价格以 Apple 购买界面为准）</strong>解锁：</p>
+                <ul class="legal-list">
+                  <li>MP4 录屏（选定区域 / 显示器）</li>
+                  <li>GIF 录制</li>
+                  <li>系统声音 + 麦克风同时录制</li>
+                  <li>摄像头画中画</li>
+                  <li>倒计时与异常自动恢复</li>
+                  <li>头尾裁剪导出</li>
+                </ul>
+              </div>
+            </div>
 
-            <h3>Q3：如何恢复购买？</h3>
-            <p>
-              打开 SnipX → 菜单栏 → 设置 → 录屏 → 付费墙卡底部「恢复购买」按钮。App
-              会通过 StoreKit 2 重新校验你的购买状态。
-            </p>
+            <div class="faq-item" id="faq-q3">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q3</span>
+                <h3>Q3：如何恢复购买？</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>打开 SnipX → 菜单栏 → 设置 → 录屏 → 付费墙卡底部「恢复购买」按钮。App 会通过 StoreKit 2 重新校验你的购买状态。</p>
+              </div>
+            </div>
 
-            <h3>Q4：可以更换已授权的功能吗？</h3>
-            <p>
-              截屏、标注、长截图的快捷键都可以在「设置 → 快捷键」中自定义，冲突时会自动提示。
-            </p>
+            <div class="faq-item" id="faq-q4">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q4</span>
+                <h3>Q4：可以更换已授权的功能吗？</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>截屏、标注、长截图的快捷键都可以在「设置 → 快捷键」中自定义，冲突时会自动提示。</p>
+              </div>
+            </div>
 
-            <h3>Q5：为什么我截不到 SnipX 自己的窗口？</h3>
-            <p>
-              SnipX 在录屏与截屏时会自动排除自身的菜单栏蒙层、操作浮层与录屏浮动条，避免污染画面。其他 SnipX
-              窗口（如设置、编辑录屏）默认会被正常捕获。
-            </p>
+            <div class="faq-item" id="faq-q5">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q5</span>
+                <h3>Q5：为什么我截不到 SnipX 自己的窗口？</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>SnipX 在录屏与截屏时会自动排除自身的菜单栏蒙层、操作浮层与录屏浮动条，避免污染画面。其他 SnipX 窗口（如设置、编辑录屏）默认会被正常捕获。</p>
+              </div>
+            </div>
 
-            <h3>Q6：OCR 支持哪些语言？</h3>
-            <p>
-              1.0.0 起，OCR 支持中文（简/繁）、英文及中英混合文本，由 Apple Vision
-              框架在本地完成识别，无网络依赖。
-            </p>
+            <div class="faq-item" id="faq-q6">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q6</span>
+                <h3>Q6：OCR 支持哪些语言？</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>1.0.0 起，OCR 支持中文（简/繁）、英文及中英混合文本，由 Apple Vision 框架在本地完成识别，无网络依赖。</p>
+              </div>
+            </div>
 
-            <h3>Q7：录屏文件保存在哪里？</h3>
-            <p>
-              通过保存对话框导出到你选择的位置。录制过程文件保存在应用支持目录的 SnipX/Recovery 中，沙盒版位于 SnipX 的 macOS 容器内。应用会保留可恢复文件；退出前请先保存需要的内容。
-            </p>
+            <div class="faq-item" id="faq-q7">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q7</span>
+                <h3>Q7：录屏文件保存在哪里？</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>通过保存对话框导出到你选择的位置。录制过程文件保存在应用支持目录的 SnipX/Recovery 中，沙盒版位于 SnipX 的 macOS 容器内。应用会保留可恢复文件；退出前请先保存需要的内容。</p>
+              </div>
+            </div>
           </section>
 
-          <section class="legal-section">
-            <h2>反馈与问题上报</h2>
+          <section class="legal-section" id="support-feedback">
+            <header class="legal-section-head">
+              <span class="legal-section-num">03</span>
+              <h2>反馈与问题上报</h2>
+            </header>
             <p>如果你遇到 bug、有功能建议或希望贡献想法：</p>
             <ul class="legal-list">
               <li>邮箱：<a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a></li>
@@ -2115,8 +2171,11 @@ def body_support() -> str:
             </ul>
           </section>
 
-          <section class="legal-section">
-            <h2>版本与更新</h2>
+          <section class="legal-section" id="support-versions">
+            <header class="legal-section-head">
+              <span class="legal-section-num">04</span>
+              <h2>版本与更新</h2>
+            </header>
             <p>
               当前最新版本：<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。
             </p>
@@ -2126,17 +2185,16 @@ def body_support() -> str:
             </p>
           </section>
 
-          <section class="legal-section">
-            <h2>相关链接</h2>
+          <section class="legal-section" id="support-links">
+            <header class="legal-section-head">
+              <span class="legal-section-num">05</span>
+              <h2>相关链接</h2>
+            </header>
             <ul class="legal-list">
               <li><a href="./">产品主页</a></li>
               <li><a href="./privacy.html">隐私政策</a></li>
               <li>
-                <a
-                  href="https://github.com/kenlez/SnipX"
-                  rel="noopener"
-                  >SnipX GitHub</a
-                >
+                <a href="https://github.com/kenlez/SnipX" rel="noopener">SnipX GitHub</a>
               </li>
             </ul>
           </section>

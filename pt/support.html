@@ -85,21 +85,24 @@
             </p>
           </header>
 
-          <section class="legal-section">
-            <h2>Requisitos do sistema</h2>
-            <ul class="legal-list">
+          <section class="legal-section" id="support-requirements">
+            <header class="legal-section-head">
+              <span class="legal-section-num">00</span>
+              <h2>Requisitos do sistema</h2>
+            </header>
+            <ul class="sysreq">
               <li>macOS 14.0 Sonoma ou superior</li>
               <li>Compatível com Apple Silicon (M1 / M2 / M3 / M4) e Mac Intel</li>
-              <li>
-                A build Universal 2 inclui ambos <code>arm64</code> 与
-                <code>x86_64</code>
-              </li>
+              <li>A build Universal 2 inclui ambos <code>arm64</code> 与 <code>x86_64</code></li>
               <li>Captura, gravação e OCR são processados no dispositivo; o carregamento do produto, compra e restauração podem exigir internet.</li>
             </ul>
           </section>
 
-          <section class="legal-section">
-            <h2>Primeira execução: guia de permissões</h2>
+          <section class="legal-section" id="support-permissions">
+            <header class="legal-section-head">
+              <span class="legal-section-num">01</span>
+              <h2>Primeira execução: guia de permissões</h2>
+            </header>
             <p>
               SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS
               默认流程，不会启动即弹窗。
@@ -117,66 +120,101 @@
               </li>
               <li><strong>Áudio do sistema:</strong>Para capturar o áudio do computador, siga o aviso de permissão de tela e áudio do sistema do macOS.</li>
             </ol>
-            <p>
-              如果误点了「拒绝」，可以到「系统设置 → 隐私与安全性」手动开启；SnipX
-              内置的「权限」面板也会引导你跳转到对应位置。
-            </p>
+            <div class="legal-callout">
+              <p>Se você tocou em "Não permitir" por engano, ative manualmente em Ajustes do Sistema → Privacidade e Segurança. O painel "Permissões" integrado do SnipX também leva você ao local certo.</p>
+            </div>
           </section>
 
-          <section class="legal-section">
-            <h2>FAQ</h2>
+          <section class="legal-section" id="support-faq">
+            <header class="legal-section-head">
+              <span class="legal-section-num">02</span>
+              <h2>FAQ</h2>
+            </header>
 
-            <h3>P1: O SnipX conecta à internet? Envia minhas capturas?</h3>
-            <p>
-              Captura, gravação, OCR e anotação são processados no dispositivo e nunca enviados ao desenvolvedor. Compras e restauração passam pela Apple e podem exigir internet. Se você compartilhar ou enviar por e-mail, o conteúdo é entregue ao serviço correspondente conforme sua ação.
-            </p>
+            <div class="faq-item" id="faq-q1">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q1</span>
+                <h3>P1: O SnipX conecta à internet? Envia minhas capturas?</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>Captura, gravação, OCR e anotação são processados no dispositivo e nunca enviados ao desenvolvedor. Compras e restauração passam pela Apple e podem exigir internet. Se você compartilhar ou enviar por e-mail, o conteúdo é entregue ao serviço correspondente conforme sua ação.</p>
+              </div>
+            </div>
 
-            <h3>P2: O que é SnipX Pro? Quais recursos são pagos?</h3>
-            <p>
-              Captura, anotação, captura de rolagem, fixar, copiar, salvar, compartilhar e outros recursos básicos são grátis para sempre.<strong
-                >SnipX Pro(compra única, preço definido pela Apple)</strong
-              >desbloqueia:
-            </p>
-            <ul class="legal-list">
-              <li>Gravação MP4 (região / monitor selecionado)</li>
-              <li>Captura GIF</li>
-              <li>Áudio do sistema + microfone ao mesmo tempo</li>
-              <li>Câmera picture-in-picture</li>
-              <li>Contagem regressiva e recuperação após falhas</li>
-              <li>Recortar início e fim e exportar</li>
-            </ul>
+            <div class="faq-item" id="faq-q2">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q2</span>
+                <h3>P2: O que é SnipX Pro? Quais recursos são pagos?</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>Captura, anotação, captura de rolagem, fixar, copiar, salvar, compartilhar e outros recursos básicos são grátis para sempre.<strong>SnipX Pro(compra única, preço definido pela Apple)</strong>desbloqueia:</p>
+                <ul class="legal-list">
+                  <li>Gravação MP4 (região / monitor selecionado)</li>
+                  <li>Captura GIF</li>
+                  <li>Áudio do sistema + microfone ao mesmo tempo</li>
+                  <li>Câmera picture-in-picture</li>
+                  <li>Contagem regressiva e recuperação após falhas</li>
+                  <li>Recortar início e fim e exportar</li>
+                </ul>
+              </div>
+            </div>
 
-            <h3>P3: Como restauro uma compra?</h3>
-            <p>
-              打开 SnipX → 菜单栏 → 设置 → 录屏 → 付费墙卡底部「恢复购买」按钮。App
-              会通过 StoreKit 2 重新校验你的购买状态。
-            </p>
+            <div class="faq-item" id="faq-q3">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q3</span>
+                <h3>P3: Como restauro uma compra?</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>Abra o SnipX → barra de menus → Ajustes → Gravação → toque em "Restaurar compra" na parte inferior do cartão de pagamento. O app revalidará seu estado de compra via StoreKit 2.</p>
+              </div>
+            </div>
 
-            <h3>P4: Posso alterar um recurso já autorizado?</h3>
-            <p>
-              Os atalhos de captura, anotação e captura de rolagem podem ser personalizados em Ajustes → Atalhos, com avisos automáticos em conflitos.
-            </p>
+            <div class="faq-item" id="faq-q4">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q4</span>
+                <h3>P4: Posso alterar um recurso já autorizado?</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>Os atalhos de captura, anotação e captura de rolagem podem ser personalizados em Ajustes → Atalhos, com avisos automáticos em conflitos.</p>
+              </div>
+            </div>
 
-            <h3>P5: Por que não consigo capturar a própria janela do SnipX?</h3>
-            <p>
-              SnipX 在录屏与截屏时会自动排除自身的菜单栏蒙层、操作浮层与录屏浮动条，避免污染画面。其他 SnipX
-              窗口（如设置、编辑录屏）默认会被正常捕获。
-            </p>
+            <div class="faq-item" id="faq-q5">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q5</span>
+                <h3>P5: Por que não consigo capturar a própria janela do SnipX?</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>Durante a captura ou gravação, o SnipX exclui automaticamente seus próprios overlays da barra de menus, popovers de ação e barra flutuante de gravação para manter a saída limpa. Outras janelas do SnipX (como Ajustes ou o editor de gravação) são capturadas normalmente.</p>
+              </div>
+            </div>
 
-            <h3>P6: Quais idiomas o OCR suporta?</h3>
-            <p>
-              1.0.0 起，OCR Suporte中文（简/繁）、英文及中英混合文本，由 Apple Vision
-              框架在本地完成识别，无网络依赖。
-            </p>
+            <div class="faq-item" id="faq-q6">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q6</span>
+                <h3>P6: Quais idiomas o OCR suporta?</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>A partir do 1.0.0, o OCR suporta chinês simplificado e tradicional, inglês e texto misto chinês/inglês, tudo reconhecido no dispositivo pelo framework Apple Vision, sem depender da rede.</p>
+              </div>
+            </div>
 
-            <h3>P7: Onde ficam minhas gravações?</h3>
-            <p>
-              Exportadas por uma caixa de diálogo para o local que você escolher. Os arquivos em andamento ficam em SnipX/Recovery dentro do diretório de suporte do app (no contêiner do macOS para a versão sandbox). O app mantém arquivos recuperáveis; salve o que precisa antes de sair.
-            </p>
+            <div class="faq-item" id="faq-q7">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q7</span>
+                <h3>P7: Onde ficam minhas gravações?</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>Exportadas por uma caixa de diálogo para o local que você escolher. Os arquivos em andamento ficam em SnipX/Recovery dentro do diretório de suporte do app (no contêiner do macOS para a versão sandbox). O app mantém arquivos recuperáveis; salve o que precisa antes de sair.</p>
+              </div>
+            </div>
           </section>
 
-          <section class="legal-section">
-            <h2>Feedback e relato de bugs</h2>
+          <section class="legal-section" id="support-feedback">
+            <header class="legal-section-head">
+              <span class="legal-section-num">03</span>
+              <h2>Feedback e relato de bugs</h2>
+            </header>
             <p>Encontrou um bug, tem uma ideia de recurso ou quer contribuir?</p>
             <ul class="legal-list">
               <li>E-mail:<a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a></li>
@@ -189,8 +227,11 @@
             </ul>
           </section>
 
-          <section class="legal-section">
-            <h2>Versões e atualizações</h2>
+          <section class="legal-section" id="support-versions">
+            <header class="legal-section-head">
+              <span class="legal-section-num">04</span>
+              <h2>Versões e atualizações</h2>
+            </header>
             <p>
               Versão mais recente:<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。
             </p>
@@ -200,17 +241,16 @@
             </p>
           </section>
 
-          <section class="legal-section">
-            <h2>Links relacionados</h2>
+          <section class="legal-section" id="support-links">
+            <header class="legal-section-head">
+              <span class="legal-section-num">05</span>
+              <h2>Links relacionados</h2>
+            </header>
             <ul class="legal-list">
               <li><a href="./">Página do produto</a></li>
               <li><a href="./privacy.html">Política de privacidade</a></li>
               <li>
-                <a
-                  href="https://github.com/kenlez/SnipX"
-                  rel="noopener"
-                  >SnipX GitHub</a
-                >
+                <a href="https://github.com/kenlez/SnipX" rel="noopener">SnipX GitHub</a>
               </li>
             </ul>
           </section>

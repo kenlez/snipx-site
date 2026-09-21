@@ -85,21 +85,24 @@
             </p>
           </header>
 
-          <section class="legal-section">
-            <h2>システム要件</h2>
-            <ul class="legal-list">
+          <section class="legal-section" id="support-requirements">
+            <header class="legal-section-head">
+              <span class="legal-section-num">00</span>
+              <h2>システム要件</h2>
+            </header>
+            <ul class="sysreq">
               <li>macOS 14.0 Sonoma 以降</li>
               <li>Apple Silicon（M1 / M2 / M3 / M4）と Intel Mac に対応</li>
-              <li>
-                Universal 2 ビルドには次の両方が含まれます <code>arm64</code> 与
-                <code>x86_64</code>
-              </li>
+              <li>Universal 2 ビルドには次の両方が含まれます <code>arm64</code> 与 <code>x86_64</code></li>
               <li>キャプチャ、録画、OCR は Mac 上で処理されます。商品ロード、購入、復元にはネット接続が必要な場合があります。</li>
             </ul>
           </section>
 
-          <section class="legal-section">
-            <h2>初回起動：権限ガイド</h2>
+          <section class="legal-section" id="support-permissions">
+            <header class="legal-section-head">
+              <span class="legal-section-num">01</span>
+              <h2>初回起動：権限ガイド</h2>
+            </header>
             <p>
               SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS
               默认流程，不会启动即弹窗。
@@ -117,66 +120,101 @@
               </li>
               <li><strong>システム音声：</strong>パソコン音声を録音する際は、macOS の画面とシステム音声の録音プロンプトに従ってください。</li>
             </ol>
-            <p>
-              如果误点了「拒绝」，可以到「系统设置 → 隐私与安全性」手动开启；SnipX
-              内置的「权限」面板也会引导你跳转到对应位置。
-            </p>
+            <div class="legal-callout">
+              <p>誤って「許可しない」をタップした場合は、「システム設定 → プライバシーとセキュリティ」で手動で有効化できます。SnipX 内蔵の「権限」パネルからも該当箇所へ誘導されます。</p>
+            </div>
           </section>
 
-          <section class="legal-section">
-            <h2>FAQ</h2>
+          <section class="legal-section" id="support-faq">
+            <header class="legal-section-head">
+              <span class="legal-section-num">02</span>
+              <h2>FAQ</h2>
+            </header>
 
-            <h3>Q1：SnipX はネット接続しますか？キャプチャをアップロードしますか？</h3>
-            <p>
-              キャプチャ、録画、OCR、注釈はローカル処理され、開発者に自動アップロードされることはありません。購入と復元は Apple 経由で行われ、ネット接続が必要な場合があります。能動的に共有やメール送信を行った場合、コンテンツはあなたの操作に応じて対応サービスに引き渡されます。
-            </p>
+            <div class="faq-item" id="faq-q1">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q1</span>
+                <h3>Q1：SnipX はネット接続しますか？キャプチャをアップロードしますか？</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>キャプチャ、録画、OCR、注釈はローカル処理され、開発者に自動アップロードされることはありません。購入と復元は Apple 経由で行われ、ネット接続が必要な場合があります。能動的に共有やメール送信を行った場合、コンテンツはあなたの操作に応じて対応サービスに引き渡されます。</p>
+              </div>
+            </div>
 
-            <h3>Q2：SnipX Pro とは？どの機能が有料ですか？</h3>
-            <p>
-              キャプチャ、注釈、スクロールキャプチャ、ピン留め、コピー、保存、共有などの基本機能は永久無料です。<strong
-                >SnipX Pro（買い切り、価格は Apple の購入画面に準拠）</strong
-              >ロック解除で解放：
-            </p>
-            <ul class="legal-list">
-              <li>MP4 録画（選択範囲 / ディスプレイ）</li>
-              <li>GIF 録画</li>
-              <li>システム音声 + マイク同時録音</li>
-              <li>カメラ PiP</li>
-              <li>カウントダウンと異常時の自動復元</li>
-              <li>先頭・末尾をトリムして書き出し</li>
-            </ul>
+            <div class="faq-item" id="faq-q2">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q2</span>
+                <h3>Q2：SnipX Pro とは？どの機能が有料ですか？</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>キャプチャ、注釈、スクロールキャプチャ、ピン留め、コピー、保存、共有などの基本機能は永久無料です。<strong>SnipX Pro（買い切り、価格は Apple の購入画面に準拠）</strong>ロック解除で解放：</p>
+                <ul class="legal-list">
+                  <li>MP4 録画（選択範囲 / ディスプレイ）</li>
+                  <li>GIF 録画</li>
+                  <li>システム音声 + マイク同時録音</li>
+                  <li>カメラ PiP</li>
+                  <li>カウントダウンと異常時の自動復元</li>
+                  <li>先頭・末尾をトリムして書き出し</li>
+                </ul>
+              </div>
+            </div>
 
-            <h3>Q3：購入を復元するには？</h3>
-            <p>
-              打开 SnipX → 菜单栏 → 设置 → 录屏 → 付费墙卡底部「恢复购买」按钮。App
-              会通过 StoreKit 2 重新校验你的购买状态。
-            </p>
+            <div class="faq-item" id="faq-q3">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q3</span>
+                <h3>Q3：購入を復元するには？</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>SnipX を開く → メニューバー → 設定 → 録画 → ペイウォールカード下部の「購入を復元」ボタンをタップ。アプリが StoreKit 2 で購入状態を再検証します。</p>
+              </div>
+            </div>
 
-            <h3>Q4：既に有効化された機能を変更できますか？</h3>
-            <p>
-              キャプチャ、注釈、スクロールキャプチャのショートカットは「設定 → ショートカット」でカスタマイズでき、競合時は自動で警告されます。
-            </p>
+            <div class="faq-item" id="faq-q4">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q4</span>
+                <h3>Q4：既に有効化された機能を変更できますか？</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>キャプチャ、注釈、スクロールキャプチャのショートカットは「設定 → ショートカット」でカスタマイズでき、競合時は自動で警告されます。</p>
+              </div>
+            </div>
 
-            <h3>Q5：なぜ SnipX 自身のウィンドウをキャプチャできないのですか？</h3>
-            <p>
-              SnipX 在录屏与截屏时会自动排除自身的菜单栏蒙层、操作浮层与录屏浮动条，避免污染画面。其他 SnipX
-              窗口（如设置、编辑录屏）默认会被正常捕获。
-            </p>
+            <div class="faq-item" id="faq-q5">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q5</span>
+                <h3>Q5：なぜ SnipX 自身のウィンドウをキャプチャできないのですか？</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>SnipX は録画とキャプチャ時に自身のメニューバーオーバーレイ、操作ポップオーバー、録画フローティングバーを自動的に除外し、出力をクリーンに保ちます。その他の SnipX ウィンドウ（設定や録画エディタなど）は通常通りキャプチャされます。</p>
+              </div>
+            </div>
 
-            <h3>Q6：OCR はどの言語に対応していますか？</h3>
-            <p>
-              1.0.0 起，OCR サポート中文（简/繁）、英文及中英混合文本，由 Apple Vision
-              框架在本地完成识别，无网络依赖。
-            </p>
+            <div class="faq-item" id="faq-q6">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q6</span>
+                <h3>Q6：OCR はどの言語に対応していますか？</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>1.0.0 より、OCR は簡体字・繁体字・英語および中英混在テキストに対応し、Apple Vision フレームワークによりローカルで認識されるためネットワークに依存しません。</p>
+              </div>
+            </div>
 
-            <h3>Q7：録画ファイルはどこに保存されますか？</h3>
-            <p>
-              保存ダイアログで選択した場所に書き出されます。録画中ファイルはアプリサポートディレクトリの SnipX/Recovery に保存され、サンドボックス版では SnipX の macOS コンテナ内にあります。アプリは復元可能なファイルを保持するため、終了前に必要な内容を保存してください。
-            </p>
+            <div class="faq-item" id="faq-q7">
+              <div class="faq-item-head">
+                <span class="faq-item-q">Q7</span>
+                <h3>Q7：録画ファイルはどこに保存されますか？</h3>
+              </div>
+              <div class="faq-item-body">
+                <p>保存ダイアログで選択した場所に書き出されます。録画中ファイルはアプリサポートディレクトリの SnipX/Recovery に保存され、サンドボックス版では SnipX の macOS コンテナ内にあります。アプリは復元可能なファイルを保持するため、終了前に必要な内容を保存してください。</p>
+              </div>
+            </div>
           </section>
 
-          <section class="legal-section">
-            <h2>フィードバックとバグ報告</h2>
+          <section class="legal-section" id="support-feedback">
+            <header class="legal-section-head">
+              <span class="legal-section-num">03</span>
+              <h2>フィードバックとバグ報告</h2>
+            </header>
             <p>バグを見つけた場合、機能提案がある場合、アイデアを共有したい場合：</p>
             <ul class="legal-list">
               <li>メール：<a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a></li>
@@ -189,8 +227,11 @@
             </ul>
           </section>
 
-          <section class="legal-section">
-            <h2>バージョンとアップデート</h2>
+          <section class="legal-section" id="support-versions">
+            <header class="legal-section-head">
+              <span class="legal-section-num">04</span>
+              <h2>バージョンとアップデート</h2>
+            </header>
             <p>
               最新バージョン：<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。
             </p>
@@ -200,17 +241,16 @@
             </p>
           </section>
 
-          <section class="legal-section">
-            <h2>関連リンク</h2>
+          <section class="legal-section" id="support-links">
+            <header class="legal-section-head">
+              <span class="legal-section-num">05</span>
+              <h2>関連リンク</h2>
+            </header>
             <ul class="legal-list">
               <li><a href="./">製品ホーム</a></li>
               <li><a href="./privacy.html">プライバシーポリシー</a></li>
               <li>
-                <a
-                  href="https://github.com/kenlez/SnipX"
-                  rel="noopener"
-                  >SnipX GitHub</a
-                >
+                <a href="https://github.com/kenlez/SnipX" rel="noopener">SnipX GitHub</a>
               </li>
             </ul>
           </section>

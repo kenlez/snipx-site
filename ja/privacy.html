@@ -82,13 +82,19 @@
             <h1 class="legal-title">SnipX プライバシーポリシー</h1>
             <p class="legal-meta">最終更新日：2026 年 9 月 6 日 · SnipX macOS アプリおよび本サイトに適用</p>
           </header>
-          <section class="legal-section">
-            <h2>コンテンツは Mac 上で処理</h2>
+          <section class="legal-section" id="privacy-summary">
+            <header class="legal-section-head">
+              <span class="legal-section-num">00</span>
+              <h2>コンテンツは Mac 上で処理</h2>
+            </header>
             <p>スクリーンショット、録画、音声、カメラ映像、OCR 認識結果、注釈はすべて Mac 上で処理されます。SnipX はコンテンツやローカル診断ログを開発者に自動アップロードせず、広告、トラッカー、サードパーティ分析 SDK も組み込みません。</p>
             <p>能動的にシステム共有を使用したり、フィードバックを送信したり、ファイルをクラウド同期フォルダに保存した場合、コンテンツはあなたの操作に応じて対応するサービスに引き渡され、そのサービスのプライバシーポリシーが適用されます。</p>
           </section>
-          <section class="legal-section">
-            <h2>1. システム権限</h2>
+          <section class="legal-section" id="privacy-permissions">
+            <header class="legal-section-head">
+              <span class="legal-section-num">01</span>
+              <h2>系统权限</h2>
+            </header>
             <ul class="legal-list">
               <li><strong>画面収録：</strong>キャプチャ、スクロールキャプチャ、録画に使用されます。</li>
               <li><strong>システム音声：</strong>パソコン音声の録音有効時にローカル動画に書き込まれます。</li>
@@ -97,24 +103,36 @@
             </ul>
             <p>macOS の「システム設定 → プライバシーとセキュリティ」で権限を管理できます。権限を拒否または取り消すと対応する機能は無効になります。グローバルショートカットはアクセシビリティを要求せず、Finder でのファイル表示もオートメーション権限を要求しません。</p>
           </section>
-          <section class="legal-section">
-            <h2>2. ファイル、設定、ローカルログ</h2>
+          <section class="legal-section" id="privacy-files">
+            <header class="legal-section-head">
+              <span class="legal-section-num">02</span>
+              <h2>文件、设置与本地日志</h2>
+            </header>
             <p>キャプチャと録画は保存ダイアログで選択した場所に書き出されます。録画中ファイルはアプリサポートディレクトリの SnipX/Recovery に保存され、ローカル診断ログは Library/Logs/SnipX/CrashLogs に保存されます。サンドボックス版のこれらのディレクトリは、macOS が SnipX に割り当てたコンテナ内にあります。開発ビルドではプロジェクト隣の CrashLogs ディレクトリも使用される場合があります。</p>
             <p>アプリはショートカットなどの設定をローカルに保存し、録画ファイルを保護するために利用可能なディスク容量を確認します。これらの情報は自動で開発者に送信されません。OCR は Apple Vision フレームワークでローカル実行され、画像や認識結果がサーバーに送信されることはありません。</p>
             <p>アプリをアンインストールしても、書き出し済みファイル、復元ファイル、ログは自動削除されません。残したい内容は先に保存し、不要なファイルは各自で削除してください。録画進行中に復元ファイルを削除しないでください。</p>
           </section>
-          <section class="legal-section">
-            <h2>3. 購入と購入復元</h2>
+          <section class="legal-section" id="privacy-purchase">
+            <header class="legal-section-head">
+              <span class="legal-section-num">03</span>
+              <h2>购买与恢复购买</h2>
+            </header>
             <p>SnipX Pro は買い切りの非消耗型アプリ内課金で、価格はアプリ内および Apple の購入確認画面に従います。商品ロード、購入、復元、取引状態の同期は Apple の StoreKit サービス経由で行われ、ネット接続が必要な場合があります。</p>
             <p>決済は Apple が処理します。SnipX は Apple から提供された取引およびエンタイトルメント情報をローカルで検証し、録画と GIF のロック解除を判定します。デベロッパはアプリを通じてあなたのカードや支払いアカウント情報を収集しません。Apple が取り扱う情報には <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple のプライバシーポリシーが適用されます</a>。</p>
           </section>
-          <section class="legal-section">
-            <h2>4. サポートへの能動的な連絡と公式サイト閲覧</h2>
+          <section class="legal-section" id="privacy-contact">
+            <header class="legal-section-head">
+              <span class="legal-section-num">04</span>
+              <h2>主动联系サポート与访问官网</h2>
+            </header>
             <p>あなたが能動的にメールを送った場合、記載されたメールアドレス、問題の説明、添付ファイルを受信し、返信と問題の調査にのみ使用します。無関係な個人情報、パスワード、機密性の高いスクリーンショットは送らないでください。提供したフィードバック資料の削除依頼は下記のメールアドレスまでご連絡ください。</p>
             <p>本サイトは広告や分析 SDK を一切組み込んでいません。ホスティングサービスはページの提供とサービス維持に必要な IP アドレス、ブラウザリクエスト、アクセスログを処理する場合がありますが、これはアプリがローカルでキャプチャを処理する仕組みとは異なります。</p>
           </section>
-          <section class="legal-section">
-            <h2>5. ポリシーの変更と連絡先</h2>
+          <section class="legal-section" id="privacy-changes">
+            <header class="legal-section-head">
+              <span class="legal-section-num">05</span>
+              <h2>政策变更与联系方式</h2>
+            </header>
             <p>プライバシー取り扱いを変更する際は、本ページと更新日を更新します。プライバシーに関するご質問やフィードバック資料の削除依頼は下記までご連絡ください <a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a>。</p>
             <p>使い方は <a href="./support.html">サポート</a>。</p>
           </section>
