@@ -1618,6 +1618,12 @@ def fill_placeholders(template: str, lang: str) -> str:
 def page_html(lang: str, page: str, head_extra: str, body_html: str) -> str:
     """组装完整 HTML：head + topbar + body + footer + scripts。"""
     meta = META[lang]
+    # 隐私/支持页额外加载 legal.css
+    extra_css = (
+        '    <link rel="stylesheet" href="/assets/css/legal.css" />'
+        if page in ("privacy", "support")
+        else ""
+    )
     head = f'''<!doctype html>
 <html lang="{meta["html_lang"]}">
   <head>
@@ -1626,6 +1632,7 @@ def page_html(lang: str, page: str, head_extra: str, body_html: str) -> str:
     <meta name="theme-color" content="#050505" />
     {head_extra}
     {HEAD_COMMON}
+{extra_css}
 '''
     topbar_html = f'''<header class="topbar{"" if page == "index" else " is-stuck"}" id="topbar">
         <div class="topbar-inner">
