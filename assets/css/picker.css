@@ -1,0 +1,92 @@
+/* SnipX-site · 根路径语言选择页（替代 ROOT_PICKER 内联样式）
+ * 与主页共享 styles.css 与 i18n.css，仅补 .picker-page 的排版。
+ */
+
+.picker-page {
+  padding-top: calc(var(--topbar-h-on-scroll) + 56px);
+  padding-bottom: 96px;
+}
+
+.picker {
+  width: min(var(--max), calc(100% - 32px));
+  margin: 0 auto;
+  text-align: center;
+  /* 默认隐藏：JS 决定是否跳转；若不跳转则给 <html> 加 .show-picker 类 */
+  opacity: 0;
+  transition: opacity 240ms ease;
+}
+
+html.show-picker .picker {
+  opacity: 1;
+}
+
+.picker-eyebrow {
+  margin: 0 0 14px;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.picker-title {
+  margin: 0 0 36px;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.picker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.picker-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 22px 24px;
+  border-radius: var(--radius);
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    background 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+
+.picker-card:hover {
+  background: var(--panel-strong);
+  border-color: var(--line-hover);
+  transform: translateY(-2px);
+}
+
+.picker-card-name {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.picker-card-sub {
+  font-size: 13px;
+  color: var(--faint);
+}
+
+@media (max-width: 560px) {
+  .picker-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .picker-grid {
+    grid-template-columns: 1fr;
+  }
+  .picker-card {
+    padding: 16px 18px;
+  }
+}

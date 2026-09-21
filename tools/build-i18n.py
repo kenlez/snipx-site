@@ -16,6 +16,7 @@
 - 同一页面的语种切换由 assets/js/i18n.js 处理（保留当前页面）
 """
 from pathlib import Path
+import re
 import sys
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -104,8 +105,8 @@ T = {
         "倒计时与状态指示，录屏不打断": "倒數計時與狀態指示，錄螢不打斷",
         "异常退出后 Recovery 保留录制": "異常退出後 Recovery 保留錄製",
         "头尾裁剪导出为新 MP4": "頭尾裁剪匯出為新 MP4",
-        "录屏与 GIF 录制需解锁 SnipX Pro（一次性买断，价格以 App Store 为准）。截屏、标注、长截图永久免费。":
-            "錄螢與 GIF 錄製需解鎖 SnipX Pro（一次性買斷，價格以 App Store 為準）。截圖、標註、長截圖永久免費。",
+        "录屏与 GIF 录制需解锁 <strong>SnipX Pro</strong>（一次性买断，价格以 App Store 为准）。截屏、标注、长截图永久免费。":
+            "錄螢與 GIF 錄製需解鎖 <strong>SnipX Pro</strong>（一次性買斷，價格以 App Store 為準）。截圖、標註、長截圖永久免費。",
         "零数据外传": "零資料外傳",
         "完全离线运行": "完全離線運作",
         "截图、录屏与 OCR 在本机处理，不自动上传内容或遥测。购买与恢复通过 Apple 服务完成。":
@@ -130,8 +131,8 @@ T = {
         "App Store 应用页即将上线，链接待回填。": "App Store 應用程式頁即將上線，連結待回填。",
         "macOS 14+ · Universal 2（Apple Silicon + Intel）· 仅 3 MB":
             "macOS 14+ · Universal 2（Apple Silicon + Intel）· 僅 3 MB",
-        "基础截屏永久免费 · 录屏与 GIF 录制需 SnipX Pro（一次性买断）":
-            "基礎截圖永久免費 · 錄螢與 GIF 錄製需 SnipX Pro（一次性買斷）",
+        "基础截屏永久免费 · 录屏与 GIF 录制需 <a href=\"./#about\">SnipX Pro</a>（一次性买断）":
+            "基礎截圖永久免費 · 錄螢與 GIF 錄製需 <a href=\"./#about\">SnipX Pro</a>（一次性買斷）",
         # about
         "关于 SnipX": "關於 SnipX",
         "原生开发": "原生開發",
@@ -339,8 +340,8 @@ T = {
         "倒计时与状态指示，录屏不打断": "Countdown & live status, no interruption",
         "异常退出后 Recovery 保留录制": "Crash recovery preserves the last clip",
         "头尾裁剪导出为新 MP4": "Trim head & tail, export a new MP4",
-        "录屏与 GIF 录制需解锁 SnipX Pro（一次性买断，价格以 App Store 为准）。截屏、标注、长截图永久免费。":
-            "Recording & GIF capture unlock with SnipX Pro (one-time purchase, price set in the App Store). Capture, annotation, and scrolling capture stay free, forever.",
+        "录屏与 GIF 录制需解锁 <strong>SnipX Pro</strong>（一次性买断，价格以 App Store 为准）。截屏、标注、长截图永久免费。":
+            "Recording & GIF capture unlock with <strong>SnipX Pro</strong> (one-time purchase, price set in the App Store). Capture, annotation, and scrolling capture stay free, forever.",
         "零数据外传": "Zero data leaving your Mac",
         "完全离线运行": "Fully offline",
         "截图、录屏与 OCR 在本机处理，不自动上传内容或遥测。购买与恢复通过 Apple 服务完成。":
@@ -365,8 +366,8 @@ T = {
         "App Store 应用页即将上线，链接待回填。": "The App Store listing is coming soon — link will be filled in.",
         "macOS 14+ · Universal 2（Apple Silicon + Intel）· 仅 3 MB":
             "macOS 14+ · Universal 2 (Apple Silicon + Intel) · only 3 MB",
-        "基础截屏永久免费 · 录屏与 GIF 录制需 SnipX Pro（一次性买断）":
-            "Capture stays free forever · recording & GIF require SnipX Pro (one-time purchase)",
+        "基础截屏永久免费 · 录屏与 GIF 录制需 <a href=\"./#about\">SnipX Pro</a>（一次性买断）":
+            "Capture stays free forever · recording & GIF require <a href=\"./#about\">SnipX Pro</a> (one-time purchase)",
         # about
         "关于 SnipX": "About SnipX",
         "原生开发": "Built native",
@@ -573,8 +574,8 @@ T = {
     "倒计时与状态指示，录屏不打断": "カウントダウンと状態表示で録画を止めない",
     "异常退出后 Recovery 保留录制": "異常終了時は Recovery が録画を保護",
     "头尾裁剪导出为新 MP4": "先頭と末尾をトリムして新しい MP4 に書き出し",
-    "录屏与 GIF 录制需解锁 SnipX Pro（一次性买断，价格以 App Store 为准）。截屏、标注、长截图永久免费。":
-        "録画と GIF 録画は SnipX Pro（買い切り、価格は App Store 準拠）のロック解除が必要です。キャプチャ、注釈、スクロールキャプチャは永久無料です。",
+    "录屏与 GIF 录制需解锁 <strong>SnipX Pro</strong>（一次性买断，价格以 App Store 为准）。截屏、标注、长截图永久免费。":
+        "録画と GIF 録画は <strong>SnipX Pro</strong>（買い切り、価格は App Store 準拠）のロック解除が必要です。キャプチャ、注釈、スクロールキャプチャは永久無料です。",
     "零数据外传": "データは一切外部送信されません",
     "完全离线运行": "完全オフラインで動作",
     "截图、录屏与 OCR 在本机处理，不自动上传内容或遥测。购买与恢复通过 Apple 服务完成。":
@@ -599,8 +600,8 @@ T = {
     "App Store 应用页即将上线，链接待回填。": "App Store ページは近日公開予定です。リンクは決まり次第反映します。",
     "macOS 14+ · Universal 2（Apple Silicon + Intel）· 仅 3 MB":
         "macOS 14+ · Universal 2（Apple Silicon + Intel）· わずか 3 MB",
-    "基础截屏永久免费 · 录屏与 GIF 录制需 SnipX Pro（一次性买断）":
-        "基本キャプチャは永久無料 · 録画と GIF 録画は SnipX Pro（買い切り）が必要",
+    "基础截屏永久免费 · 录屏与 GIF 录制需 <a href=\"./#about\">SnipX Pro</a>（一次性买断）":
+        "基本キャプチャは永久無料 · 録画と GIF 録画は <a href=\"./#about\">SnipX Pro</a>（買い切り）が必要",
     # about
     "关于 SnipX": "SnipX について",
     "原生开发": "ネイティブ開発",
@@ -807,8 +808,8 @@ T = {
     "倒计时与状态指示，录屏不打断": "카운트다운과 상태 표시로 녹화를 방해하지 않음",
     "异常退出后 Recovery 保留录制": "비정상 종료 시 Recovery가 녹화를 보존",
     "头尾裁剪导出为新 MP4": "머리와 꼬리를 잘라 새 MP4로 내보내기",
-    "录屏与 GIF 录制需解锁 SnipX Pro（一次性买断，价格以 App Store 为准）。截屏、标注、长截图永久免费。":
-        "녹화와 GIF 녹화는 SnipX Pro (일회성 구매, 가격은 App Store 기준)의 잠금 해제가 필요합니다. 캡처, 주석, 스크롤 캡처는 영원히 무료입니다.",
+    "录屏与 GIF 录制需解锁 <strong>SnipX Pro</strong>（一次性买断，价格以 App Store 为准）。截屏、标注、长截图永久免费。":
+        "녹화와 GIF 녹화는 <strong>SnipX Pro</strong> (일회성 구매, 가격은 App Store 기준)의 잠금 해제가 필요합니다. 캡처, 주석, 스크롤 캡처는 영원히 무료입니다.",
     "零数据外传": "데이터 외부 전송 없음",
     "完全离线运行": "완전 오프라인 작동",
     "截图、录屏与 OCR 在本机处理，不自动上传内容或遥测。购买与恢复通过 Apple 服务完成。":
@@ -833,8 +834,8 @@ T = {
     "App Store 应用页即将上线，链接待回填。": "App Store 앱 페이지는 곧 공개됩니다. 링크는 확정 후 반영됩니다.",
     "macOS 14+ · Universal 2（Apple Silicon + Intel）· 仅 3 MB":
         "macOS 14+ · Universal 2 (Apple Silicon + Intel) · 단 3 MB",
-    "基础截屏永久免费 · 录屏与 GIF 录制需 SnipX Pro（一次性买断）":
-        "기본 캡처는 영구 무료 · 녹화와 GIF 녹화는 SnipX Pro (일회성 구매) 필요",
+    "基础截屏永久免费 · 录屏与 GIF 录制需 <a href=\"./#about\">SnipX Pro</a>（一次性买断）":
+        "기본 캡처는 영구 무료 · 녹화와 GIF 녹화는 <a href=\"./#about\">SnipX Pro</a> (일회성 구매) 필요",
     # about
     "关于 SnipX": "SnipX 정보",
     "原生开发": "네이티브 개발",
@@ -1041,7 +1042,7 @@ T = {
     "倒计时与状态指示，录屏不打断": "Cuenta atrás e indicador en vivo, sin interrumpir [MT]",
     "异常退出后 Recovery 保留录制": "Recovery conserva el clip tras cierre inesperado [MT]",
     "头尾裁剪导出为新 MP4": "Recorta inicio y fin, exporta un nuevo MP4 [MT]",
-    "录屏与 GIF 录制需解锁 SnipX Pro（一次性买断，价格以 App Store 为准）。截屏、标注、长截图永久免费。":
+    "录屏与 GIF 录制需解锁 <strong>SnipX Pro</strong>（一次性买断，价格以 App Store 为准）。截屏、标注、长截图永久免费。":
         "La grabación y la captura GIF requieren SnipX Pro (compra única, precio en el App Store). Captura, anotación y captura larga son gratis para siempre. [MT]",
     "零数据外传": "Cero datos salen de tu Mac [MT]",
     "完全离线运行": "Funciona totalmente sin conexión [MT]",
@@ -1067,7 +1068,7 @@ T = {
     "App Store 应用页即将上线，链接待回填。": "La ficha del App Store estará disponible pronto. El enlace se añadirá cuando esté listo. [MT]",
     "macOS 14+ · Universal 2（Apple Silicon + Intel）· 仅 3 MB":
         "macOS 14+ · Universal 2 (Apple Silicon + Intel) · solo 3 MB [MT]",
-    "基础截屏永久免费 · 录屏与 GIF 录制需 SnipX Pro（一次性买断）":
+    "基础截屏永久免费 · 录屏与 GIF 录制需 <a href=\"./#about\">SnipX Pro</a>（一次性买断）":
         "Captura básica gratis para siempre · grabación y GIF requieren SnipX Pro (compra única) [MT]",
     # about
     "关于 SnipX": "Acerca de SnipX [MT]",
@@ -1275,8 +1276,8 @@ T = {
     "倒计时与状态指示，录屏不打断": "Contagem regressiva e status ao vivo, sem interrupção [MT]",
     "异常退出后 Recovery 保留录制": "Recovery preserva a gravação após queda [MT]",
     "头尾裁剪导出为新 MP4": "Recorte início e fim, exporte um novo MP4 [MT]",
-    "录屏与 GIF 录制需解锁 SnipX Pro（一次性买断，价格以 App Store 为准）。截屏、标注、长截图永久免费。":
-        "Gravação e captura GIF exigem SnipX Pro (compra única, preço definido na App Store). Captura, anotação e captura de rolagem são grátis para sempre. [MT]",
+    "录屏与 GIF 录制需解锁 <strong>SnipX Pro</strong>（一次性买断，价格以 App Store 为准）。截屏、标注、长截图永久免费。":
+        "Gravação e captura GIF exigem <strong>SnipX Pro</strong> (compra única, preço definido na App Store). Captura, anotação e captura de rolagem são grátis para sempre. [MT]",
     "零数据外传": "Zero dados saindo do seu Mac [MT]",
     "完全离线运行": "Funciona totalmente offline [MT]",
     "截图、录屏与 OCR 在本机处理，不自动上传内容或遥测。购买与恢复通过 Apple 服务完成。":
@@ -1301,8 +1302,8 @@ T = {
     "App Store 应用页即将上线，链接待回填。": "A página na App Store será publicada em breve. O link será adicionado quando estiver pronto. [MT]",
     "macOS 14+ · Universal 2（Apple Silicon + Intel）· 仅 3 MB":
         "macOS 14+ · Universal 2 (Apple Silicon + Intel) · apenas 3 MB [MT]",
-    "基础截屏永久免费 · 录屏与 GIF 录制需 SnipX Pro（一次性买断）":
-        "Captura básica grátis para sempre · gravação e GIF exigem SnipX Pro (compra única) [MT]",
+    "基础截屏永久免费 · 录屏与 GIF 录制需 <a href=\"./#about\">SnipX Pro</a>（一次性买断）":
+        "Captura básica grátis para sempre · gravação e GIF exigem <a href=\"./#about\">SnipX Pro</a> (compra única) [MT]",
     # about
     "关于 SnipX": "Sobre o SnipX [MT]",
     "原生开发": "Desenvolvimento nativo [MT]",
@@ -1549,7 +1550,11 @@ META = {
 # ---------------------------------------------------------------------------
 
 def apply_translations(html: str, lang: str) -> str:
-    """把中文原文替换为指定语言的译文。zh-CN 直接返回。"""
+    """把中文原文替换为指定语言的译文。zh-CN 直接返回。
+
+    去除 [MT] 标记（仅用于字典内部区分机译稿），并剥离 MT 标记后的
+    尾随空格（如 `Descargar SnipX [MT]` → `Descargar SnipX`）。
+    """
     if lang == "zh-CN":
         return html
     tr = T.get(lang, {})
@@ -1559,8 +1564,10 @@ def apply_translations(html: str, lang: str) -> str:
     # 长串优先，避免短串误命中
     items = sorted(tr.items(), key=lambda kv: -len(kv[0]))
     for src, tgt in items:
+        # 字典内 [MT] 后缀仅作开发标记，从输出里去掉
         if src in html:
-            html = html.replace(src, tgt)
+            clean_tgt = re.sub(r"\s*\[MT\]\s*$", "", tgt)
+            html = html.replace(src, clean_tgt)
     return html
 
 
@@ -1586,6 +1593,8 @@ def fill_placeholders(template: str, lang: str) -> str:
     tr = T.get(lang, {})
     for token, zh_str in tokens_zh.items():
         translated = tr.get(zh_str, zh_str)
+        # 去除 [MT] 开发标记
+        translated = re.sub(r"\s*\[MT\]\s*$", "", translated)
         template = template.replace(token, translated)
     # 切换器 placeholder
     lang_short = next((l["short"] for l in [
@@ -2232,9 +2241,26 @@ ROOT_PICKER = '''<!doctype html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#050505" />
     <meta name="robots" content="index,follow" />
-    <meta name="description" content="SnipX — macOS 14+ native screenshot & MP4 recording app. Choose your language." />
+    <meta
+      name="description"
+      content="SnipX — macOS 14+ native screenshot & MP4 recording app. Choose your language."
+    />
     <title>SnipX</title>
     <script>
+      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      (function () {{
+        try {{
+          var mode = localStorage.getItem("snipx-theme") || "system";
+          var resolved = mode === "system"
+            ? (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+            : mode;
+          document.documentElement.setAttribute("data-theme", resolved);
+          document.documentElement.setAttribute("data-theme-mode", mode);
+          var mc = document.querySelector('meta[name="theme-color"]');
+          if (mc) mc.setAttribute("content", resolved === "light" ? "#f5f5f0" : "#050505");
+        }} catch (e) {{}}
+      }})();
+      /* 语言自动跳转：匹配则跳子目录，否则显示手动选择器 */
       (function () {{
         try {{
           var stored = localStorage.getItem("snipx-lang");
@@ -2250,65 +2276,109 @@ ROOT_PICKER = '''<!doctype html>
             return;
           }}
         }} catch (e) {{}}
-        // 不自动跳转：渲染手动选择页
-        document.documentElement.classList.add("no-auto-redirect");
+        document.documentElement.classList.add("show-picker");
       }})();
     </script>
-    <style>
-      :root {{
-        color-scheme: dark light;
-        --bg: #050505;
-        --text: #f7f7f4;
-        --muted: rgba(247,247,244,0.65);
-        --accent: #6aa7ff;
-        --panel: rgba(255,255,255,0.06);
-        --line: rgba(255,255,255,0.12);
-      }}
-      @media (prefers-color-scheme: light) {{
-        :root {{
-          --bg: #f5f5f0;
-          --text: #1a1a1a;
-          --muted: rgba(26,26,26,0.7);
-          --accent: #3a7bd5;
-          --panel: rgba(20,22,28,0.05);
-          --line: rgba(20,22,28,0.10);
-        }}
-      }}
-      html.no-auto-redirect {{ background: var(--bg); }}
-      body {{
-        margin: 0; min-height: 100vh; display: grid; place-items: center;
-        background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
-      }}
-      /* 默认隐藏 picker：JS 决定是否跳转；若不跳转则加 .no-auto-redirect 显示 */
-      .picker {{ max-width: 560px; padding: 32px; text-align: center; opacity: 0; transition: opacity 220ms ease; }}
-      html.no-auto-redirect .picker {{ opacity: 1; }}
-      .picker h1 {{ margin: 0 0 12px; font-size: 32px; }}
-      .picker p {{ margin: 0 0 28px; color: var(--muted); }}
-      .picker-grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }}
-      @media (max-width: 480px) {{ .picker-grid {{ grid-template-columns: 1fr; }} }}
-      .picker a {{
-        display: block; padding: 14px 16px; border-radius: 14px;
-        background: var(--panel); border: 1px solid var(--line); color: var(--text);
-        text-decoration: none; transition: background .2s, transform .2s;
-      }}
-      .picker a:hover {{ background: rgba(106,167,255,0.12); transform: translateY(-1px); }}
-      .picker small {{ display: block; color: var(--muted); margin-top: 4px; font-size: 12px; }}
-    </style>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/i18n.css" />
+    <link rel="stylesheet" href="/assets/css/picker.css" />
   </head>
   <body>
-    <div class="picker">
-      <h1>SnipX</h1>
-      <p>选择语言 · Choose your language</p>
-      <div class="picker-grid">
-        <a href="/zh-CN/{target}">中文（简体）<small>Simplified Chinese</small></a>
-        <a href="/zh-TW/{target}">中文（繁體）<small>Traditional Chinese</small></a>
-        <a href="/en/{target}">English<small>English</small></a>
-        <a href="/ja/{target}">日本語<small>Japanese</small></a>
-        <a href="/ko/{target}">한국어<small>Korean</small></a>
-        <a href="/es/{target}">Español<small>Spanish</small></a>
-        <a href="/pt/{target}">Português<small>Portuguese</small></a>
-      </div>
+    <canvas id="space-canvas" aria-hidden="true"></canvas>
+
+    <div class="site-shell">
+      <header class="topbar is-stuck" id="topbar">
+        <div class="topbar-inner">
+          <a href="/" class="topbar-brand" aria-label="SnipX">
+            <img class="topbar-brand-mark" src="/assets/brand/icon-snipx.png" alt="" width="26" height="26" aria-hidden="true" />
+            <span class="topbar-brand-text">SnipX</span>
+          </a>
+
+          <nav class="topbar-nav" aria-label="主导航">
+            <a href="/#features">特性</a>
+            <a href="/#install">下载</a>
+            <a href="/#about">关于</a>
+          </nav>
+
+          <div class="topbar-actions">
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="主题：跟随系统"
+              title="主题：跟随系统"
+              data-mode="system"
+            >
+              <span class="theme-toggle-icon" aria-hidden="true">◐</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main id="app" class="picker-page">
+        <section class="picker">
+          <p class="picker-eyebrow">SnipX</p>
+          <h1 class="picker-title">选择语言 · Choose your language</h1>
+          <div class="picker-grid">
+            <a href="/zh-CN/{target}" class="picker-card">
+              <span class="picker-card-name">中文（简体）</span>
+              <span class="picker-card-sub">Simplified Chinese</span>
+            </a>
+            <a href="/zh-TW/{target}" class="picker-card">
+              <span class="picker-card-name">中文（繁體）</span>
+              <span class="picker-card-sub">Traditional Chinese</span>
+            </a>
+            <a href="/en/{target}" class="picker-card">
+              <span class="picker-card-name">English</span>
+              <span class="picker-card-sub">English</span>
+            </a>
+            <a href="/ja/{target}" class="picker-card">
+              <span class="picker-card-name">日本語</span>
+              <span class="picker-card-sub">Japanese</span>
+            </a>
+            <a href="/ko/{target}" class="picker-card">
+              <span class="picker-card-name">한국어</span>
+              <span class="picker-card-sub">Korean</span>
+            </a>
+            <a href="/es/{target}" class="picker-card">
+              <span class="picker-card-name">Español</span>
+              <span class="picker-card-sub">Spanish</span>
+            </a>
+            <a href="/pt/{target}" class="picker-card">
+              <span class="picker-card-name">Português</span>
+              <span class="picker-card-sub">Portuguese</span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <img class="topbar-brand-mark" src="/assets/brand/icon-snipx.png" alt="" width="26" height="26" aria-hidden="true" />
+            <span class="footer-brand-text">SnipX</span>
+          </div>
+
+          <nav class="footer-links" aria-label="次要导航">
+            <a href="/">主页</a>
+            <a href="/#features">特性</a>
+            <a href="/#install">下载</a>
+            <a href="/support.html">支持</a>
+            <a href="/privacy.html">隐私政策</a>
+          </nav>
+
+          <div class="footer-contact">
+            <a href="mailto:snipx@tongkun.top" class="footer-contact-link">snipx@tongkun.top</a>
+            <span class="footer-sep" aria-hidden="true">·</span>
+            <span class="footer-meta">当前版本 <span class="ph-version">1.0.0</span></span>
+          </div>
+
+          <p class="footer-copyright">© 2026 SnipX. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
+
+    <script src="/assets/js/space-canvas.js" defer></script>
+    <script src="/assets/js/site.js" defer></script>
   </body>
 </html>'''
 
