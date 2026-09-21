@@ -13,7 +13,7 @@
     <meta name="robots" content="index,follow" />
     <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
     <script>
-      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      /* Theme init (FOUC guard): set data-theme before CSS is parsed */
       (function () {{
         try {{
           var mode = localStorage.getItem("snipx-theme") || "system";
@@ -42,7 +42,7 @@
             <span class="topbar-brand-text">SnipX</span>
           </a>
 
-          <nav class="topbar-nav" aria-label="主导航">
+          <nav class="topbar-nav" aria-label="主導航">
             <a href="/zh-TW/#features">特色</a>
             <a href="/zh-TW/#install">下載</a>
             <a href="/zh-TW/#about">關於</a>
@@ -94,7 +94,7 @@
           <section class="legal-section" id="privacy-permissions">
             <header class="legal-section-head">
               <span class="legal-section-num">01</span>
-              <h2>系统权限</h2>
+              <h2>1. 系統權限</h2>
             </header>
             <ul class="legal-list">
               <li><strong>螢幕錄製：</strong>用於截圖、長截圖與錄螢。</li>
@@ -107,7 +107,7 @@
           <section class="legal-section" id="privacy-files">
             <header class="legal-section-head">
               <span class="legal-section-num">02</span>
-              <h2>文件、设置与本地日志</h2>
+              <h2>2. 檔案、設定與本地記錄</h2>
             </header>
             <p>截圖與錄螢透過儲存對話框匯出到你選擇的位置。錄螢過程檔案儲存在應用支援目錄的 SnipX/Recovery 中；本地診斷記錄儲存在 Library/Logs/SnipX/CrashLogs 中。沙盒版的這些應用目錄位於 macOS 為 SnipX 分配的容器內，開發測試版也可能使用專案旁的 CrashLogs 目錄。</p>
             <p>應用程式在本機儲存快捷鍵等偏好設定，並檢查可用磁碟空間以保護錄製檔案。這些資訊不會自動傳送給開發者。OCR 使用 Apple Vision 框架在本機完成，不向伺服器上傳圖片或辨識結果。</p>
@@ -116,7 +116,7 @@
           <section class="legal-section" id="privacy-purchase">
             <header class="legal-section-head">
               <span class="legal-section-num">03</span>
-              <h2>购买与恢复购买</h2>
+              <h2>3. 購買與復原購買</h2>
             </header>
             <p>SnipX Pro 為一次性買斷的非消耗型內購，價格以 App 內和 Apple 購買確認介面為準。商品載入、購買、復原及交易狀態同步透過 Apple StoreKit 服務完成，可能需要連線。</p>
             <p>Apple 處理付款。SnipX 在本機驗證 Apple 提供的交易及權益資訊，以決定是否解鎖錄螢和 GIF。開發者不透過應用程式收集你的銀行卡或支付帳戶資訊。Apple 對其處理的資訊適用 <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple 隱私政策</a>。</p>
@@ -124,7 +124,7 @@
           <section class="legal-section" id="privacy-contact">
             <header class="legal-section-head">
               <span class="legal-section-num">04</span>
-              <h2>主动联系支援与访问官网</h2>
+              <h2>4. 主動聯絡支援與瀏覽官網</h2>
             </header>
             <p>你主動傳送郵件時，我們會收到你提供的電子郵件、問題描述及附件，僅用於回覆和排查問題。請勿傳送無關的個人資訊、密碼或敏感截圖；可以聯絡下方電子郵件請求刪除你提供的回饋材料。</p>
             <p>本站沒有加入廣告或分析 SDK。網站託管服務可能處理提供頁面和保障服務所需的 IP 位址、瀏覽器請求及瀏覽記錄；這與應用程式在本機處理截圖的行為不同。</p>
@@ -132,7 +132,7 @@
           <section class="legal-section" id="privacy-changes">
             <header class="legal-section-head">
               <span class="legal-section-num">05</span>
-              <h2>政策变更与联系方式</h2>
+              <h2>5. 政策變更與聯絡方式</h2>
             </header>
             <p>隱私處理方式變化時，我們會更新本頁面及更新日期。隱私問題或刪除回饋材料的請求請聯絡 <a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a>。</p>
             <p>使用說明見 <a href="./support.html">支援與說明</a>。</p>
@@ -147,7 +147,7 @@
             <span class="footer-brand-text">SnipX</span>
           </div>
 
-          <nav class="footer-links" aria-label="次要导航">
+          <nav class="footer-links" aria-label="次要導航">
             <a href="/zh-TW/">首頁</a>
             <a href="/zh-TW/#features">特色</a>
             <a href="/zh-TW/#install">下載</a>

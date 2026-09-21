@@ -14,7 +14,7 @@
     <meta name="robots" content="index,follow" />
     <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
     <script>
-      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      /* Theme init (FOUC guard): set data-theme before CSS is parsed */
       (function () {{
         try {{
           var mode = localStorage.getItem("snipx-theme") || "system";
@@ -43,7 +43,7 @@
             <span class="topbar-brand-text">SnipX</span>
           </a>
 
-          <nav class="topbar-nav" aria-label="主导航">
+          <nav class="topbar-nav" aria-label="Navegação principal">
             <a href="/pt/#features">Recursos</a>
             <a href="/pt/#install">Baixar</a>
             <a href="/pt/#about">Sobre</a>
@@ -374,7 +374,7 @@
             <span class="footer-brand-text">SnipX</span>
           </div>
 
-          <nav class="footer-links" aria-label="次要导航">
+          <nav class="footer-links" aria-label="Navegação secundária">
             <a href="/pt/">Início</a>
             <a href="/pt/#features">Recursos</a>
             <a href="/pt/#install">Baixar</a>

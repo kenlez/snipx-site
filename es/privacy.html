@@ -13,7 +13,7 @@
     <meta name="robots" content="index,follow" />
     <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
     <script>
-      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      /* Theme init (FOUC guard): set data-theme before CSS is parsed */
       (function () {{
         try {{
           var mode = localStorage.getItem("snipx-theme") || "system";
@@ -42,7 +42,7 @@
             <span class="topbar-brand-text">SnipX</span>
           </a>
 
-          <nav class="topbar-nav" aria-label="主导航">
+          <nav class="topbar-nav" aria-label="Navegación principal">
             <a href="/es/#features">Características</a>
             <a href="/es/#install">Descargar</a>
             <a href="/es/#about">Acerca de</a>
@@ -94,7 +94,7 @@
           <section class="legal-section" id="privacy-permissions">
             <header class="legal-section-head">
               <span class="legal-section-num">01</span>
-              <h2>系统权限</h2>
+              <h2>1. Permisos del sistema</h2>
             </header>
             <ul class="legal-list">
               <li><strong>Grabación de pantalla:</strong>necesaria para captura, captura larga y grabación.</li>
@@ -107,7 +107,7 @@
           <section class="legal-section" id="privacy-files">
             <header class="legal-section-head">
               <span class="legal-section-num">02</span>
-              <h2>文件、设置与本地日志</h2>
+              <h2>2. Archivos, ajustes y registros locales</h2>
             </header>
             <p>Las capturas y grabaciones se exportan mediante un diálogo a la ubicación que elijas. Las grabaciones en curso se guardan en SnipX/Recovery dentro del directorio de soporte de la app; los registros diagnósticos locales van a Library/Logs/SnipX/CrashLogs. En la versión sandbox estas carpetas están dentro del contenedor asignado por macOS a SnipX; la versión de desarrollo puede usar una carpeta CrashLogs junto al proyecto.</p>
             <p>La app guarda localmente ajustes como los atajos y comprueba el espacio en disco para proteger las grabaciones. Estos datos no se envían automáticamente al desarrollador. El OCR se ejecuta en el dispositivo con Apple Vision; las imágenes y resultados nunca llegan a un servidor.</p>
@@ -116,7 +116,7 @@
           <section class="legal-section" id="privacy-purchase">
             <header class="legal-section-head">
               <span class="legal-section-num">03</span>
-              <h2>购买与恢复购买</h2>
+              <h2>3. Compras y restauración</h2>
             </header>
             <p>SnipX Pro es una compra in-app no consumible de un solo pago. El precio se muestra en la app y en la confirmación de compra de Apple. La carga del producto, compra, restauración y sincronización del estado de la transacción pasan por StoreKit de Apple y pueden requerir internet.</p>
             <p>Apple gestiona los pagos. SnipX verifica localmente la transacción y los datos de derecho que Apple proporciona para decidir si desbloquea grabación y GIF. El desarrollador no recoge datos de tarjeta ni de cuenta de pago a través de la app. Para la información que Apple trata, <a href="https://www.apple.com/legal/privacy/" rel="noopener">se aplica la Política de privacidad de Apple</a>。</p>
@@ -124,7 +124,7 @@
           <section class="legal-section" id="privacy-contact">
             <header class="legal-section-head">
               <span class="legal-section-num">04</span>
-              <h2>主动联系Soporte与访问官网</h2>
+              <h2>4. Contactar con soporte y visitar el sitio</h2>
             </header>
             <p>Cuando nos escribes, recibimos el correo, la descripción del problema y los adjuntos que envíes, que usamos solo para responder y depurar. No envíes datos personales no relacionados, contraseñas ni capturas sensibles. Puedes escribir a la dirección de abajo para solicitar la eliminación del material que proporcionaste.</p>
             <p>Este sitio no incluye anuncios ni SDKs de análisis. El proveedor de hosting puede procesar direcciones IP, peticiones del navegador y registros de acceso necesarios para servir y asegurar el sitio, algo distinto del procesamiento local de capturas en la app.</p>
@@ -132,7 +132,7 @@
           <section class="legal-section" id="privacy-changes">
             <header class="legal-section-head">
               <span class="legal-section-num">05</span>
-              <h2>政策变更与联系方式</h2>
+              <h2>5. Cambios y contacto</h2>
             </header>
             <p>Si cambian nuestras prácticas de privacidad, actualizaremos esta página y su fecha. Para preguntas de privacidad o solicitudes de eliminación de material de feedback, escribe a <a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a>。</p>
             <p>Las instrucciones de uso están en <a href="./support.html">Soporte y ayuda</a>。</p>
@@ -147,7 +147,7 @@
             <span class="footer-brand-text">SnipX</span>
           </div>
 
-          <nav class="footer-links" aria-label="次要导航">
+          <nav class="footer-links" aria-label="Navegación secundaria">
             <a href="/es/">Inicio</a>
             <a href="/es/#features">Características</a>
             <a href="/es/#install">Descargar</a>

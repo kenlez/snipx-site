@@ -13,7 +13,7 @@
     <meta name="robots" content="index,follow" />
     <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
     <script>
-      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      /* Theme init (FOUC guard): set data-theme before CSS is parsed */
       (function () {{
         try {{
           var mode = localStorage.getItem("snipx-theme") || "system";
@@ -42,7 +42,7 @@
             <span class="topbar-brand-text">SnipX</span>
           </a>
 
-          <nav class="topbar-nav" aria-label="主导航">
+          <nav class="topbar-nav" aria-label="メインナビゲーション">
             <a href="/ja/#features">機能</a>
             <a href="/ja/#install">ダウンロード</a>
             <a href="/ja/#about">概要</a>
@@ -94,7 +94,7 @@
           <section class="legal-section" id="privacy-permissions">
             <header class="legal-section-head">
               <span class="legal-section-num">01</span>
-              <h2>系统权限</h2>
+              <h2>1. システム権限</h2>
             </header>
             <ul class="legal-list">
               <li><strong>画面収録：</strong>キャプチャ、スクロールキャプチャ、録画に使用されます。</li>
@@ -107,7 +107,7 @@
           <section class="legal-section" id="privacy-files">
             <header class="legal-section-head">
               <span class="legal-section-num">02</span>
-              <h2>文件、设置与本地日志</h2>
+              <h2>2. ファイル、設定、ローカルログ</h2>
             </header>
             <p>キャプチャと録画は保存ダイアログで選択した場所に書き出されます。録画中ファイルはアプリサポートディレクトリの SnipX/Recovery に保存され、ローカル診断ログは Library/Logs/SnipX/CrashLogs に保存されます。サンドボックス版のこれらのディレクトリは、macOS が SnipX に割り当てたコンテナ内にあります。開発ビルドではプロジェクト隣の CrashLogs ディレクトリも使用される場合があります。</p>
             <p>アプリはショートカットなどの設定をローカルに保存し、録画ファイルを保護するために利用可能なディスク容量を確認します。これらの情報は自動で開発者に送信されません。OCR は Apple Vision フレームワークでローカル実行され、画像や認識結果がサーバーに送信されることはありません。</p>
@@ -116,7 +116,7 @@
           <section class="legal-section" id="privacy-purchase">
             <header class="legal-section-head">
               <span class="legal-section-num">03</span>
-              <h2>购买与恢复购买</h2>
+              <h2>3. 購入と購入復元</h2>
             </header>
             <p>SnipX Pro は買い切りの非消耗型アプリ内課金で、価格はアプリ内および Apple の購入確認画面に従います。商品ロード、購入、復元、取引状態の同期は Apple の StoreKit サービス経由で行われ、ネット接続が必要な場合があります。</p>
             <p>決済は Apple が処理します。SnipX は Apple から提供された取引およびエンタイトルメント情報をローカルで検証し、録画と GIF のロック解除を判定します。デベロッパはアプリを通じてあなたのカードや支払いアカウント情報を収集しません。Apple が取り扱う情報には <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple のプライバシーポリシーが適用されます</a>。</p>
@@ -124,7 +124,7 @@
           <section class="legal-section" id="privacy-contact">
             <header class="legal-section-head">
               <span class="legal-section-num">04</span>
-              <h2>主动联系サポート与访问官网</h2>
+              <h2>4. サポートへの能動的な連絡と公式サイト閲覧</h2>
             </header>
             <p>あなたが能動的にメールを送った場合、記載されたメールアドレス、問題の説明、添付ファイルを受信し、返信と問題の調査にのみ使用します。無関係な個人情報、パスワード、機密性の高いスクリーンショットは送らないでください。提供したフィードバック資料の削除依頼は下記のメールアドレスまでご連絡ください。</p>
             <p>本サイトは広告や分析 SDK を一切組み込んでいません。ホスティングサービスはページの提供とサービス維持に必要な IP アドレス、ブラウザリクエスト、アクセスログを処理する場合がありますが、これはアプリがローカルでキャプチャを処理する仕組みとは異なります。</p>
@@ -132,7 +132,7 @@
           <section class="legal-section" id="privacy-changes">
             <header class="legal-section-head">
               <span class="legal-section-num">05</span>
-              <h2>政策变更与联系方式</h2>
+              <h2>5. ポリシーの変更と連絡先</h2>
             </header>
             <p>プライバシー取り扱いを変更する際は、本ページと更新日を更新します。プライバシーに関するご質問やフィードバック資料の削除依頼は下記までご連絡ください <a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a>。</p>
             <p>使い方は <a href="./support.html">サポート</a>。</p>
@@ -147,7 +147,7 @@
             <span class="footer-brand-text">SnipX</span>
           </div>
 
-          <nav class="footer-links" aria-label="次要导航">
+          <nav class="footer-links" aria-label="サブナビゲーション">
             <a href="/ja/">ホーム</a>
             <a href="/ja/#features">機能</a>
             <a href="/ja/#install">ダウンロード</a>

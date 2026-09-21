@@ -13,7 +13,7 @@
     <meta name="robots" content="index,follow" />
     <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
     <script>
-      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      /* Theme init (FOUC guard): set data-theme before CSS is parsed */
       (function () {{
         try {{
           var mode = localStorage.getItem("snipx-theme") || "system";
@@ -42,7 +42,7 @@
             <span class="topbar-brand-text">SnipX</span>
           </a>
 
-          <nav class="topbar-nav" aria-label="主导航">
+          <nav class="topbar-nav" aria-label="主導航">
             <a href="/zh-TW/#features">特色</a>
             <a href="/zh-TW/#install">下載</a>
             <a href="/zh-TW/#about">關於</a>
@@ -94,8 +94,8 @@
             <ul class="sysreq">
               <li>macOS 14.0 Sonoma 或更高版本</li>
               <li>支援 Apple Silicon（M1 / M2 / M3 / M4）與 Intel Mac</li>
-              <li>通用建置（Universal 2）同時包含 <code>arm64</code> 与 <code>x86_64</code></li>
-              <li>截圖、錄螢與 OCR 在本機處理；商品載入、購買與復原可能需要連線。</li>
+              <li>通用建置（Universal 2）同時包含 <code>arm64</code> 與 <code>x86_64</code></li>
+              <li>截图、录屏与 OCR 在本机处理；商品加载、購買與復原可能需要連線。</li>
             </ul>
           </section>
 
@@ -104,14 +104,10 @@
               <span class="legal-section-num">01</span>
               <h2>首次啟動：權限引導</h2>
             </header>
-            <p>
-              SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS
-              默认流程，不会启动即弹窗。
-            </p>
+            <p>SnipX 只會在你實際使用對應功能時申請系統權限，遵循 macOS 預設流程，不會啟動即彈跳視窗。</p>
             <ol class="legal-list">
               <li>
-                <strong>屏幕录制</strong>：首次截屏或录屏时系统会弹窗。授权后到「系统设置 → 隐私与安全性 →
-                屏幕录制」可看到 SnipX。
+                <strong>屏幕录制</strong>：首次截圖或錄螢時系統會彈跳視窗。授權後到「系統設定 → 隱私與安全性 → 螢幕錄製」可看到 SnipX。
               </li>
               <li>
                 <strong>麦克风</strong>：僅在你開啟「錄製麥克風」開關時申請。
@@ -221,9 +217,7 @@
               <li>電子郵件：<a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a></li>
               <li>請附上：macOS 版本、SnipX 版本、重現步驟、必要時附截圖或錄螢</li>
               <li>
-                SnipX 在異常退出時會保留當機記錄到
-                <code>Library/Logs/SnipX/CrashLogs/（沙盒版位于应用容器内）</code
-                >，提交問題時一併附上可大幅加快定位
+                SnipX 在異常退出時會保留當機記錄到 <code>Library/Logs/SnipX/CrashLogs/（沙盒版位於應用程式容器內）</code>，提交問題時一併附上可大幅加快定位
               </li>
             </ul>
           </section>
@@ -233,13 +227,8 @@
               <span class="legal-section-num">04</span>
               <h2>版本與更新</h2>
             </header>
-            <p>
-              目前最新版本：<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。
-            </p>
-            <p>
-              完整版本變更說明見
-              <a href="https://github.com/kenlez/SnipX/blob/main/RELEASE-NOTES.md" rel="noopener">RELEASE-NOTES.md</a>。
-            </p>
+            <p>目前最新版本：<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。</p>
+            <p>完整版本變更說明見 <a href="https://github.com/kenlez/SnipX/blob/main/RELEASE-NOTES.md" rel="noopener">RELEASE-NOTES.md</a>。</p>
           </section>
 
           <section class="legal-section" id="support-links">
@@ -265,7 +254,7 @@
             <span class="footer-brand-text">SnipX</span>
           </div>
 
-          <nav class="footer-links" aria-label="次要导航">
+          <nav class="footer-links" aria-label="次要導航">
             <a href="/zh-TW/">首頁</a>
             <a href="/zh-TW/#features">特色</a>
             <a href="/zh-TW/#install">下載</a>

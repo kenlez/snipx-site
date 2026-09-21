@@ -13,7 +13,7 @@
     <meta name="robots" content="index,follow" />
     <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
     <script>
-      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      /* Theme init (FOUC guard): set data-theme before CSS is parsed */
       (function () {{
         try {{
           var mode = localStorage.getItem("snipx-theme") || "system";
@@ -42,7 +42,7 @@
             <span class="topbar-brand-text">SnipX</span>
           </a>
 
-          <nav class="topbar-nav" aria-label="主导航">
+          <nav class="topbar-nav" aria-label="Main navigation">
             <a href="/en/#features">Features</a>
             <a href="/en/#install">Download</a>
             <a href="/en/#about">About</a>
@@ -94,7 +94,7 @@
             <ul class="sysreq">
               <li>macOS 14.0 Sonoma or later</li>
               <li>Apple Silicon (M1/M2/M3/M4) and Intel Macs</li>
-              <li>The Universal 2 build includes both <code>arm64</code> 与 <code>x86_64</code></li>
+              <li>The Universal 2 build includes both <code>arm64</code> and <code>x86_64</code></li>
               <li>Capture, recording, and OCR are processed on-device; product loading, purchase, and restore may require internet.</li>
             </ul>
           </section>
@@ -104,14 +104,10 @@
               <span class="legal-section-num">01</span>
               <h2>First launch: permission guide</h2>
             </header>
-            <p>
-              SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS
-              默认流程，不会启动即弹窗。
-            </p>
+            <p>SnipX only asks for system permissions when you actually use the corresponding feature, following macOS defaults — no prompts at launch.</p>
             <ol class="legal-list">
               <li>
-                <strong>屏幕录制</strong>：首次截屏或录屏时系统会弹窗。授权后到「系统设置 → 隐私与安全性 →
-                屏幕录制」可看到 SnipX。
+                <strong>屏幕录制</strong>：macOS prompts on your first capture or recording. After you grant it, you'll see SnipX under System Settings → Privacy & Security → Screen Recording.
               </li>
               <li>
                 <strong>麦克风</strong>：Requested only when you enable mic capture.
@@ -221,9 +217,7 @@
               <li>Email:<a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a></li>
               <li>Please include: macOS version, SnipX version, reproduction steps, and a screenshot or recording if possible</li>
               <li>
-                SnipX preserves crash logs at
-                <code>Library/Logs/SnipX/CrashLogs/（沙盒版位于应用容器内）</code
-                >，include them in your report for much faster triage
+                SnipX preserves crash logs at <code>Library/Logs/SnipX/CrashLogs/(sandbox version is in the app container)</code>，include them in your report for much faster triage
               </li>
             </ul>
           </section>
@@ -233,13 +227,8 @@
               <span class="legal-section-num">04</span>
               <h2>Versions & updates</h2>
             </header>
-            <p>
-              Current release:<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。
-            </p>
-            <p>
-              Full release notes:
-              <a href="https://github.com/kenlez/SnipX/blob/main/RELEASE-NOTES.md" rel="noopener">RELEASE-NOTES.md</a>。
-            </p>
+            <p>Current release:<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。</p>
+            <p>Full release notes: <a href="https://github.com/kenlez/SnipX/blob/main/RELEASE-NOTES.md" rel="noopener">RELEASE-NOTES.md</a>。</p>
           </section>
 
           <section class="legal-section" id="support-links">
@@ -265,7 +254,7 @@
             <span class="footer-brand-text">SnipX</span>
           </div>
 
-          <nav class="footer-links" aria-label="次要导航">
+          <nav class="footer-links" aria-label="Secondary navigation">
             <a href="/en/">Home</a>
             <a href="/en/#features">Features</a>
             <a href="/en/#install">Download</a>

@@ -13,7 +13,7 @@
     <meta name="robots" content="index,follow" />
     <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
     <script>
-      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      /* Theme init (FOUC guard): set data-theme before CSS is parsed */
       (function () {{
         try {{
           var mode = localStorage.getItem("snipx-theme") || "system";
@@ -93,8 +93,8 @@
             </header>
             <ul class="sysreq">
               <li>macOS 14.0 Sonoma 或更高版本</li>
-              <li>支持 Apple Silicon（M1 / M2 / M3 / M4）与 Intel Mac</li>
-              <li>通用构建（Universal 2）同时包含 <code>arm64</code> 与 <code>x86_64</code></li>
+              <li>支持 Apple Silicon（M1 / M2 / M3 / M4）和 Intel Mac</li>
+              <li>通用构建（Universal 2）同时包含 <code>arm64</code> 和 <code>x86_64</code></li>
               <li>截图、录屏与 OCR 在本机处理；商品加载、购买与恢复可能需要联网。</li>
             </ul>
           </section>
@@ -104,14 +104,10 @@
               <span class="legal-section-num">01</span>
               <h2>首次启动：权限引导</h2>
             </header>
-            <p>
-              SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS
-              默认流程，不会启动即弹窗。
-            </p>
+            <p>SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS 默认流程，不会启动即弹窗。</p>
             <ol class="legal-list">
               <li>
-                <strong>屏幕录制</strong>：首次截屏或录屏时系统会弹窗。授权后到「系统设置 → 隐私与安全性 →
-                屏幕录制」可看到 SnipX。
+                <strong>屏幕录制</strong>：首次截屏或录屏时系统会弹窗。授权后到「系统设置 → 隐私与安全性 → 屏幕录制」可看到 SnipX。
               </li>
               <li>
                 <strong>麦克风</strong>：仅在你开启「录制麦克风」开关时申请。
@@ -221,9 +217,7 @@
               <li>邮箱：<a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a></li>
               <li>请附上：macOS 版本、SnipX 版本、复现步骤、必要时附截图或录屏</li>
               <li>
-                SnipX 在异常退出时会保留崩溃日志到
-                <code>Library/Logs/SnipX/CrashLogs/（沙盒版位于应用容器内）</code
-                >，提交问题时一并附上可大幅加快定位
+                SnipX 在异常退出时会保留崩溃日志到 <code>Library/Logs/SnipX/CrashLogs/（沙盒版位于应用容器内）</code>，提交问题时一并附上可大幅加快定位
               </li>
             </ul>
           </section>
@@ -233,13 +227,8 @@
               <span class="legal-section-num">04</span>
               <h2>版本与更新</h2>
             </header>
-            <p>
-              当前最新版本：<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。
-            </p>
-            <p>
-              完整版本变更说明见
-              <a href="https://github.com/kenlez/SnipX/blob/main/RELEASE-NOTES.md" rel="noopener">RELEASE-NOTES.md</a>。
-            </p>
+            <p>当前最新版本：<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。</p>
+            <p>完整版本变更说明见 <a href="https://github.com/kenlez/SnipX/blob/main/RELEASE-NOTES.md" rel="noopener">RELEASE-NOTES.md</a>。</p>
           </section>
 
           <section class="legal-section" id="support-links">

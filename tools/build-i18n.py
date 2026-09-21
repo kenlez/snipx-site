@@ -169,7 +169,7 @@ T = {
             "截圖、錄螢、聲音、攝影機畫面、OCR 辨識結果和標註均在你的 Mac 上處理。SnipX 不會自動把這些內容或本地診斷記錄上傳給開發者，不整合廣告、追蹤或第三方分析 SDK。",
         "当你主动使用系统分享、发送反馈或将文件保存到云盘同步目录时，内容会按你的操作交给相应服务，其处理方式适用该服务的隐私政策。":
             "當你主動使用系統分享、傳送回饋或將檔案儲存到雲端同步目錄時，內容會按你的操作交給相應服務，其處理方式適用該服務的隱私政策。",
-        "1. 系统权限": "1. 系統權限",
+        "系统权限": "1. 系統權限",
         "屏幕录制：": "螢幕錄製：",
         "用于截屏、长截图与录屏。": "用於截圖、長截圖與錄螢。",
         "系统声音：": "系統聲音：",
@@ -180,25 +180,25 @@ T = {
         "在你开启摄像头画面时申请，用于画中画。": "在你開啟攝影機畫面時申請，用於子母畫面。",
         "你可以在 macOS「系统设置 → 隐私与安全性」中管理权限。拒绝或撤销权限会影响对应功能。全局快捷键不要求额外开启辅助功能；在 Finder 中显示文件不要求自动化权限。":
             "你可以在 macOS「系統設定 → 隱私與安全性」中管理權限。拒絕或撤銷權限會影響對應功能。全域快捷鍵不要求額外開啟輔助功能；在 Finder 中顯示檔案不要求自動化權限。",
-        "2. 文件、设置与本地日志": "2. 檔案、設定與本地記錄",
+        "文件、设置与本地日志": "2. 檔案、設定與本地記錄",
         "截图与录屏通过保存对话框导出到你选择的位置。录屏过程文件保存在应用支持目录的 SnipX/Recovery 中；本地诊断日志保存在 Library/Logs/SnipX/CrashLogs 中。沙盒版的这些应用目录位于 macOS 为 SnipX 分配的容器内，开发测试版也可能使用项目旁的 CrashLogs 目录。":
             "截圖與錄螢透過儲存對話框匯出到你選擇的位置。錄螢過程檔案儲存在應用支援目錄的 SnipX/Recovery 中；本地診斷記錄儲存在 Library/Logs/SnipX/CrashLogs 中。沙盒版的這些應用目錄位於 macOS 為 SnipX 分配的容器內，開發測試版也可能使用專案旁的 CrashLogs 目錄。",
         "应用在本机保存快捷键等偏好设置，并检查可用磁盘空间以保护录制文件。这些信息不会自动发送给开发者。OCR 使用 Apple Vision 框架在本机完成，不向服务器上传图片或识别结果。":
             "應用程式在本機儲存快捷鍵等偏好設定，並檢查可用磁碟空間以保護錄製檔案。這些資訊不會自動傳送給開發者。OCR 使用 Apple Vision 框架在本機完成，不向伺服器上傳圖片或辨識結果。",
         "删除应用本身不保证删除已导出文件、恢复文件和日志。请先保存需要保留的内容，再自行清理不需要的文件；不要在录制过程中删除恢复文件。":
             "刪除應用程式本身不保證刪除已匯出檔案、復原檔案和記錄。請先儲存需要保留的內容，再自行清理不需要的檔案；不要在錄製過程中刪除復原檔案。",
-        "3. 购买与恢复购买": "3. 購買與復原購買",
+        "购买与恢复购买": "3. 購買與復原購買",
         "SnipX Pro 为一次性买断的非消耗型内购，价格以 App 内和 Apple 购买确认界面为准。商品加载、购买、恢复及交易状态同步通过 Apple StoreKit 服务完成，可能需要联网。":
             "SnipX Pro 為一次性買斷的非消耗型內購，價格以 App 內和 Apple 購買確認介面為準。商品載入、購買、復原及交易狀態同步透過 Apple StoreKit 服務完成，可能需要連線。",
         "Apple 处理付款。SnipX 在本机验证 Apple 提供的交易及权益信息，以决定是否解锁录屏和 GIF。开发者不通过应用收集你的银行卡或支付账户信息。Apple 对其处理的信息适用":
             "Apple 處理付款。SnipX 在本機驗證 Apple 提供的交易及權益資訊，以決定是否解鎖錄螢和 GIF。開發者不透過應用程式收集你的銀行卡或支付帳戶資訊。Apple 對其處理的資訊適用",
         "Apple 隐私政策": "Apple 隱私政策",
-        "4. 主动联系支持与访问官网": "4. 主動聯絡支援與瀏覽官網",
+        "主动联系支持与访问官网": "4. 主動聯絡支援與瀏覽官網",
         "你主动发送邮件时，我们会收到你提供的邮箱、问题描述及附件，仅用于回复和排查问题。请勿发送无关的个人信息、密码或敏感截图；可以联系下方邮箱请求删除你提供的反馈材料。":
             "你主動傳送郵件時，我們會收到你提供的電子郵件、問題描述及附件，僅用於回覆和排查問題。請勿傳送無關的個人資訊、密碼或敏感截圖；可以聯絡下方電子郵件請求刪除你提供的回饋材料。",
         "本站没有加入广告或分析 SDK。网站托管服务可能处理提供页面和保障服务所需的 IP 地址、浏览器请求及访问日志；这与应用在本机处理截图的行为不同。":
             "本站沒有加入廣告或分析 SDK。網站託管服務可能處理提供頁面和保障服務所需的 IP 位址、瀏覽器請求及瀏覽記錄；這與應用程式在本機處理截圖的行為不同。",
-        "5. 政策变更与联系方式": "5. 政策變更與聯絡方式",
+        "政策变更与联系方式": "5. 政策變更與聯絡方式",
         "隐私处理方式变化时，我们会更新本页面及更新日期。隐私问题或删除反馈材料的请求请联系":
             "隱私處理方式變化時，我們會更新本頁面及更新日期。隱私問題或刪除回饋材料的請求請聯絡",
         "使用说明见": "使用說明見",
@@ -210,9 +210,9 @@ T = {
             "FAQ、權限引導、回饋渠道 · 適用於 SnipX 1.0.0 及以上版本",
         "系统要求": "系統需求",
         "macOS 14.0 Sonoma 或更高版本": "macOS 14.0 Sonoma 或更高版本",
-        "支持 Apple Silicon（M1 / M2 / M3 / M4）与 Intel Mac": "支援 Apple Silicon（M1 / M2 / M3 / M4）與 Intel Mac",
-        "通用构建（Universal 2）同时包含": "通用建置（Universal 2）同時包含",
-        "截图、录屏与 OCR 在本机处理；商品加载、购买与恢复可能需要联网。":
+"支持 Apple Silicon（M1 / M2 / M3 / M4）和 Intel Mac": "支援 Apple Silicon（M1 / M2 / M3 / M4）與 Intel Mac",
+        "通用构建（Universal 2）同时包含 <code>arm64</code> 和 <code>x86_64</code>": "通用建置（Universal 2）同時包含 <code>arm64</code> 與 <code>x86_64</code>",
+        "截屏、录屏与 OCR 在本机处理；商品加载、购买与恢复可能需要联网。":
             "截圖、錄螢與 OCR 在本機處理；商品載入、購買與復原可能需要連線。",
         "首次启动：权限引导": "首次啟動：權限引導",
         "SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS 默认流程，不会启动即弹窗。":
@@ -265,7 +265,10 @@ T = {
         "完整版本变更说明见": "完整版本變更說明見",
         "相关链接": "相關連結",
         "产品主页": "產品首頁",
-    },
+        "主导航": "主導航",
+        "次要导航": "次要導航",
+        "（沙盒版位于应用容器内）": "（沙盒版位於應用程式容器內）",
+                            },
 
     "en": {
         # common
@@ -404,7 +407,7 @@ T = {
             "Screenshots, recordings, audio, camera frames, OCR results, and annotations are all processed on your Mac. SnipX does not upload your content or local diagnostic logs, and does not embed ads, trackers, or third-party analytics SDKs.",
         "当你主动使用系统分享、发送反馈或将文件保存到云盘同步目录时，内容会按你的操作交给相应服务，其处理方式适用该服务的隐私政策。":
             "When you actively use system share, send feedback, or save files into a cloud-synced folder, the content is handed to the corresponding service per your action, and that service's privacy policy applies.",
-        "1. 系统权限": "1. System permissions",
+        "系统权限": "1. System permissions",
         "屏幕录制：": "Screen recording:",
         "用于截屏、长截图与录屏。": "required for capture, scrolling capture, and recording.",
         "系统声音：": "System audio:",
@@ -415,25 +418,25 @@ T = {
         "在你开启摄像头画面时申请，用于画中画。": "requested only when you enable camera overlay, for picture-in-picture.",
         "你可以在 macOS「系统设置 → 隐私与安全性」中管理权限。拒绝或撤销权限会影响对应功能。全局快捷键不要求额外开启辅助功能；在 Finder 中显示文件不要求自动化权限。":
             "You can manage permissions in macOS System Settings → Privacy & Security. Declining or revoking a permission disables the related features. Global shortcuts don't require Accessibility; revealing files in Finder doesn't require Automation.",
-        "2. 文件、设置与本地日志": "2. Files, settings, and local logs",
+        "文件、设置与本地日志": "2. Files, settings, and local logs",
         "截图与录屏通过保存对话框导出到你选择的位置。录屏过程文件保存在应用支持目录的 SnipX/Recovery 中；本地诊断日志保存在 Library/Logs/SnipX/CrashLogs 中。沙盒版的这些应用目录位于 macOS 为 SnipX 分配的容器内，开发测试版也可能使用项目旁的 CrashLogs 目录。":
             "Captures and recordings are exported via a save dialog to a location you choose. In-progress recordings live in the app's support directory under SnipX/Recovery; local diagnostic logs go to Library/Logs/SnipX/CrashLogs. In the sandbox build these directories live inside the macOS-assigned container for SnipX; the development build may also use a CrashLogs folder next to the project.",
         "应用在本机保存快捷键等偏好设置，并检查可用磁盘空间以保护录制文件。这些信息不会自动发送给开发者。OCR 使用 Apple Vision 框架在本机完成，不向服务器上传图片或识别结果。":
             "SnipX stores preferences such as shortcuts locally and checks available disk space to protect recordings. This data is not automatically sent to the developer. OCR runs on-device through the Apple Vision framework — images and recognition results never reach a server.",
         "删除应用本身不保证删除已导出文件、恢复文件和日志。请先保存需要保留的内容，再自行清理不需要的文件；不要在录制过程中删除恢复文件。":
             "Uninstalling SnipX does not guarantee deletion of exported files, recovery files, or logs. Save anything you want to keep first, then clean up files you no longer need. Don't delete recovery files while a recording is in progress.",
-        "3. 购买与恢复购买": "3. Purchases & restore",
+        "购买与恢复购买": "3. Purchases & restore",
         "SnipX Pro 为一次性买断的非消耗型内购，价格以 App 内和 Apple 购买确认界面为准。商品加载、购买、恢复及交易状态同步通过 Apple StoreKit 服务完成，可能需要联网。":
             "SnipX Pro is a one-time-purchase non-consumable in-app purchase. The price is shown in the app and in Apple's purchase confirmation. Product loading, purchase, restore, and transaction-state sync go through Apple's StoreKit service and may require internet.",
         "Apple 处理付款。SnipX 在本机验证 Apple 提供的交易及权益信息，以决定是否解锁录屏和 GIF。开发者不通过应用收集你的银行卡或支付账户信息。Apple 对其处理的信息适用":
             "Apple handles payments. SnipX verifies the transaction and entitlement data Apple provides locally to decide whether to unlock recording and GIF. The developer does not collect your card or payment-account info through the app. For information Apple handles,",
         "Apple 隐私政策": "Apple's Privacy Policy applies",
-        "4. 主动联系支持与访问官网": "4. Contacting support & visiting the site",
+        "主动联系支持与访问官网": "4. Contacting support & visiting the site",
         "你主动发送邮件时，我们会收到你提供的邮箱、问题描述及附件，仅用于回复和排查问题。请勿发送无关的个人信息、密码或敏感截图；可以联系下方邮箱请求删除你提供的反馈材料。":
             "When you email us, we receive the email address, problem description, and any attachments you provide — used only to reply and debug. Please don't send unrelated personal info, passwords, or sensitive screenshots. You can email the address below to request deletion of your feedback materials.",
         "本站没有加入广告或分析 SDK。网站托管服务可能处理提供页面和保障服务所需的 IP 地址、浏览器请求及访问日志；这与应用在本机处理截图的行为不同。":
             "This site includes no ads or analytics SDKs. The hosting provider may process IP addresses, browser requests, and access logs needed to serve the site and keep it secure — that's separate from how the app processes captures locally.",
-        "5. 政策变更与联系方式": "5. Changes & contact",
+        "政策变更与联系方式": "5. Changes & contact",
         "隐私处理方式变化时，我们会更新本页面及更新日期。隐私问题或删除反馈材料的请求请联系":
             "If our privacy practices change, we'll update this page and its date. For privacy questions or to request deletion of feedback materials, email",
         "使用说明见": "See usage notes at",
@@ -445,8 +448,8 @@ T = {
             "FAQ, permission guide, feedback channels · for SnipX 1.0.0 and later",
         "系统要求": "System requirements",
         "macOS 14.0 Sonoma 或更高版本": "macOS 14.0 Sonoma or later",
-        "支持 Apple Silicon（M1 / M2 / M3 / M4）与 Intel Mac": "Apple Silicon (M1/M2/M3/M4) and Intel Macs",
-        "通用构建（Universal 2）同时包含": "The Universal 2 build includes both",
+"支持 Apple Silicon（M1 / M2 / M3 / M4）和 Intel Mac": "Apple Silicon (M1/M2/M3/M4) and Intel Macs",
+        "通用构建（Universal 2）同时包含 <code>arm64</code> 和 <code>x86_64</code>": "The Universal 2 build includes both <code>arm64</code> and <code>x86_64</code>",
         "截图、录屏与 OCR 在本机处理；商品加载、购买与恢复可能需要联网。":
             "Capture, recording, and OCR are processed on-device; product loading, purchase, and restore may require internet.",
         "首次启动：权限引导": "First launch: permission guide",
@@ -500,7 +503,10 @@ T = {
         "完整版本变更说明见": "Full release notes:",
         "相关链接": "Related links",
         "产品主页": "Product home",
-    },
+        "主导航": "Main navigation",
+        "次要导航": "Secondary navigation",
+        "（沙盒版位于应用容器内）": "(sandbox version is in the app container)",
+                            },
 "ja": {
     # common
     "下载 SnipX": "SnipX をダウンロード",
@@ -638,7 +644,7 @@ T = {
         "スクリーンショット、録画、音声、カメラ映像、OCR 認識結果、注釈はすべて Mac 上で処理されます。SnipX はコンテンツやローカル診断ログを開発者に自動アップロードせず、広告、トラッカー、サードパーティ分析 SDK も組み込みません。",
     "当你主动使用系统分享、发送反馈或将文件保存到云盘同步目录时，内容会按你的操作交给相应服务，其处理方式适用该服务的隐私政策。":
         "能動的にシステム共有を使用したり、フィードバックを送信したり、ファイルをクラウド同期フォルダに保存した場合、コンテンツはあなたの操作に応じて対応するサービスに引き渡され、そのサービスのプライバシーポリシーが適用されます。",
-    "1. 系统权限": "1. システム権限",
+    "系统权限": "1. システム権限",
     "屏幕录制：": "画面収録：",
     "用于截屏、长截图与录屏。": "キャプチャ、スクロールキャプチャ、録画に使用されます。",
     "系统声音：": "システム音声：",
@@ -649,25 +655,25 @@ T = {
     "在你开启摄像头画面时申请，用于画中画。": "カメラオーバーレイを有効にした場合にのみ要求され、PiP に使用されます。",
     "你可以在 macOS「系统设置 → 隐私与安全性」中管理权限。拒绝或撤销权限会影响对应功能。全局快捷键不要求额外开启辅助功能；在 Finder 中显示文件不要求自动化权限。":
         "macOS の「システム設定 → プライバシーとセキュリティ」で権限を管理できます。権限を拒否または取り消すと対応する機能は無効になります。グローバルショートカットはアクセシビリティを要求せず、Finder でのファイル表示もオートメーション権限を要求しません。",
-    "2. 文件、设置与本地日志": "2. ファイル、設定、ローカルログ",
+    "文件、设置与本地日志": "2. ファイル、設定、ローカルログ",
     "截图与录屏通过保存对话框导出到你选择的位置。录屏过程文件保存在应用支持目录的 SnipX/Recovery 中；本地诊断日志保存在 Library/Logs/SnipX/CrashLogs 中。沙盒版的这些应用目录位于 macOS 为 SnipX 分配的容器内，开发测试版也可能使用项目旁的 CrashLogs 目录。":
         "キャプチャと録画は保存ダイアログで選択した場所に書き出されます。録画中ファイルはアプリサポートディレクトリの SnipX/Recovery に保存され、ローカル診断ログは Library/Logs/SnipX/CrashLogs に保存されます。サンドボックス版のこれらのディレクトリは、macOS が SnipX に割り当てたコンテナ内にあります。開発ビルドではプロジェクト隣の CrashLogs ディレクトリも使用される場合があります。",
     "应用在本机保存快捷键等偏好设置，并检查可用磁盘空间以保护录制文件。这些信息不会自动发送给开发者。OCR 使用 Apple Vision 框架在本机完成，不向服务器上传图片或识别结果。":
         "アプリはショートカットなどの設定をローカルに保存し、録画ファイルを保護するために利用可能なディスク容量を確認します。これらの情報は自動で開発者に送信されません。OCR は Apple Vision フレームワークでローカル実行され、画像や認識結果がサーバーに送信されることはありません。",
     "删除应用本身不保证删除已导出文件、恢复文件和日志。请先保存需要保留的内容，再自行清理不需要的文件；不要在录制过程中删除恢复文件。":
         "アプリをアンインストールしても、書き出し済みファイル、復元ファイル、ログは自動削除されません。残したい内容は先に保存し、不要なファイルは各自で削除してください。録画進行中に復元ファイルを削除しないでください。",
-    "3. 购买与恢复购买": "3. 購入と購入復元",
+    "购买与恢复购买": "3. 購入と購入復元",
     "SnipX Pro 为一次性买断的非消耗型内购，价格以 App 内和 Apple 购买确认界面为准。商品加载、购买、恢复及交易状态同步通过 Apple StoreKit 服务完成，可能需要联网。":
         "SnipX Pro は買い切りの非消耗型アプリ内課金で、価格はアプリ内および Apple の購入確認画面に従います。商品ロード、購入、復元、取引状態の同期は Apple の StoreKit サービス経由で行われ、ネット接続が必要な場合があります。",
     "Apple 处理付款。SnipX 在本机验证 Apple 提供的交易及权益信息，以决定是否解锁录屏和 GIF。开发者不通过应用收集你的银行卡或支付账户信息。Apple 对其处理的信息适用":
         "決済は Apple が処理します。SnipX は Apple から提供された取引およびエンタイトルメント情報をローカルで検証し、録画と GIF のロック解除を判定します。デベロッパはアプリを通じてあなたのカードや支払いアカウント情報を収集しません。Apple が取り扱う情報には",
     "Apple 隐私政策": "Apple のプライバシーポリシーが適用されます",
-    "4. 主动联系支持与访问官网": "4. サポートへの能動的な連絡と公式サイト閲覧",
+    "主动联系支持与访问官网": "4. サポートへの能動的な連絡と公式サイト閲覧",
     "你主动发送邮件时，我们会收到你提供的邮箱、问题描述及附件，仅用于回复和排查问题。请勿发送无关的个人信息、密码或敏感截图；可以联系下方邮箱请求删除你提供的反馈材料。":
         "あなたが能動的にメールを送った場合、記載されたメールアドレス、問題の説明、添付ファイルを受信し、返信と問題の調査にのみ使用します。無関係な個人情報、パスワード、機密性の高いスクリーンショットは送らないでください。提供したフィードバック資料の削除依頼は下記のメールアドレスまでご連絡ください。",
     "本站没有加入广告或分析 SDK。网站托管服务可能处理提供页面和保障服务所需的 IP 地址、浏览器请求及访问日志；这与应用在本机处理截图的行为不同。":
         "本サイトは広告や分析 SDK を一切組み込んでいません。ホスティングサービスはページの提供とサービス維持に必要な IP アドレス、ブラウザリクエスト、アクセスログを処理する場合がありますが、これはアプリがローカルでキャプチャを処理する仕組みとは異なります。",
-    "5. 政策变更与联系方式": "5. ポリシーの変更と連絡先",
+    "政策变更与联系方式": "5. ポリシーの変更と連絡先",
     "隐私处理方式变化时，我们会更新本页面及更新日期。隐私问题或删除反馈材料的请求请联系":
         "プライバシー取り扱いを変更する際は、本ページと更新日を更新します。プライバシーに関するご質問やフィードバック資料の削除依頼は下記までご連絡ください",
     "使用说明见": "使い方は",
@@ -679,10 +685,10 @@ T = {
         "FAQ、権限ガイド、フィードバック窓口 · SnipX 1.0.0 以降に対応",
     "系统要求": "システム要件",
     "macOS 14.0 Sonoma 或更高版本": "macOS 14.0 Sonoma 以降",
-    "支持 Apple Silicon（M1 / M2 / M3 / M4）与 Intel Mac": "Apple Silicon（M1 / M2 / M3 / M4）と Intel Mac に対応",
-    "通用构建（Universal 2）同时包含": "Universal 2 ビルドには次の両方が含まれます",
-    "截图、录屏与 OCR 在本机处理；商品加载、购买与恢复可能需要联网。":
-        "キャプチャ、録画、OCR は Mac 上で処理されます。商品ロード、購入、復元にはネット接続が必要な場合があります。",
+    "支持 Apple Silicon（M1 / M2 / M3 / M4）和 Intel Mac": "Apple Silicon（M1 / M2 / M3 / M4）と Intel Mac に対応",
+    "通用构建（Universal 2）同时包含 <code>arm64</code> 和 <code>x86_64</code>": "Universal 2 ビルドには <code>arm64</code> と <code>x86_64</code> の両方が含まれます",
+        "截图、录屏与 OCR 在本机处理；商品加载、购买与恢复可能需要联网。":
+            "キャプチャ、録画、OCR は Mac 上で処理されます。商品ロード、購入、復元にはネット接続が必要な場合があります。",
     "首次启动：权限引导": "初回起動：権限ガイド",
     "SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS 默认流程，不会启动即弹窗。":
         "SnipX は対応する機能を実際に使ったときのみシステム権限を要求します。macOS のデフォルトフローに従い、起動直後にダイアログは表示しません。",
@@ -734,7 +740,10 @@ T = {
     "完整版本变更说明见": "完全な変更履歴は",
     "相关链接": "関連リンク",
     "产品主页": "製品ホーム",
-},
+        "主导航": "メインナビゲーション",
+        "次要导航": "サブナビゲーション",
+        "（沙盒版位于应用容器内）": "（サンドボックス版はアプリのコンテナ内にあります）",
+                        },
 "ko": {
     # common
     "下载 SnipX": "SnipX 다운로드",
@@ -872,7 +881,7 @@ T = {
         "스크린샷, 녹화, 음성, 카메라 영상, OCR 인식 결과 및 주석은 모두 Mac에서 처리됩니다. SnipX는 콘텐츠나 로컬 진단 로그를 개발자에게 자동으로 업로드하지 않으며, 광고, 트래커, 타사 분석 SDK를 포함하지 않습니다.",
     "当你主动使用系统分享、发送反馈或将文件保存到云盘同步目录时，内容会按你的操作交给相应服务，其处理方式适用该服务的隐私政策。":
         "사용자가 시스템 공유를 사용하거나, 피드백을 보내거나, 파일을 클라우드 동기화 폴더에 저장하면 콘텐츠는 사용자의 작업에 따라 해당 서비스로 전달되며 해당 서비스의 개인정보 처리방침이 적용됩니다.",
-    "1. 系统权限": "1. 시스템 권한",
+    "系统权限": "1. 시스템 권한",
     "屏幕录制：": "화면 녹화:",
     "用于截屏、长截图与录屏。": "캡처, 스크롤 캡처, 녹화에 사용됩니다.",
     "系统声音：": "시스템 음성:",
@@ -883,25 +892,25 @@ T = {
     "在你开启摄像头画面时申请，用于画中画。": "카메라 오버레이를 활성화할 때만 요청되며 PIP에 사용됩니다.",
     "你可以在 macOS「系统设置 → 隐私与安全性」中管理权限。拒绝或撤销权限会影响对应功能。全局快捷键不要求额外开启辅助功能；在 Finder 中显示文件不要求自动化权限。":
         "macOS의 「시스템 설정 → 개인 정보 보호 및 보안」에서 권한을 관리할 수 있습니다. 권한을 거부하거나 취소하면 해당 기능에 영향을 줍니다. 전역 단축키는 접근성 권한을 요구하지 않으며, Finder에서 파일 표시는 자동화 권한을 요구하지 않습니다.",
-    "2. 文件、设置与本地日志": "2. 파일, 설정, 로컬 로그",
+    "文件、设置与本地日志": "2. 파일, 설정, 로컬 로그",
     "截图与录屏通过保存对话框导出到你选择的位置。录屏过程文件保存在应用支持目录的 SnipX/Recovery 中；本地诊断日志保存在 Library/Logs/SnipX/CrashLogs 中。沙盒版的这些应用目录位于 macOS 为 SnipX 分配的容器内，开发测试版也可能使用项目旁的 CrashLogs 目录。":
         "캡처와 녹화는 저장 대화상자를 통해 사용자가 선택한 위치로 내보냅니다. 진행 중인 녹화 파일은 앱 지원 디렉터리의 SnipX/Recovery에 저장되고, 로컬 진단 로그는 Library/Logs/SnipX/CrashLogs에 저장됩니다. 샌드박스 버전의 이 디렉터리는 macOS가 SnipX에 할당한 컨테이너 안에 있으며, 개발 빌드는 프로젝트 옆의 CrashLogs 디렉터리를 사용할 수도 있습니다.",
     "应用在本机保存快捷键等偏好设置，并检查可用磁盘空间以保护录制文件。这些信息不会自动发送给开发者。OCR 使用 Apple Vision 框架在本机完成，不向服务器上传图片或识别结果。":
         "앱은 단축키 등 설정을 로컬에 저장하고 녹화 파일 보호를 위해 사용 가능한 디스크 공간을 확인합니다. 이 정보는 자동으로 개발자에게 전송되지 않습니다. OCR은 Apple Vision 프레임워크로 로컬에서 실행되며 이미지나 인식 결과가 서버로 업로드되지 않습니다.",
     "删除应用本身不保证删除已导出文件、恢复文件和日志。请先保存需要保留的内容，再自行清理不需要的文件；不要在录制过程中删除恢复文件。":
         "앱 삭제는 내보낸 파일, 복구 파일, 로그의 삭제를 보장하지 않습니다. 보존할 내용은 먼저 저장한 다음 필요 없는 파일은 직접 정리하세요. 녹화 진행 중에는 복구 파일을 삭제하지 마세요.",
-    "3. 购买与恢复购买": "3. 구매 및 구매 복구",
+    "购买与恢复购买": "3. 구매 및 구매 복구",
     "SnipX Pro 为一次性买断的非消耗型内购，价格以 App 内和 Apple 购买确认界面为准。商品加载、购买、恢复及交易状态同步通过 Apple StoreKit 服务完成，可能需要联网。":
         "SnipX Pro는 일회성 구매의 비소모성 인앱 구매로, 가격은 앱 내 및 Apple 구매 확인 화면에 따릅니다. 상품 로드, 구매, 복구, 거래 상태 동기화는 Apple StoreKit 서비스를 통해 처리되며 인터넷 연결이 필요할 수 있습니다.",
     "Apple 处理付款。SnipX 在本机验证 Apple 提供的交易及权益信息，以决定是否解锁录屏和 GIF。开发者不通过应用收集你的银行卡或支付账户信息。Apple 对其处理的信息适用":
         "결제는 Apple이 처리합니다. SnipX는 Apple이 제공한 거래 및 자격 정보를 로컬에서 검증해 녹화와 GIF 잠금 해제 여부를 결정합니다. 개발자는 앱을 통해 사용자의 카드 또는 결제 계정 정보를 수집하지 않습니다. Apple이 처리하는 정보에는",
     "Apple 隐私政策": "Apple의 개인정보 처리방침이 적용됩니다",
-    "4. 主动联系支持与访问官网": "4. 지원팀 능동적 연락 및 공식 사이트 방문",
+    "主动联系支持与访问官网": "4. 지원팀 능동적 연락 및 공식 사이트 방문",
     "你主动发送邮件时，我们会收到你提供的邮箱、问题描述及附件，仅用于回复和排查问题。请勿发送无关的个人信息、密码或敏感截图；可以联系下方邮箱请求删除你提供的反馈材料。":
         "사용자가 능동적으로 이메일을 보내면 제공된 이메일 주소, 문제 설명 및 첨부 파일을 받으며, 이는 회신 및 문제 조사에만 사용됩니다. 관련 없는 개인정보, 비밀번호, 민감한 스크린샷은 보내지 마세요. 제공한 피드백 자료의 삭제는 아래 이메일로 요청할 수 있습니다.",
     "本站没有加入广告或分析 SDK。网站托管服务可能处理提供页面和保障服务所需的 IP 地址、浏览器请求及访问日志；这与应用在本机处理截图的行为不同。":
         "본 사이트는 광고나 분석 SDK를 포함하지 않습니다. 호스팅 서비스는 페이지 제공과 서비스 유지에 필요한 IP 주소, 브라우저 요청, 접근 로그를 처리할 수 있으며 이는 앱이 캡처를 로컬에서 처리하는 것과는 다릅니다.",
-    "5. 政策变更与联系方式": "5. 정책 변경 및 연락처",
+    "政策变更与联系方式": "5. 정책 변경 및 연락처",
     "隐私处理方式变化时，我们会更新本页面及更新日期。隐私问题或删除反馈材料的请求请联系":
         "개인정보 처리 방식이 변경되면 본 페이지와 업데이트 날짜를 갱신합니다. 개인정보 관련 질문이나 피드백 자료 삭제 요청은 다음으로 연락하세요",
     "使用说明见": "사용 안내는",
@@ -913,10 +922,10 @@ T = {
         "FAQ, 권한 안내, 피드백 채널 · SnipX 1.0.0 이상 버전 기준",
     "系统要求": "시스템 요구 사항",
     "macOS 14.0 Sonoma 或更高版本": "macOS 14.0 Sonoma 이상",
-    "支持 Apple Silicon（M1 / M2 / M3 / M4）与 Intel Mac": "Apple Silicon (M1 / M2 / M3 / M4) 및 Intel Mac 지원",
-    "通用构建（Universal 2）同时包含": "Universal 2 빌드는 다음 두 가지 모두 포함",
-    "截图、录屏与 OCR 在本机处理；商品加载、购买与恢复可能需要联网。":
-        "캡처, 녹화, OCR은 Mac에서 처리되며 상품 로드, 구매, 복구에는 인터넷 연결이 필요할 수 있습니다.",
+    "支持 Apple Silicon（M1 / M2 / M3 / M4）和 Intel Mac": "Apple Silicon (M1 / M2 / M3 / M4) 및 Intel Mac 지원",
+    "通用构建（Universal 2）同时包含 <code>arm64</code> 和 <code>x86_64</code>": "Universal 2 빌드에는 <code>arm64</code>과 <code>x86_64</code>이 모두 포함됩니다",
+        "截图、录屏与 OCR 在本机处理；商品加载、购买与恢复可能需要联网。":
+            "캡처, 녹화, OCR은 Mac에서 처리되며 상품 로드, 구매, 복구에는 인터넷 연결이 필요할 수 있습니다.",
     "首次启动：权限引导": "최초 실행: 권한 안내",
     "SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS 默认流程，不会启动即弹窗。":
         "SnipX는 해당 기능을 실제로 사용할 때만 시스템 권한을 요청하며 macOS 기본 흐름을 따르고 실행 직후 팝업을 띄우지 않습니다.",
@@ -968,7 +977,10 @@ T = {
     "完整版本变更说明见": "전체 변경 내역은",
     "相关链接": "관련 링크",
     "产品主页": "제품 홈",
-},
+        "主导航": "기본 탐색",
+        "次要导航": "보조 탐색",
+        "（沙盒版位于应用容器内）": "（샌드박스 버전은 앱의 컨테이너 안에 있습니다）",
+                        },
 "es": {
     # common
     "下载 SnipX": "Descargar SnipX [MT]",
@@ -1106,7 +1118,7 @@ T = {
         "Capturas, grabaciones, audio, vídeo de cámara, resultados de OCR y anotaciones se procesan en tu Mac. SnipX no sube tu contenido ni registros de diagnóstico locales, ni integra anuncios, rastreadores ni SDKs de terceros. [MT]",
     "当你主动使用系统分享、发送反馈或将文件保存到云盘同步目录时，内容会按你的操作交给相应服务，其处理方式适用该服务的隐私政策。":
         "Cuando compartes, envías comentarios o guardas archivos en una carpeta sincronizada en la nube, el contenido pasa al servicio correspondiente según tu acción y se aplica su política de privacidad. [MT]",
-    "1. 系统权限": "1. Permisos del sistema [MT]",
+    "系统权限": "1. Permisos del sistema [MT]",
     "屏幕录制：": "Grabación de pantalla: [MT]",
     "用于截屏、长截图与录屏。": "necesaria para captura, captura larga y grabación. [MT]",
     "系统声音：": "Audio del sistema: [MT]",
@@ -1117,25 +1129,25 @@ T = {
     "在你开启摄像头画面时申请，用于画中画。": "se solicita solo al activar la superposición de cámara (picture-in-picture). [MT]",
     "你可以在 macOS「系统设置 → 隐私与安全性」中管理权限。拒绝或撤销权限会影响对应功能。全局快捷键不要求额外开启辅助功能；在 Finder 中显示文件不要求自动化权限。":
         "Gestiona los permisos en Ajustes del Sistema → Privacidad y seguridad de macOS. Denegar o revocar un permiso desactiva la función correspondiente. Los atajos globales no requieren Accesibilidad; mostrar archivos en Finder no requiere Automatización. [MT]",
-    "2. 文件、设置与本地日志": "2. Archivos, ajustes y registros locales [MT]",
+    "文件、设置与本地日志": "2. Archivos, ajustes y registros locales [MT]",
     "截图与录屏通过保存对话框导出到你选择的位置。录屏过程文件保存在应用支持目录的 SnipX/Recovery 中；本地诊断日志保存在 Library/Logs/SnipX/CrashLogs 中。沙盒版的这些应用目录位于 macOS 为 SnipX 分配的容器内，开发测试版也可能使用项目旁的 CrashLogs 目录。":
         "Las capturas y grabaciones se exportan mediante un diálogo a la ubicación que elijas. Las grabaciones en curso se guardan en SnipX/Recovery dentro del directorio de soporte de la app; los registros diagnósticos locales van a Library/Logs/SnipX/CrashLogs. En la versión sandbox estas carpetas están dentro del contenedor asignado por macOS a SnipX; la versión de desarrollo puede usar una carpeta CrashLogs junto al proyecto. [MT]",
     "应用在本机保存快捷键等偏好设置，并检查可用磁盘空间以保护录制文件。这些信息不会自动发送给开发者。OCR 使用 Apple Vision 框架在本机完成，不向服务器上传图片或识别结果。":
         "La app guarda localmente ajustes como los atajos y comprueba el espacio en disco para proteger las grabaciones. Estos datos no se envían automáticamente al desarrollador. El OCR se ejecuta en el dispositivo con Apple Vision; las imágenes y resultados nunca llegan a un servidor. [MT]",
     "删除应用本身不保证删除已导出文件、恢复文件和日志。请先保存需要保留的内容，再自行清理不需要的文件；不要在录制过程中删除恢复文件。":
         "Desinstalar la app no garantiza el borrado de archivos exportados, archivos de recuperación ni registros. Guarda primero lo que quieras conservar y luego limpia lo que no necesites. No borres archivos de recuperación durante una grabación. [MT]",
-    "3. 购买与恢复购买": "3. Compras y restauración [MT]",
+    "购买与恢复购买": "3. Compras y restauración [MT]",
     "SnipX Pro 为一次性买断的非消耗型内购，价格以 App 内和 Apple 购买确认界面为准。商品加载、购买、恢复及交易状态同步通过 Apple StoreKit 服务完成，可能需要联网。":
         "SnipX Pro es una compra in-app no consumible de un solo pago. El precio se muestra en la app y en la confirmación de compra de Apple. La carga del producto, compra, restauración y sincronización del estado de la transacción pasan por StoreKit de Apple y pueden requerir internet. [MT]",
     "Apple 处理付款。SnipX 在本机验证 Apple 提供的交易及权益信息，以决定是否解锁录屏和 GIF。开发者不通过应用收集你的银行卡或支付账户信息。Apple 对其处理的信息适用":
         "Apple gestiona los pagos. SnipX verifica localmente la transacción y los datos de derecho que Apple proporciona para decidir si desbloquea grabación y GIF. El desarrollador no recoge datos de tarjeta ni de cuenta de pago a través de la app. Para la información que Apple trata, [MT]",
     "Apple 隐私政策": "se aplica la Política de privacidad de Apple [MT]",
-    "4. 主动联系支持与访问官网": "4. Contactar con soporte y visitar el sitio [MT]",
+    "主动联系支持与访问官网": "4. Contactar con soporte y visitar el sitio [MT]",
     "你主动发送邮件时，我们会收到你提供的邮箱、问题描述及附件，仅用于回复和排查问题。请勿发送无关的个人信息、密码或敏感截图；可以联系下方邮箱请求删除你提供的反馈材料。":
         "Cuando nos escribes, recibimos el correo, la descripción del problema y los adjuntos que envíes, que usamos solo para responder y depurar. No envíes datos personales no relacionados, contraseñas ni capturas sensibles. Puedes escribir a la dirección de abajo para solicitar la eliminación del material que proporcionaste. [MT]",
     "本站没有加入广告或分析 SDK。网站托管服务可能处理提供页面和保障服务所需的 IP 地址、浏览器请求及访问日志；这与应用在本机处理截图的行为不同。":
         "Este sitio no incluye anuncios ni SDKs de análisis. El proveedor de hosting puede procesar direcciones IP, peticiones del navegador y registros de acceso necesarios para servir y asegurar el sitio, algo distinto del procesamiento local de capturas en la app. [MT]",
-    "5. 政策变更与联系方式": "5. Cambios y contacto [MT]",
+    "政策变更与联系方式": "5. Cambios y contacto [MT]",
     "隐私处理方式变化时，我们会更新本页面及更新日期。隐私问题或删除反馈材料的请求请联系":
         "Si cambian nuestras prácticas de privacidad, actualizaremos esta página y su fecha. Para preguntas de privacidad o solicitudes de eliminación de material de feedback, escribe a [MT]",
     "使用说明见": "Las instrucciones de uso están en [MT]",
@@ -1147,10 +1159,10 @@ T = {
         "FAQ, guía de permisos y canales de feedback · para SnipX 1.0.0 y posteriores [MT]",
     "系统要求": "Requisitos del sistema [MT]",
     "macOS 14.0 Sonoma 或更高版本": "macOS 14.0 Sonoma o posterior [MT]",
-    "支持 Apple Silicon（M1 / M2 / M3 / M4）与 Intel Mac": "Compatible con Apple Silicon (M1 / M2 / M3 / M4) y Mac Intel [MT]",
-    "通用构建（Universal 2）同时包含": "La compilación Universal 2 incluye ambas [MT]",
-    "截图、录屏与 OCR 在本机处理；商品加载、购买与恢复可能需要联网。":
-        "Captura, grabación y OCR se procesan en el dispositivo; la carga del producto, compra y restauración pueden requerir internet. [MT]",
+    "支持 Apple Silicon（M1 / M2 / M3 / M4）和 Intel Mac": "Compatible con Apple Silicon (M1 / M2 / M3 / M4) y Mac Intel [MT]",
+    "通用构建（Universal 2）同时包含 <code>arm64</code> 和 <code>x86_64</code>": "La compilación Universal 2 incluye tanto <code>arm64</code> como <code>x86_64</code>",
+        "截图、录屏与 OCR 在本机处理；商品加载、购买与恢复可能需要联网。":
+            "Captura, grabación y OCR se procesan en el dispositivo; la carga del producto, compra y restauración pueden requerir internet. [MT]",
     "首次启动：权限引导": "Primer inicio: guía de permisos [MT]",
     "SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS 默认流程，不会启动即弹窗。":
         "SnipX solo pide permisos del sistema cuando usas realmente la función correspondiente, siguiendo el flujo por defecto de macOS, sin avisos al iniciar. [MT]",
@@ -1202,7 +1214,10 @@ T = {
     "完整版本变更说明见": "Las notas completas están en [MT]",
     "相关链接": "Enlaces relacionados [MT]",
     "产品主页": "Página del producto [MT]",
-},
+        "主导航": "Navegación principal",
+        "次要导航": "Navegación secundaria",
+        "（沙盒版位于应用容器内）": "(la versión sandbox está dentro del contenedor de la app)",
+                        },
 "pt": {
     # common
     "下载 SnipX": "Baixar SnipX [MT]",
@@ -1340,7 +1355,7 @@ T = {
         "Capturas, gravações, áudio, imagens da câmera, resultados de OCR e anotações são processados no seu Mac. O SnipX não envia seu conteúdo nem registros de diagnóstico locais, nem integra anúncios, rastreadores ou SDKs de terceiros. [MT]",
     "当你主动使用系统分享、发送反馈或将文件保存到云盘同步目录时，内容会按你的操作交给相应服务，其处理方式适用该服务的隐私政策。":
         "Ao usar o compartilhamento do sistema, enviar feedback ou salvar arquivos em uma pasta sincronizada na nuvem, o conteúdo é entregue ao serviço correspondente conforme sua ação, e a política de privacidade desse serviço se aplica. [MT]",
-    "1. 系统权限": "1. Permissões do sistema [MT]",
+    "系统权限": "1. Permissões do sistema [MT]",
     "屏幕录制：": "Gravação de tela: [MT]",
     "用于截屏、长截图与录屏。": "necessária para captura, captura de rolagem e gravação. [MT]",
     "系统声音：": "Áudio do sistema: [MT]",
@@ -1351,25 +1366,25 @@ T = {
     "在你开启摄像头画面时申请，用于画中画。": "solicitado apenas ao ativar a sobreposição de câmera, para picture-in-picture. [MT]",
     "你可以在 macOS「系统设置 → 隐私与安全性」中管理权限。拒绝或撤销权限会影响对应功能。全局快捷键不要求额外开启辅助功能；在 Finder 中显示文件不要求自动化权限。":
         "Gerencie as permissões em Ajustes do Sistema → Privacidade e Segurança do macOS. Negar ou revogar uma permissão desativa o recurso relacionado. Atalhos globais não exigem Acessibilidade; mostrar arquivos no Finder não exige Automação. [MT]",
-    "2. 文件、设置与本地日志": "2. Arquivos, ajustes e registros locais [MT]",
+    "文件、设置与本地日志": "2. Arquivos, ajustes e registros locais [MT]",
     "截图与录屏通过保存对话框导出到你选择的位置。录屏过程文件保存在应用支持目录的 SnipX/Recovery 中；本地诊断日志保存在 Library/Logs/SnipX/CrashLogs 中。沙盒版的这些应用目录位于 macOS 为 SnipX 分配的容器内，开发测试版也可能使用项目旁的 CrashLogs 目录。":
         "Capturas e gravações são exportadas por uma caixa de diálogo para o local que você escolher. Gravações em andamento ficam em SnipX/Recovery dentro do diretório de suporte do app; os registros diagnósticos vão para Library/Logs/SnipX/CrashLogs. Na versão em sandbox esses diretórios ficam dentro do contêiner que o macOS atribui ao SnipX; a versão de desenvolvimento pode usar uma pasta CrashLogs ao lado do projeto. [MT]",
     "应用在本机保存快捷键等偏好设置，并检查可用磁盘空间以保护录制文件。这些信息不会自动发送给开发者。OCR 使用 Apple Vision 框架在本机完成，不向服务器上传图片或识别结果。":
         "O app salva localmente preferências como atalhos e verifica o espaço em disco para proteger as gravações. Essas informações não são enviadas ao desenvolvedor automaticamente. O OCR roda localmente com o framework Apple Vision; imagens e resultados nunca vão para um servidor. [MT]",
     "删除应用本身不保证删除已导出文件、恢复文件和日志。请先保存需要保留的内容，再自行清理不需要的文件；不要在录制过程中删除恢复文件。":
         "Desinstalar o app não garante a exclusão de arquivos exportados, arquivos de recuperação ou registros. Salve antes o que quiser manter e depois remova o que não precisa. Não apague arquivos de recuperação durante uma gravação. [MT]",
-    "3. 购买与恢复购买": "3. Compras e restauração [MT]",
+    "购买与恢复购买": "3. Compras e restauração [MT]",
     "SnipX Pro 为一次性买断的非消耗型内购，价格以 App 内和 Apple 购买确认界面为准。商品加载、购买、恢复及交易状态同步通过 Apple StoreKit 服务完成，可能需要联网。":
         "SnipX Pro é uma compra in-app não consumível de pagamento único. O preço é mostrado no app e na confirmação de compra da Apple. O carregamento do produto, a compra, a restauração e a sincronização do estado da transação passam pelo serviço StoreKit da Apple e podem exigir internet. [MT]",
     "Apple 处理付款。SnipX 在本机验证 Apple 提供的交易及权益信息，以决定是否解锁录屏和 GIF。开发者不通过应用收集你的银行卡或支付账户信息。Apple 对其处理的信息适用":
         "A Apple processa os pagamentos. O SnipX verifica localmente os dados de transação e entitlement fornecidos pela Apple para decidir se libera gravação e GIF. O desenvolvedor não coleta dados de cartão nem de conta de pagamento pelo app. Para as informações que a Apple trata, [MT]",
     "Apple 隐私政策": "vale a Política de Privacidade da Apple [MT]",
-    "4. 主动联系支持与访问官网": "4. Contato com o suporte e visita ao site [MT]",
+    "主动联系支持与访问官网": "4. Contato com o suporte e visita ao site [MT]",
     "你主动发送邮件时，我们会收到你提供的邮箱、问题描述及附件，仅用于回复和排查问题。请勿发送无关的个人信息、密码或敏感截图；可以联系下方邮箱请求删除你提供的反馈材料。":
         "Quando você nos envia um e-mail, recebemos o endereço, a descrição do problema e os anexos fornecidos, usados apenas para responder e depurar. Não envie dados pessoais não relacionados, senhas nem capturas sensíveis. Você pode escrever para o endereço abaixo pedindo a exclusão do material enviado. [MT]",
     "本站没有加入广告或分析 SDK。网站托管服务可能处理提供页面和保障服务所需的 IP 地址、浏览器请求及访问日志；这与应用在本机处理截图的行为不同。":
         "Este site não inclui anúncios nem SDKs de análise. O provedor de hospedagem pode processar endereços IP, requisições do navegador e logs de acesso necessários para servir e proteger o site, algo diferente do processamento local de capturas no app. [MT]",
-    "5. 政策变更与联系方式": "5. Alterações e contato [MT]",
+    "政策变更与联系方式": "5. Alterações e contato [MT]",
     "隐私处理方式变化时，我们会更新本页面及更新日期。隐私问题或删除反馈材料的请求请联系":
         "Se nossas práticas de privacidade mudarem, atualizaremos esta página e sua data. Para dúvidas de privacidade ou pedidos de exclusão de material de feedback, escreva para [MT]",
     "使用说明见": "As instruções de uso estão em [MT]",
@@ -1381,10 +1396,10 @@ T = {
         "FAQ, guia de permissões e canais de feedback · para SnipX 1.0.0 e posteriores [MT]",
     "系统要求": "Requisitos do sistema [MT]",
     "macOS 14.0 Sonoma 或更高版本": "macOS 14.0 Sonoma ou superior [MT]",
-    "支持 Apple Silicon（M1 / M2 / M3 / M4）与 Intel Mac": "Compatível com Apple Silicon (M1 / M2 / M3 / M4) e Mac Intel [MT]",
-    "通用构建（Universal 2）同时包含": "A build Universal 2 inclui ambos [MT]",
-    "截图、录屏与 OCR 在本机处理；商品加载、购买与恢复可能需要联网。":
-        "Captura, gravação e OCR são processados no dispositivo; o carregamento do produto, compra e restauração podem exigir internet. [MT]",
+    "支持 Apple Silicon（M1 / M2 / M3 / M4）和 Intel Mac": "Compatível com Apple Silicon (M1 / M2 / M3 / M4) e Mac Intel [MT]",
+    "通用构建（Universal 2）同时包含 <code>arm64</code> 和 <code>x86_64</code>": "O build Universal 2 inclui tanto <code>arm64</code> quanto <code>x86_64</code>",
+        "截图、录屏与 OCR 在本机处理；商品加载、购买与恢复可能需要联网。":
+            "Captura, gravação e OCR são processados no dispositivo; o carregamento do produto, compra e restauração podem exigir internet. [MT]",
     "首次启动：权限引导": "Primeira execução: guia de permissões [MT]",
     "SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS 默认流程，不会启动即弹窗。":
         "O SnipX só pede permissões do sistema quando você realmente usa o recurso correspondente, seguindo o fluxo padrão do macOS, sem avisos ao iniciar. [MT]",
@@ -1436,7 +1451,10 @@ T = {
     "完整版本变更说明见": "As notas completas estão em [MT]",
     "相关链接": "Links relacionados [MT]",
     "产品主页": "Página do produto [MT]",
-},
+        "主导航": "Navegação principal",
+        "次要导航": "Navegação secundária",
+        "（沙盒版位于应用容器内）": "(a versão em sandbox fica dentro do contêiner do app)",
+                        },
 }
 
 
@@ -1447,7 +1465,7 @@ T = {
 HEAD_COMMON = '''<meta name="robots" content="index,follow" />
     <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
     <script>
-      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      /* Theme init (FOUC guard): set data-theme before CSS is parsed */
       (function () {{
         try {{
           var mode = localStorage.getItem("snipx-theme") || "system";
@@ -1469,7 +1487,7 @@ TOPBAR_INNER = '''<a href="/{lang}/" class="topbar-brand" aria-label="SnipX">
             <span class="topbar-brand-text">SnipX</span>
           </a>
 
-          <nav class="topbar-nav" aria-label="主导航">
+          <nav class="topbar-nav" aria-label="__NAV_ARIA_LABEL__">
             <a href="/{lang}/#features">__NAV_FEATURES__</a>
             <a href="/{lang}/#install">__NAV_DOWNLOAD__</a>
             <a href="/{lang}/#about">__NAV_ABOUT__</a>
@@ -1507,7 +1525,7 @@ FOOTER_INNER = '''<div class="footer-brand">
             <span class="footer-brand-text">SnipX</span>
           </div>
 
-          <nav class="footer-links" aria-label="次要导航">
+          <nav class="footer-links" aria-label="__FOOTER_NAV_ARIA__">
             <a href="/{lang}/">__NAV_HOME__</a>
             <a href="/{lang}/#features">__NAV_FEATURES__</a>
             <a href="/{lang}/#install">__NAV_DOWNLOAD__</a>
@@ -1586,6 +1604,8 @@ def fill_placeholders(template: str, lang: str) -> str:
         "__NAV_HOME__": "主页",
         "__NAV_SUPPORT__": "支持",
         "__NAV_PRIVACY__": "隐私政策",
+        "__NAV_ARIA_LABEL__": "主导航",
+        "__FOOTER_NAV_ARIA__": "次要导航",
         "__TOPBAR_CTA__": "下载 SnipX",
         "__THEME_DEFAULT_LABEL__": "主题：跟随系统",
         "__FOOTER_VERSION_LABEL__": "当前版本",
@@ -2043,8 +2063,8 @@ def body_support() -> str:
             </header>
             <ul class="sysreq">
               <li>macOS 14.0 Sonoma 或更高版本</li>
-              <li>支持 Apple Silicon（M1 / M2 / M3 / M4）与 Intel Mac</li>
-              <li>通用构建（Universal 2）同时包含 <code>arm64</code> 与 <code>x86_64</code></li>
+              <li>支持 Apple Silicon（M1 / M2 / M3 / M4）和 Intel Mac</li>
+              <li>通用构建（Universal 2）同时包含 <code>arm64</code> 和 <code>x86_64</code></li>
               <li>截图、录屏与 OCR 在本机处理；商品加载、购买与恢复可能需要联网。</li>
             </ul>
           </section>
@@ -2054,14 +2074,10 @@ def body_support() -> str:
               <span class="legal-section-num">01</span>
               <h2>首次启动：权限引导</h2>
             </header>
-            <p>
-              SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS
-              默认流程，不会启动即弹窗。
-            </p>
+            <p>SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS 默认流程，不会启动即弹窗。</p>
             <ol class="legal-list">
               <li>
-                <strong>屏幕录制</strong>：首次截屏或录屏时系统会弹窗。授权后到「系统设置 → 隐私与安全性 →
-                屏幕录制」可看到 SnipX。
+                <strong>屏幕录制</strong>：首次截屏或录屏时系统会弹窗。授权后到「系统设置 → 隐私与安全性 → 屏幕录制」可看到 SnipX。
               </li>
               <li>
                 <strong>麦克风</strong>：仅在你开启「录制麦克风」开关时申请。
@@ -2171,9 +2187,7 @@ def body_support() -> str:
               <li>邮箱：<a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a></li>
               <li>请附上：macOS 版本、SnipX 版本、复现步骤、必要时附截图或录屏</li>
               <li>
-                SnipX 在异常退出时会保留崩溃日志到
-                <code>Library/Logs/SnipX/CrashLogs/（沙盒版位于应用容器内）</code
-                >，提交问题时一并附上可大幅加快定位
+                SnipX 在异常退出时会保留崩溃日志到 <code>Library/Logs/SnipX/CrashLogs/（沙盒版位于应用容器内）</code>，提交问题时一并附上可大幅加快定位
               </li>
             </ul>
           </section>
@@ -2183,13 +2197,8 @@ def body_support() -> str:
               <span class="legal-section-num">04</span>
               <h2>版本与更新</h2>
             </header>
-            <p>
-              当前最新版本：<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。
-            </p>
-            <p>
-              完整版本变更说明见
-              <a href="https://github.com/kenlez/SnipX/blob/main/RELEASE-NOTES.md" rel="noopener">RELEASE-NOTES.md</a>。
-            </p>
+            <p>当前最新版本：<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。</p>
+            <p>完整版本变更说明见 <a href="https://github.com/kenlez/SnipX/blob/main/RELEASE-NOTES.md" rel="noopener">RELEASE-NOTES.md</a>。</p>
           </section>
 
           <section class="legal-section" id="support-links">
@@ -2359,7 +2368,7 @@ ROOT_PICKER = '''<!doctype html>
             <span class="topbar-brand-text">SnipX</span>
           </a>
 
-          <nav class="topbar-nav" aria-label="主导航">
+          <nav class="topbar-nav" aria-label="__NAV_ARIA_LABEL__">
             <a href="/#features">特性</a>
             <a href="/#install">下载</a>
             <a href="/#about">关于</a>
@@ -2423,7 +2432,7 @@ ROOT_PICKER = '''<!doctype html>
             <span class="footer-brand-text">SnipX</span>
           </div>
 
-          <nav class="footer-links" aria-label="次要导航">
+          <nav class="footer-links" aria-label="__FOOTER_NAV_ARIA__">
             <a href="/">主页</a>
             <a href="/#features">特性</a>
             <a href="/#install">下载</a>

@@ -13,7 +13,7 @@
     <meta name="robots" content="index,follow" />
     <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
     <script>
-      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      /* Theme init (FOUC guard): set data-theme before CSS is parsed */
       (function () {{
         try {{
           var mode = localStorage.getItem("snipx-theme") || "system";
@@ -42,7 +42,7 @@
             <span class="topbar-brand-text">SnipX</span>
           </a>
 
-          <nav class="topbar-nav" aria-label="主导航">
+          <nav class="topbar-nav" aria-label="기본 탐색">
             <a href="/ko/#features">기능</a>
             <a href="/ko/#install">다운로드</a>
             <a href="/ko/#about">정보</a>
@@ -94,7 +94,7 @@
             <ul class="sysreq">
               <li>macOS 14.0 Sonoma 이상</li>
               <li>Apple Silicon (M1 / M2 / M3 / M4) 및 Intel Mac 지원</li>
-              <li>Universal 2 빌드는 다음 두 가지 모두 포함 <code>arm64</code> 与 <code>x86_64</code></li>
+              <li>Universal 2 빌드에는 <code>arm64</code>과 <code>x86_64</code>이 모두 포함됩니다</li>
               <li>캡처, 녹화, OCR은 Mac에서 처리되며 상품 로드, 구매, 복구에는 인터넷 연결이 필요할 수 있습니다.</li>
             </ul>
           </section>
@@ -104,14 +104,10 @@
               <span class="legal-section-num">01</span>
               <h2>최초 실행: 권한 안내</h2>
             </header>
-            <p>
-              SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS
-              默认流程，不会启动即弹窗。
-            </p>
+            <p>SnipX는 해당 기능을 실제로 사용할 때만 시스템 권한을 요청하며 macOS 기본 흐름을 따르고 실행 직후 팝업을 띄우지 않습니다.</p>
             <ol class="legal-list">
               <li>
-                <strong>屏幕录制</strong>：首次截屏或录屏时系统会弹窗。授权后到「系统设置 → 隐私与安全性 →
-                屏幕录制」可看到 SnipX。
+                <strong>屏幕录制</strong>：최초 캡처 또는 녹화 시 시스템이 팝업을 띄웁니다. 허용 후 「시스템 설정 → 개인 정보 보호 및 보안 → 화면 녹화」에서 SnipX를 확인할 수 있습니다.
               </li>
               <li>
                 <strong>麦克风</strong>：마이크 녹음을 활성화했을 때만 요청됩니다.
@@ -221,9 +217,7 @@
               <li>이메일:<a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a></li>
               <li>다음 정보를 함께 보내주세요: macOS 버전, SnipX 버전, 재현 단계, 필요 시 스크린샷 또는 녹화</li>
               <li>
-                SnipX는 비정상 종료 시 크래시 로그를 다음 위치에 보존합니다:
-                <code>Library/Logs/SnipX/CrashLogs/（沙盒版位于应用容器内）</code
-                >，신고 시 함께 첨부해 주시면 원인 파악이 빨라집니다
+                SnipX는 비정상 종료 시 크래시 로그를 다음 위치에 보존합니다: <code>Library/Logs/SnipX/CrashLogs/（샌드박스 버전은 앱의 컨테이너 안에 있습니다）</code>，신고 시 함께 첨부해 주시면 원인 파악이 빨라집니다
               </li>
             </ul>
           </section>
@@ -233,13 +227,8 @@
               <span class="legal-section-num">04</span>
               <h2>버전 및 업데이트</h2>
             </header>
-            <p>
-              최신 버전:<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。
-            </p>
-            <p>
-              전체 변경 내역은
-              <a href="https://github.com/kenlez/SnipX/blob/main/RELEASE-NOTES.md" rel="noopener">RELEASE-NOTES.md</a>。
-            </p>
+            <p>최신 버전:<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。</p>
+            <p>전체 변경 내역은 <a href="https://github.com/kenlez/SnipX/blob/main/RELEASE-NOTES.md" rel="noopener">RELEASE-NOTES.md</a>。</p>
           </section>
 
           <section class="legal-section" id="support-links">
@@ -265,7 +254,7 @@
             <span class="footer-brand-text">SnipX</span>
           </div>
 
-          <nav class="footer-links" aria-label="次要导航">
+          <nav class="footer-links" aria-label="보조 탐색">
             <a href="/ko/">홈</a>
             <a href="/ko/#features">기능</a>
             <a href="/ko/#install">다운로드</a>

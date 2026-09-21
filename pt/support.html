@@ -13,7 +13,7 @@
     <meta name="robots" content="index,follow" />
     <link id="favicon" rel="icon" href="/assets/brand/icon-snipx.png" />
     <script>
-      /* 主题初始化（防 FOUC）：在 CSS 解析前完成 data-theme 设置 */
+      /* Theme init (FOUC guard): set data-theme before CSS is parsed */
       (function () {{
         try {{
           var mode = localStorage.getItem("snipx-theme") || "system";
@@ -42,7 +42,7 @@
             <span class="topbar-brand-text">SnipX</span>
           </a>
 
-          <nav class="topbar-nav" aria-label="主导航">
+          <nav class="topbar-nav" aria-label="Navegação principal">
             <a href="/pt/#features">Recursos</a>
             <a href="/pt/#install">Baixar</a>
             <a href="/pt/#about">Sobre</a>
@@ -94,7 +94,7 @@
             <ul class="sysreq">
               <li>macOS 14.0 Sonoma ou superior</li>
               <li>Compatível com Apple Silicon (M1 / M2 / M3 / M4) e Mac Intel</li>
-              <li>A build Universal 2 inclui ambos <code>arm64</code> 与 <code>x86_64</code></li>
+              <li>O build Universal 2 inclui tanto <code>arm64</code> quanto <code>x86_64</code></li>
               <li>Captura, gravação e OCR são processados no dispositivo; o carregamento do produto, compra e restauração podem exigir internet.</li>
             </ul>
           </section>
@@ -104,14 +104,10 @@
               <span class="legal-section-num">01</span>
               <h2>Primeira execução: guia de permissões</h2>
             </header>
-            <p>
-              SnipX 只会在你实际使用对应功能时申请系统权限，遵循 macOS
-              默认流程，不会启动即弹窗。
-            </p>
+            <p>O SnipX só pede permissões do sistema quando você realmente usa o recurso correspondente, seguindo o fluxo padrão do macOS, sem avisos ao iniciar.</p>
             <ol class="legal-list">
               <li>
-                <strong>屏幕录制</strong>：首次截屏或录屏时系统会弹窗。授权后到「系统设置 → 隐私与安全性 →
-                屏幕录制」可看到 SnipX。
+                <strong>屏幕录制</strong>：O macOS mostrará um aviso na sua primeira captura ou gravação. Depois de autorizar, você verá o SnipX em Ajustes do Sistema → Privacidade e Segurança → Gravação de Tela.
               </li>
               <li>
                 <strong>麦克风</strong>：Solicitado apenas ao ativar a captura de microfone.
@@ -221,9 +217,7 @@
               <li>E-mail:<a href="mailto:snipx@tongkun.top">snipx@tongkun.top</a></li>
               <li>Inclua: versão do macOS, versão do SnipX, passos para reproduzir e, se possível, uma captura ou gravação</li>
               <li>
-                O SnipX preserva logs de falha em
-                <code>Library/Logs/SnipX/CrashLogs/（沙盒版位于应用容器内）</code
-                >，anexá-los acelera muito a análise
+                O SnipX preserva logs de falha em <code>Library/Logs/SnipX/CrashLogs/(a versão em sandbox fica dentro do contêiner do app)</code>，anexá-los acelera muito a análise
               </li>
             </ul>
           </section>
@@ -233,13 +227,8 @@
               <span class="legal-section-num">04</span>
               <h2>Versões e atualizações</h2>
             </header>
-            <p>
-              Versão mais recente:<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。
-            </p>
-            <p>
-              As notas completas estão em
-              <a href="https://github.com/kenlez/SnipX/blob/main/RELEASE-NOTES.md" rel="noopener">RELEASE-NOTES.md</a>。
-            </p>
+            <p>Versão mais recente:<strong>SnipX 1.0.0</strong>（OCR MVP + Universal 2）。</p>
+            <p>As notas completas estão em <a href="https://github.com/kenlez/SnipX/blob/main/RELEASE-NOTES.md" rel="noopener">RELEASE-NOTES.md</a>。</p>
           </section>
 
           <section class="legal-section" id="support-links">
@@ -265,7 +254,7 @@
             <span class="footer-brand-text">SnipX</span>
           </div>
 
-          <nav class="footer-links" aria-label="次要导航">
+          <nav class="footer-links" aria-label="Navegação secundária">
             <a href="/pt/">Início</a>
             <a href="/pt/#features">Recursos</a>
             <a href="/pt/#install">Baixar</a>
