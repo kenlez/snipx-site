@@ -13,15 +13,18 @@
   position: relative;
 }
 
+/* 唯一内容容器：与首页 .section 同宽度公式，居中，两侧留白 */
+.legal {
+  width: min(var(--max), calc(100% - 32px));
+  margin: 0 auto;
+}
+
 /* ====== Hero ====== */
 .legal-head {
   margin-bottom: 64px;
   text-align: left;
   position: relative;
   padding-bottom: 32px;
-  width: min(var(--max), calc(100% - 32px));
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .legal-head::after {
