@@ -128,7 +128,6 @@ T = {
         "按所用功能授权：屏幕录制、系统声音、麦克风和摄像头。":
             "按所用功能授權：螢幕錄製、系統聲音、麥克風和攝影機。",
         "前往 App Store 下载": "前往 App Store 下載",
-        "App Store 应用页即将上线，链接待回填。": "App Store 應用程式頁即將上線，連結待回填。",
         "macOS 14+ · Universal 2（Apple Silicon + Intel）· 仅 3 MB":
             "macOS 14+ · Universal 2（Apple Silicon + Intel）· 僅 3 MB",
         "基础截屏永久免费 · 录屏与 GIF 录制需 <a href=\"./#about\">SnipX Pro</a>（一次性买断）":
@@ -366,7 +365,6 @@ T = {
         "按所用功能授权：屏幕录制、系统声音、麦克风和摄像头。":
             "Authorize per feature: screen recording, system audio, microphone, and camera.",
         "前往 App Store 下载": "Get SnipX on the App Store",
-        "App Store 应用页即将上线，链接待回填。": "The App Store listing is coming soon — link will be filled in.",
         "macOS 14+ · Universal 2（Apple Silicon + Intel）· 仅 3 MB":
             "macOS 14+ · Universal 2 (Apple Silicon + Intel) · only 3 MB",
         "基础截屏永久免费 · 录屏与 GIF 录制需 <a href=\"./#about\">SnipX Pro</a>（一次性买断）":
@@ -603,7 +601,6 @@ T = {
     "按所用功能授权：屏幕录制、系统声音、麦克风和摄像头。":
         "使用する機能に応じて許可：画面収録、システム音声、マイク、カメラ。",
     "前往 App Store 下载": "App Store でダウンロード",
-    "App Store 应用页即将上线，链接待回填。": "App Store ページは近日公開予定です。リンクは決まり次第反映します。",
     "macOS 14+ · Universal 2（Apple Silicon + Intel）· 仅 3 MB":
         "macOS 14+ · Universal 2（Apple Silicon + Intel）· わずか 3 MB",
     "基础截屏永久免费 · 录屏与 GIF 录制需 <a href=\"./#about\">SnipX Pro</a>（一次性买断）":
@@ -840,7 +837,6 @@ T = {
     "按所用功能授权：屏幕录制、系统声音、麦克风和摄像头。":
         "사용 기능별로 허용: 화면 녹화, 시스템 음성, 마이크, 카메라.",
     "前往 App Store 下载": "App Store에서 다운로드",
-    "App Store 应用页即将上线，链接待回填。": "App Store 앱 페이지는 곧 공개됩니다. 링크는 확정 후 반영됩니다.",
     "macOS 14+ · Universal 2（Apple Silicon + Intel）· 仅 3 MB":
         "macOS 14+ · Universal 2 (Apple Silicon + Intel) · 단 3 MB",
     "基础截屏永久免费 · 录屏与 GIF 录制需 <a href=\"./#about\">SnipX Pro</a>（一次性买断）":
@@ -1077,7 +1073,6 @@ T = {
     "按所用功能授权：屏幕录制、系统声音、麦克风和摄像头。":
         "Autoriza por función: grabación de pantalla, audio del sistema, micrófono y cámara. [MT]",
     "前往 App Store 下载": "Descargar desde el App Store [MT]",
-    "App Store 应用页即将上线，链接待回填。": "La ficha del App Store estará disponible pronto. El enlace se añadirá cuando esté listo. [MT]",
     "macOS 14+ · Universal 2（Apple Silicon + Intel）· 仅 3 MB":
         "macOS 14+ · Universal 2 (Apple Silicon + Intel) · solo 3 MB [MT]",
     "基础截屏永久免费 · 录屏与 GIF 录制需 <a href=\"./#about\">SnipX Pro</a>（一次性买断）":
@@ -1314,7 +1309,6 @@ T = {
     "按所用功能授权：屏幕录制、系统声音、麦克风和摄像头。":
         "Autorize por recurso: gravação de tela, áudio do sistema, microfone e câmera. [MT]",
     "前往 App Store 下载": "Baixar na App Store [MT]",
-    "App Store 应用页即将上线，链接待回填。": "A página na App Store será publicada em breve. O link será adicionado quando estiver pronto. [MT]",
     "macOS 14+ · Universal 2（Apple Silicon + Intel）· 仅 3 MB":
         "macOS 14+ · Universal 2 (Apple Silicon + Intel) · apenas 3 MB [MT]",
     "基础截屏永久免费 · 录屏与 GIF 录制需 <a href=\"./#about\">SnipX Pro</a>（一次性买断）":
@@ -1927,12 +1921,11 @@ def body_index() -> str:
           <div class="install-cta">
             <a
               id="appstore-download"
-              href="#"
-              data-appstore-url=""
+              href="https://apps.apple.com/cn/app/snipx-%E6%88%AA%E5%9B%BE-ocr-%E5%BD%95%E5%B1%8F-gif-%E9%95%BF%E6%88%AA%E5%9B%BE-%E6%89%B9%E6%B3%A8/id6807466249?mt=12"
+              data-appstore-url="https://apps.apple.com/cn/app/snipx-%E6%88%AA%E5%9B%BE-ocr-%E5%BD%95%E5%B1%8F-gif-%E9%95%BF%E6%88%AA%E5%9B%BE-%E6%89%B9%E6%B3%A8/id6807466249?mt=12"
               class="btn btn-primary btn-lg"
-              aria-disabled="true"
+              rel="noopener"
             >前往 App Store 下载</a>
-            <p class="install-pending">App Store 应用页即将上线，链接待回填。</p>
             <p class="install-req">macOS 14+ · Universal 2（Apple Silicon + Intel）· 仅 3 MB</p>
             <p class="install-pro">
               基础截屏永久免费 · 录屏与 GIF 录制需 <a href="./#about">SnipX Pro</a>（一次性买断）

@@ -26,6 +26,9 @@
 | 隐私政策 URL | https://snipx.tongkun.top/{lang}/privacy.html （7 语，根路径自动判断） |
 | 支持 URL | https://snipx.tongkun.top/{lang}/support.html （7 语，根路径自动判断） |
 | 营销 URL | https://snipx.tongkun.top/ |
+| **App Store URL** | https://apps.apple.com/cn/app/snipx-%E6%88%AA%E5%9B%BE-ocr-%E5%BD%95%E5%B1%8F-gif-%E9%95%BF%E6%88%AA%E5%9B%BE-%E6%89%B9%E6%B3%A8/id6807466249?mt=12 |
+| App Store ID | `id6807466249` |
+| 上架状态 | ✅ 已正式上线（2026-09） |
 | 营销域名 | https://snipx.tongkun.top（Cloudflare Pages 托管，长期方案） |
 | 备用托管 | https://snipx-site.pages.dev |
 | 支持语种 | zh-CN / zh-TW / en / ja / ko / es / pt（详见 `docs/I18N.md`） |
@@ -36,7 +39,8 @@
 
 | SnipX 版本 | 网站版本 | 上线日期 | 关键更新 | 状态 |
 |---|---|---|---|---|
-| 1.0.0 | v0.3 | 2026-09-10 | App Store 上架版本；接入真实图片（hero + feature 截图 + 图标）、移除 ICP 备案占位、版本号 0.1.99 → 1.0.0 | ⏳ 本次 |
+| 1.0.0 | v0.3 | 2026-09-10 | App Store 上架版本；接入真实图片（hero + feature 截图 + 图标）、移除 ICP 备案占位、版本号 0.1.99 → 1.0.0 | ✅ |
+| 1.0.0 (发布) | v0.4 | 2026-09 | App Store 审核通过：回填 `#appstore-download` 真实链接，移除「即将上线」占位 | ✅ 本次 |
 | 0.1.99 | v0.2 | 2026-09-05 | OCR MVP（本地 Vision 框架）+ Universal 2（arm64 + x86_64）+ SnipX Pro 付费墙 + 隐私政策/支持页 | ✅ 本次 PR |
 | 0.1.86 | v0.1 | 2026-09-02 | 初版框架（占位图、占位文案） | ✅ |
 
@@ -68,9 +72,9 @@
 
 ### Install 区
 - 分发渠道：**Mac App Store**（不再提供 .dmg 直装；App Store 版内购走 Apple IAP）
-- 下载按钮：`#appstore-download` 为占位（`href="#"`、`data-appstore-url=""`），待 App Store 应用页上线后回填
+- 下载按钮：`#appstore-download` 已回填真实 App Store URL（见上表）
 - 系统要求：`macOS 14+ · Universal 2（Apple Silicon + Intel）· 仅 3 MB`
-- 附注：`基础截屏永久免费 · 录屏与 GIF 录制需 SnipX Pro（¥12 / 首发 ¥6）`
+- 附注：`基础截屏永久免费 · 录屏与 GIF 录制需 SnipX Pro（一次性买断）`
 
 ### About 区
 - 原生开发
@@ -104,4 +108,4 @@
 - [ ] 联系信息（小红书 / 抖音 / QQ 群）补全到 footer
 - [x] 真实品牌图标（`assets/brand/icon-snipx.png`，源自 app 仓库 `SnipX/icon/snipx.png`）
 - [x] 真实产品截图（已接入 `assets/screenshots/`：`hero.jpg` + `feature-*.webp`）
-- [ ] App Store 审核通过后：回填 `index.html` 的 `#appstore-download`（`href` + `data-appstore-url`），移除 `.install-pending` 占位提示，并把营销 URL 切换为 App Store 应用页
+- [x] App Store 审核通过：回填 `#appstore-download` 的 `href` + `data-appstore-url`，移除 `.install-pending` 占位提示
